@@ -15,8 +15,8 @@
   }
 
   function formatCurrency(value, precision = 1) {
-    if (value >= 1000000) return `${(value / 1000000).toFixed(precision)}M records`;
-    return `${Math.round(value / 1000)}k records`;
+    if (value >= 1000000) return `${(value / 1000000).toFixed(precision)}M record`;
+    return `${Math.round(value / 1000)}k record`;
   }
 
   function formatProbability(value) {
@@ -27,20 +27,20 @@
     return data.accounts.find(account => account.id === id);
   }
 
-  function weightedFitScore(account) {
+  function ponderatoFitScore(account) {
     const dimensions = data.scoringMethodology.dimensions;
     const totalWeight = dimensions.reduce((sum, dimension) => sum + dimension.weight, 0);
-    const weightedTotal = dimensions.reduce((sum, dimension) => {
+    const ponderatoTotal = dimensions.reduce((sum, dimension) => {
       return sum + (account.scoreComponents[dimension.key] || 0) * dimension.weight;
     }, 0);
-    return weightedTotal / totalWeight;
+    return ponderatoTotal / totalWeight;
   }
 
   function dealProbability(deal) {
     return stageProbabilityMap[deal.stage] || 0;
   }
 
-  function weightedDealValue(deal) {
+  function ponderatoDealValue(deal) {
     return deal.value * dealProbability(deal);
   }
 
@@ -49,11 +49,11 @@
   }
 
   function allWeightedPipelineValue() {
-    return data.pipelineDeals.reduce((sum, deal) => sum + weightedDealValue(deal), 0);
+    return data.pipelineDeals.reduce((sum, deal) => sum + ponderatoDealValue(deal), 0);
   }
 
   function openDeals() {
-    return data.pipelineDeals.filter(deal => !["Action Completed", "CX Handoff"].includes(deal.stage));
+    return data.pipelineDeals.filter(deal => !["Action Completed", "Azione Completata", "CX Handoff", "Handoff CX"].includes(deal.stage));
   }
 
   function average(values) {
@@ -65,9 +65,9 @@
     return stageOrder.map(stage => {
       const deals = data.pipelineDeals.filter(deal => deal.stage === stage);
       const total = deals.reduce((sum, deal) => sum + deal.value, 0);
-      const weighted = deals.reduce((sum, deal) => sum + weightedDealValue(deal), 0);
+      const ponderato = deals.reduce((sum, deal) => sum + ponderatoDealValue(deal), 0);
       const avgDays = deals.length ? average(deals.map(deal => deal.daysInStage)) : 0;
-      return { stage, deals, total, weighted, avgDays, probability: stageProbabilityMap[stage] || 0 };
+      return { stage, deals, total, ponderato, avgDays, probability: stageProbabilityMap[stage] || 0 };
     });
   }
 
@@ -76,29 +76,36 @@
     if (element) element.textContent = value;
   }
 
+  function priorityClass(value) {
+    const normalized = String(value || "").toLowerCase();
+    if (["high", "alto"].includes(normalized)) return "high";
+    if (["medium", "medio"].includes(normalized)) return "medium";
+    return "low";
+  }
+
   function setFallbackMetrics() {
     document.querySelectorAll(".kpi-value, .metric-value").forEach(element => {
-      if (element.textContent.trim() === "Loading...") {
-        element.textContent = "Unavailable";
+      if (element.textContent.trim() === "Caricamento...") {
+        element.textContent = "Non disponibile";
       }
     });
   }
 
   function renderKpis() {
     const total = allPipelineValue();
-    const weighted = allWeightedPipelineValue();
+    const ponderato = allWeightedPipelineValue();
     const avgStageAge = average(data.pipelineDeals.map(deal => deal.daysInStage));
     const avgPocReadiness = average(data.pipelineDeals.map(deal => deal.pocReadiness));
-    const avgFit = average(data.accounts.map(account => weightedFitScore(account)));
+    const avgFit = average(data.accounts.map(account => ponderatoFitScore(account)));
 
     setText("kpi-total-pipeline", formatCurrency(total));
-    setText("kpi-weighted-pipeline", formatCurrency(weighted));
+    setText("kpi-weighted-pipeline", formatCurrency(ponderato));
     setText("kpi-accounts", String(data.accounts.length));
-    setText("kpi-stage-age", `${avgStageAge.toFixed(1)} days`);
+    setText("kpi-stage-age", `${avgStageAge.toFixed(1)} giorni`);
     setText("kpi-poc", `${Math.round(avgPocReadiness)}%`);
 
     setText("dashboard-total-pipeline", formatCurrency(total));
-    setText("dashboard-weighted-pipeline", formatCurrency(weighted));
+    setText("dashboard-weighted-pipeline", formatCurrency(ponderato));
     setText("dashboard-open-opps", String(openDeals().length));
     setText("dashboard-fit-score", avgFit.toFixed(2));
   }
@@ -111,10 +118,10 @@
       <article class="glass-panel insight-card">
         <div class="eyebrow">Insight ${index + 1}</div>
         <h3>${insight.title}</h3>
-        <p><strong>Observed signal:</strong> ${insight.signal}</p>
-        <p><strong>Operational risk:</strong> ${insight.risk}</p>
-        <p><strong>Recommended action:</strong> ${insight.action}</p>
-        <p><strong>Expected impact:</strong> ${insight.impact.replace("Expected impact: ", "")}</p>
+        <p><strong>Segnale osservato:</strong> ${insight.signal}</p>
+        <p><strong>Rischio operativo:</strong> ${insight.risk}</p>
+        <p><strong>Azione raccomandata:</strong> ${insight.action}</p>
+        <p><strong>Impatto atteso:</strong> ${insight.impact.replace("Impatto atteso: ", "")}</p>
       </article>
     `).join("");
   }
@@ -125,14 +132,14 @@
 
     grid.innerHTML = data.reviewPaths.map(path => `
       <article class="glass-panel review-path-card">
-        <div class="eyebrow">Review path</div>
+        <div class="eyebrow">Percorso di lettura</div>
         <h3>${path.title}</h3>
         <div class="review-path-meta">
-          <span class="review-path-label">Best for</span>
+          <span class="review-path-label">Ideale per</span>
           <p>${path.bestFor}</p>
         </div>
         <div class="review-path-meta">
-          <span class="review-path-label">What to inspect</span>
+          <span class="review-path-label">Cosa guardare</span>
           <p>${path.whatToInspect}</p>
         </div>
         <button class="jump-button review-path-button" type="button" data-nav-target="${path.target}">${path.cta}</button>
@@ -150,7 +157,7 @@
         <div class="reviewer-guide-copy">
           <strong>${index + 1}. ${item.title}</strong>
           <p>${item.note}</p>
-          <button class="jump-button review-guide-button" type="button" data-nav-target="${item.target}">Open ${item.title}</button>
+          <button class="jump-button review-guide-button" type="button" data-nav-target="${item.target}">Apri ${item.title}</button>
         </div>
       </article>
     `).join("");
@@ -176,23 +183,23 @@
       <section class="kanban-column">
         <div class="kanban-header">
           <span>${group.stage}</span>
-          <small>${formatProbability(group.probability)} Â· ${formatCurrency(group.weighted, 2)} weighted</small>
+          <small>${formatProbability(group.probability)} · ${formatCurrency(group.ponderato, 2)} ponderato</small>
         </div>
         <div class="kanban-cards">
           ${group.deals.length ? group.deals.map(deal => {
             const account = accountById(deal.accountId);
             return `
               <article class="kanban-card">
-                <div class="card-title">${account ? account.company : "Unknown segment"}</div>
-                <div class="card-value">${formatCurrency(deal.value, 2)} <span>${formatCurrency(weightedDealValue(deal), 2)} weighted</span></div>
+                <div class="card-title">${account ? account.company : "Segmento sconosciuto"}</div>
+                <div class="card-value">${formatCurrency(deal.value, 2)} <span>${formatCurrency(ponderatoDealValue(deal), 2)} ponderato</span></div>
                 <div class="card-meta">
-                  <span><i class="fa-regular fa-clock"></i>${deal.daysInStage} days</span>
+                  <span><i class="fa-regular fa-clock"></i>${deal.daysInStage} giorni</span>
                   <span><i class="fa-solid fa-triangle-exclamation"></i>${deal.risk}</span>
                 </div>
-                <div class="card-next"><strong>Next:</strong> ${deal.nextStep}</div>
+                <div class="card-next"><strong>Prossimo step:</strong> ${deal.nextStep}</div>
               </article>
             `;
-          }).join("") : `<div class="empty-column">No simulated analyses</div>`}
+          }).join("") : `<div class="empty-column">Nessuna analisi simulata</div>`}
         </div>
       </section>
     `).join("");
@@ -228,11 +235,12 @@
       </article>
     `).join("");
 
-    const sortedAccounts = [...data.accounts].sort((a, b) => weightedFitScore(b) - weightedFitScore(a));
+    const sortedAccounts = [...data.accounts].sort((a, b) => ponderatoFitScore(b) - ponderatoFitScore(a));
     body.innerHTML = sortedAccounts.map(account => {
-      const score = weightedFitScore(account);
+      const score = ponderatoFitScore(account);
       const components = data.scoringMethodology.dimensions.map(d => account.scoreComponents[d.key]).join(" / ");
-      const badgeClass = account.regulatorySensitivity === "High" ? "badge-high" : account.regulatorySensitivity === "Medium" ? "badge-medium" : "badge-low";
+      const priority = String(account.regulatorySensitivity || "").toLowerCase();
+      const badgeClass = ["high", "alto"].includes(priority) ? "badge-high" : ["medium", "medio"].includes(priority) ? "badge-medium" : "badge-low";
 
       return `
         <tr>
@@ -255,7 +263,7 @@
     const promptList = byId("brief-prompt-structure");
     if (!select || !generateBtn || !output || !promptList) return;
 
-    select.innerHTML = `<option value="">Select customer segment</option>` + data.accounts
+    select.innerHTML = `<option value="">Seleziona segmento cliente</option>` + data.accounts
       .map(account => `<option value="${account.id}">${account.company} Â· ${account.sector}</option>`)
       .join("");
 
@@ -265,71 +273,71 @@
       const selectedId = Number(select.value);
       const account = accountById(selectedId);
       if (!account) {
-        output.innerHTML = `<div class="empty-state">Select a customer segment to generate the structured simulator output.</div>`;
+        output.innerHTML = `<div class="empty-state">Seleziona un segmento cliente per generare l'output strutturato del simulatore.</div>`;
         return;
       }
 
-      const score = weightedFitScore(account);
-      const sectorDriver = data.sectorBuyingDrivers[account.sector] || "customer satisfaction, journey clarity, data quality, and measurable process improvement";
+      const score = ponderatoFitScore(account);
+      const sectorDriver = data.sectorBuyingDrivers[account.sector] || "soddisfazione cliente, chiarezza del journey, qualità dati e miglioramento processo misurabile";
       const topRisks = [];
-      if (account.scoreComponents.procurementFeasibility <= 2) topRisks.push("unclear action path");
-      if (account.scoreComponents.stakeholderClarity <= 3) topRisks.push("incomplete owner coverage");
-      if (account.scoreComponents.deploymentFit >= 4) topRisks.push("reporting and source-quality review");
-      if (!topRisks.length) topRisks.push("scope clarity before action pilot");
+      if (account.scoreComponents.procurementFeasibility <= 2) topRisks.push("percorso d'azione poco chiaro");
+      if (account.scoreComponents.stakeholderClarity <= 3) topRisks.push("copertura responsabili incompleta");
+      if (account.scoreComponents.deploymentFit >= 4) topRisks.push("revisione reporting e qualità fonte");
+      if (!topRisks.length) topRisks.push("chiarezza dello scope prima del pilot d'azione");
 
       output.innerHTML = `
         <article class="brief-card">
           <div class="brief-header">
             <div>
-              <div class="eyebrow">Structured simulator output</div>
+              <div class="eyebrow">Output strutturato del simulatore</div>
               <h3>${account.company}</h3>
             </div>
             <div class="brief-score">Fit ${score.toFixed(2)}</div>
           </div>
 
           <section>
-            <h4>Customer segment context</h4>
+            <h4>Contesto del segmento cliente</h4>
             <p>${account.reason}</p>
           </section>
 
           <section>
-            <h4>Likely CX drivers</h4>
-            <p>For ${account.sector}, likely CX drivers include ${sectorDriver}. The analysis should connect the customer signal to measurable journey improvement and responsible data handling.</p>
+            <h4>Driver CX probabili</h4>
+            <p>Per ${account.sector}, i driver CX probabili includono ${sectorDriver}. L'analisi dovrebbe collegare il segnale cliente a un miglioramento misurabile del journey e a una gestione responsabile dei dati.</p>
           </section>
 
           <section>
-            <h4>Potential analytics use case</h4>
-            <p>${account.useCasePotential}. The goal should be scoped as an assisted reporting workflow with clear human review and a measurable action metric.</p>
+            <h4>Potenziale caso d'uso analytics</h4>
+            <p>${account.useCasePotential}. L'obiettivo dovrebbe essere definito come workflow di reporting assistito, con chiara revisione umana e metrica d'azione misurabile.</p>
           </section>
 
           <section>
-            <h4>Stakeholders to involve</h4>
-            <p>${account.decisionMakers}. Add Data/IT, Privacy, and the business owner before moving from analysis to an action pilot.</p>
+            <h4>Stakeholder da coinvolgere</h4>
+            <p>${account.decisionMakers}. Aggiungere Data/IT, Privacy e responsabile business prima di passare dall'analisi a un pilot di azione.</p>
           </section>
 
           <section>
-            <h4>Discovery questions</h4>
+            <h4>Domande di discovery</h4>
             <ul>
-              <li>Which customer journey moment would create the clearest measurable improvement?</li>
-              <li>Which data sources would be required, and who owns access approval?</li>
-              <li>What sample-size, missing-value, privacy, or aggregation constraints must be satisfied?</li>
-              <li>Which stakeholder owns the action and which metric should change after follow-up?</li>
+              <li>Quale momento del customer journey creerebbe il miglioramento misurabile più chiaro?</li>
+              <li>Quali fonti dati sarebbero necessarie e chi approva l'accesso?</li>
+              <li>Quali vincoli di campione, valori mancanti, privacy o aggregazione devono essere soddisfatti?</li>
+              <li>Quale stakeholder possiede l'azione e quale metrica dovrebbe cambiare dopo il follow-up?</li>
             </ul>
           </section>
 
           <section>
-            <h4>Analysis risks</h4>
-            <p>${topRisks.join(", ")}. These should be captured as reporting risks before action owners are assigned.</p>
+            <h4>Rischi di analisi</h4>
+            <p>${topRisks.join(", ")}. Questi elementi dovrebbero essere registrati come rischi di reporting prima di assegnare i responsabili delle azioni.</p>
           </section>
 
           <section>
-            <h4>Recommended CX next step</h4>
-            <p>Move only when the next stage exit criteria are satisfied: segment definition, owner, data path, data-use boundary, and follow-up metric must be explicit.</p>
+            <h4>Prossimo step CX raccomandato</h4>
+            <p>Procedere solo quando i criteri di uscita dello stage successivo sono soddisfatti: definizione segmento, responsabile, percorso dati, confine di utilizzo dati e metrica di follow-up devono essere espliciti.</p>
           </section>
 
           <section>
-            <h4>Insight-to-action handoff notes</h4>
-            <p>Document the segment, data owner, action owner, target metric, data-use constraints, and next review date before handoff.</p>
+            <h4>Note di handoff insight-azione</h4>
+            <p>Documentare segmento, responsabile dati, responsabile azione, metrica target, vincoli di utilizzo dati e prossima data di revisione prima dell'handoff.</p>
           </section>
         </article>
       `;
@@ -569,7 +577,7 @@
     if (backlog) {
       backlog.innerHTML = product.backlog.map(item => `
         <tr>
-          <td><span class="priority-pill priority-${item.priority.toLowerCase()}">${item.priority}</span></td>
+          <td><span class="priority-pill priority-${priorityClass(item.priority)}">${item.priority}</span></td>
           <td><strong>${item.feature}</strong></td>
           <td>${item.reason}</td>
         </tr>
@@ -601,14 +609,14 @@
           </div>
           <span class="workflow-trigger">${flow.trigger}</span>
         </div>
-        <div class="workflow-section-title">Conditions</div>
+        <div class="workflow-section-title">Condizioni</div>
         <ul class="workflow-conditions">
           ${flow.conditions.map(c => `<li>${c}</li>`).join("")}
         </ul>
         <div class="workflow-action">
-          <strong>Action:</strong> ${flow.action} <span style="color:var(--muted)">&middot; ${flow.delay}</span>
+          <strong>Azione:</strong> ${flow.action} <span style="color:var(--muted)">&middot; ${flow.delay}</span>
         </div>
-        <div class="workflow-value"><strong>Value:</strong> ${flow.value}</div>
+        <div class="workflow-value"><strong>Valore:</strong> ${flow.value}</div>
       </article>
     `).join("");
 
@@ -623,9 +631,9 @@
     grid.innerHTML = product.researchNotes.map(note => `
       <article class="research-card">
         <div class="research-method">${note.method}</div>
-        <h3>Key Finding</h3>
+        <h3>Evidenza Chiave</h3>
         <p>${note.finding}</p>
-          <div class="research-impact"><strong>Impact on dashboard:</strong> ${note.impact}</div>
+          <div class="research-impact"><strong>Impatto sulla dashboard:</strong> ${note.impact}</div>
       </article>
     `).join("");
   }
@@ -650,7 +658,7 @@
     btn.addEventListener("click", () => {
       const { jsPDF } = window.jspdf;
       if (!jsPDF) {
-        alert("PDF library not loaded. Please try again later.");
+        alert("Libreria PDF non caricata. Riprova più tardi.");
         return;
       }
 
@@ -671,51 +679,51 @@
       doc.rect(0, 0, pageWidth, 80, "F");
       doc.setTextColor(42, 211, 167);
       doc.setFontSize(10);
-      doc.text("CUSTOMER EXPERIENCE ANALYTICS", margin, 32);
+      doc.text("ANALISI CUSTOMER EXPERIENCE", margin, 32);
       doc.setTextColor(255, 255, 255);
       doc.setFontSize(20);
-      doc.text("Customer Data Quality & Privacy Checklist", margin, 58);
+      doc.text("Checklist Qualità Dati Cliente e Privacy", margin, 58);
 
       y = 100;
       doc.setTextColor(100, 100, 100);
       doc.setFontSize(9);
-      doc.text("Customer Experience Data Analytics Cockpit | Portfolio Case Study", margin, y);
+      doc.text("Cockpit di analisi dati per Customer Experience | Caso Studio Portfolio", margin, y);
 
       y += 22;
       doc.setTextColor(60, 60, 60);
-      doc.text("Document", margin, y);
+      doc.text("Documento", margin, y);
       doc.setTextColor(30, 30, 30);
-      doc.text("Customer Data Quality & Privacy Checklist", margin + 62, y);
+      doc.text("Checklist Qualità Dati Cliente e Privacy", margin + 62, y);
       doc.setTextColor(60, 60, 60);
-      doc.text("Version", pageWidth - 185, y);
+      doc.text("Versione", pageWidth - 185, y);
       doc.setTextColor(30, 30, 30);
       doc.text("v1.0", pageWidth - 135, y);
 
       y += 16;
       doc.setTextColor(60, 60, 60);
-      doc.text("Date", margin, y);
+      doc.text("Data", margin, y);
       doc.setTextColor(30, 30, 30);
-      doc.text("April 2026", margin + 62, y);
+      doc.text("Aprile 2026", margin + 62, y);
       doc.setTextColor(60, 60, 60);
-      doc.text("Owner", pageWidth - 185, y);
+      doc.text("Responsabile", pageWidth - 185, y);
       doc.setTextColor(30, 30, 30);
       doc.text("Riccardo Capanna", pageWidth - 135, y);
 
       y += 16;
       doc.setTextColor(60, 60, 60);
-      doc.text("Status", margin, y);
+      doc.text("Stato", margin, y);
       doc.setTextColor(30, 30, 30);
-      doc.text("Draft / For Review", margin + 62, y);
+      doc.text("Bozza / Per revisione", margin + 62, y);
 
       y += 26;
       doc.setTextColor(30, 30, 30);
       doc.setFontSize(10);
-      doc.text("This document summarizes the customer-data quality checks, privacy guardrails, human review expectations, and operational risk boundaries designed for customer experience analytics workflows.", margin, y, { maxWidth: pageWidth - margin * 2 });
+      doc.text("Questo documento sintetizza controlli di qualità dei dati cliente, privacy guardrail, aspettative di revisione umana e confini di rischio operativo per workflow di analisi Customer Experience.", margin, y, { maxWidth: pageWidth - margin * 2 });
 
       y += 55;
       doc.setFontSize(13);
       doc.setTextColor(7, 9, 20);
-      doc.text("Customer Data Quality & Privacy Guardrails", margin, y);
+      doc.text("Guardrail Qualità Dati Cliente e Privacy", margin, y);
       y += 18;
 
       const guardrails = data.adoptionGovernance.guardrails;
@@ -736,7 +744,7 @@
       y += 20;
       doc.setFontSize(13);
       doc.setTextColor(7, 9, 20);
-      doc.text("Customer Data Quality & Privacy Checklist", margin, y);
+      doc.text("Checklist Qualità Dati Cliente e Privacy", margin, y);
       y += 18;
 
       const checklist = data.complianceChecklist;
@@ -771,7 +779,7 @@
       ensurePageSpace(110);
       doc.setFontSize(13);
       doc.setTextColor(7, 9, 20);
-      doc.text("Reporting Guide Summary", margin, y);
+      doc.text("Sintesi Guida al Reporting", margin, y);
       y += 18;
 
       const training = data.adoptionGovernance.trainingPlan;
@@ -808,11 +816,11 @@
         doc.setPage(i);
         doc.setFontSize(8);
         doc.setTextColor(150, 150, 150);
-        doc.text(`Page ${i} of ${totalPages} | Customer Experience Data Analytics Cockpit | Case Study`, margin, 810);
-        doc.text("Simulated data | Not a legal privacy assessment", pageWidth - margin, 810, { align: "right" });
+        doc.text(`Pagina ${i} di ${totalPages} | Cockpit di analisi dati per Customer Experience | Caso Studio`, margin, 810);
+        doc.text("Dati simulati | Non è una valutazione legale privacy", pageWidth - margin, 810, { align: "right" });
       }
 
-      doc.save("Customer_Data_Quality_Privacy_Checklist_CX_Analytics.pdf");
+      doc.save("Checklist_Qualita_Dati_Cliente_Privacy_CX_Analytics.pdf");
     });
   }
 
@@ -832,7 +840,7 @@
 
   function chartFallback() {
     document.querySelectorAll(".chart-container").forEach(container => {
-      container.innerHTML = `<div class="chart-fallback">Charts require Chart.js. The underlying values are still rendered in the KPI cards and tables.</div>`;
+      container.innerHTML = `<div class="chart-fallback">I grafici richiedono Chart.js. I valori sottostanti sono comunque mostrati nelle KPI card e nelle tabelle.</div>`;
     });
   }
 
@@ -859,7 +867,7 @@
         labels: aggregates.map(item => item.stage),
         datasets: [
           {
-            label: "Total feedback volume",
+            label: "Volume feedback totale",
             data: aggregates.map(item => Number((item.total / 1000000).toFixed(2))),
             backgroundColor: "rgba(212, 168, 83, 0.55)",
             borderColor: "rgba(212, 168, 83, 1)",
@@ -867,8 +875,8 @@
             borderRadius: 6
           },
           {
-            label: "Weighted insight volume",
-            data: aggregates.map(item => Number((item.weighted / 1000000).toFixed(2))),
+            label: "Volume insight ponderato",
+            data: aggregates.map(item => Number((item.ponderato / 1000000).toFixed(2))),
             backgroundColor: "rgba(199, 91, 58, 0.45)",
             borderColor: "rgba(199, 91, 58, 1)",
             borderWidth: 1,
@@ -880,7 +888,7 @@
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-          y: { beginAtZero: true, ticks: { callback: value => `${value}M feedback units` } },
+          y: { beginAtZero: true, ticks: { callback: value => `${value}M unità feedback` } },
           x: { ticks: { maxRotation: 45, minRotation: 0 } }
         },
         plugins: { legend: { labels: { boxWidth: 12 } } }
@@ -918,7 +926,7 @@
       data: {
         labels: aggregates.map(item => item.stage),
         datasets: [{
-          label: "Average days in current stage",
+          label: "Average giorni in current stage",
           data: aggregates.map(item => Number(item.avgDays.toFixed(1))),
           borderColor: "rgba(212, 168, 83, 1)",
           backgroundColor: "rgba(212, 168, 83, 0.12)",
@@ -931,7 +939,7 @@
     }));
 
     const topAccounts = [...data.accounts]
-      .map(account => ({ ...account, score: weightedFitScore(account) }))
+      .map(account => ({ ...account, score: ponderatoFitScore(account) }))
       .sort((a, b) => b.score - a.score)
       .slice(0, 8);
 
@@ -940,7 +948,7 @@
       data: {
         labels: topAccounts.map(account => account.company),
         datasets: [{
-          label: "Weighted fit score",
+          label: "Fit score ponderato",
           data: topAccounts.map(account => Number(account.score.toFixed(2))),
           backgroundColor: "rgba(212, 168, 83, 0.5)",
           borderColor: "rgba(212, 168, 83, 1)",
@@ -983,7 +991,7 @@
 
   function init() {
     if (!data) {
-      console.error("cockpitData was not loaded. Check data.js for syntax or loading errors.");
+      console.error("cockpitData non è stato caricato. Controlla data.js per errori di sintassi o caricamento.");
       setFallbackMetrics();
       return;
     }
@@ -1028,7 +1036,7 @@
     try {
       init();
     } catch (error) {
-      console.error("Cockpit initialization failed.", error);
+      console.error("Inizializzazione cockpit non riuscita.", error);
       setFallbackMetrics();
       chartFallback();
     }
