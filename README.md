@@ -1,3 +1,6 @@
+[`Live Demo`](https://errer441122.github.io/ducati-cx-case-study/)  
+[![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-CC0000?style=for-the-badge)](https://errer441122.github.io/ducati-cx-case-study/)
+
 # Customer Experience Data Analyst Variant
 
 This branch contains a standalone Ducati-oriented Customer Experience analytics project. It is intentionally separated from the original `case-study` main project and keeps its own project files at the repository root.
