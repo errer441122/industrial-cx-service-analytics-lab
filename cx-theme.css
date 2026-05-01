@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --bg: #f4f5f7;
   --bg-elevated: #ffffff;
   --panel: rgba(255, 255, 255, 0.94);
@@ -180,6 +181,135 @@ body::before {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.kpi-card,
+.metric-card,
+.review-path-card,
+.summary-card,
+.output-card,
+.story-card,
+.insight-card,
+.criteria-card,
+.methodology-card,
+.playbook-card,
+.formula-panel,
+.probability-panel,
+.brief-control-panel,
+.brief-output-panel,
+.chart-card,
+.workflow-card,
+.research-card,
+.final-note,
+.table-container {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.kpi-card:hover,
+.metric-card:hover,
+.output-card:hover,
+.story-card:hover,
+.review-path-card:hover,
+.weight-card:hover,
+.workflow-card:hover,
+.research-card:hover {
+  background: var(--panel-hover);
+}
+
+.role-fit-block,
+.brief-header,
+.workbook-subsection + .workbook-subsection,
+.workflow-card .workflow-header {
+  border-color: var(--border);
+}
+
+.review-path-meta,
+.section-anchor-card,
+.probability-pill,
+.kanban-column,
+.formula-text,
+.weight-card,
+.prompt-box,
+.brief-card section,
+.checklist-item,
+.workflow-action,
+.research-impact,
+.disclaimer-box {
+  background: var(--panel-soft);
+  color: var(--text-secondary);
+}
+
+.kanban-card {
+  background: #ffffff;
+  color: var(--text);
+}
+
+th {
+  color: var(--text-secondary);
+  background: rgba(18, 24, 38, 0.035);
+}
+
+td {
+  color: var(--text-secondary);
+}
+
+tbody tr:hover {
+  background: rgba(201, 0, 24, 0.035);
+}
+
+.mono,
+.card-meta,
+.card-next,
+.weight-card p,
+.workflow-value,
+.brief-control-panel label,
+.panel-note,
+td small {
+  color: var(--muted);
+}
+
+select {
+  color: var(--text);
+  background: #ffffff;
+}
+
+.priority-high,
+.priority-medium,
+.priority-low,
+.workflow-trigger,
+.badge-high,
+.badge-medium,
+.badge-low {
+  color: var(--text);
+}
+
+.priority-high,
+.workflow-trigger,
+.badge-medium {
+  background: rgba(183, 121, 31, 0.12);
+  border-color: rgba(183, 121, 31, 0.26);
+}
+
+.priority-medium {
+  background: rgba(201, 0, 24, 0.08);
+  border-color: rgba(201, 0, 24, 0.18);
+}
+
+.priority-low,
+.badge-low {
+  background: rgba(22, 120, 95, 0.1);
+  border-color: rgba(22, 120, 95, 0.22);
+}
+
+.badge-high {
+  background: rgba(201, 0, 24, 0.1);
+  border-color: rgba(201, 0, 24, 0.24);
+}
+
+.check-indicator.muted {
+  border-color: var(--border-strong);
+  background: rgba(18, 24, 38, 0.04);
 }
 
 @media (max-width: 980px) {

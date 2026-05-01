@@ -856,7 +856,7 @@
     }
 
     resetCharts();
-    Chart.defaults.color = "rgba(180, 189, 208, 0.72)";
+    Chart.defaults.color = "rgba(56, 65, 82, 0.82)";
     Chart.defaults.font.family = "Inter, Arial, sans-serif";
 
     const aggregates = stageAggregates();
