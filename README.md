@@ -3,7 +3,7 @@
 
 # Customer Experience Data Analyst Variant
 
-This branch contains a standalone Ducati-oriented Customer Experience analytics project. It is intentionally separated from the original `case-study` main project and keeps its own project files at the repository root.
+This branch contains a standalone Ducati-oriented Customer Experience analytics project. It is intentionally separated from the main AI governance cockpit project and keeps its own project files at the repository root.
 
 ## What is inside
 

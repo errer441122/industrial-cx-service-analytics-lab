@@ -1,0 +1,7 @@
+_local-check*.png
+live-check*.png
+*.log
+*.err.log
+*.bak
+__pycache__/
+.pytest_cache/
