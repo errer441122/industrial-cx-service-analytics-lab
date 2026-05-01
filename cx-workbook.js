@@ -1,7 +1,7 @@
 ﻿(function () {
   "use strict";
 
-  const data = window.cockpitData;
+  const data = window.cxWorkbookData;
 
   const state = {
     chartInstances: []
@@ -183,7 +183,7 @@
       <section class="kanban-column">
         <div class="kanban-header">
           <span>${group.stage}</span>
-          <small>${formatProbability(group.probability)} · ${formatCurrency(group.ponderato, 2)} ponderato</small>
+          <small>${formatProbability(group.probability)}  -  ${formatCurrency(group.ponderato, 2)} ponderato</small>
         </div>
         <div class="kanban-cards">
           ${group.deals.length ? group.deals.map(deal => {
@@ -264,7 +264,7 @@
     if (!select || !generateBtn || !output || !promptList) return;
 
     select.innerHTML = `<option value="">Seleziona segmento cliente</option>` + data.accounts
-      .map(account => `<option value="${account.id}">${account.company} Â· ${account.sector}</option>`)
+      .map(account => `<option value="${account.id}">${account.company}  -  ${account.sector}</option>`)
       .join("");
 
     promptList.innerHTML = data.briefPromptStructure.map(item => `<li>${item}</li>`).join("");
@@ -687,7 +687,7 @@
       y = 100;
       doc.setTextColor(100, 100, 100);
       doc.setFontSize(9);
-      doc.text("Cockpit di analisi dati per Customer Experience | Caso Studio Portfolio", margin, y);
+      doc.text("Ducati CX Analytics Workbook | Caso Studio Portfolio", margin, y);
 
       y += 22;
       doc.setTextColor(60, 60, 60);
@@ -816,7 +816,7 @@
         doc.setPage(i);
         doc.setFontSize(8);
         doc.setTextColor(150, 150, 150);
-        doc.text(`Pagina ${i} di ${totalPages} | Cockpit di analisi dati per Customer Experience | Caso Studio`, margin, 810);
+        doc.text(`Pagina ${i} di ${totalPages} | Ducati CX Analytics Workbook | Caso Studio`, margin, 810);
         doc.text("Dati simulati | Non è una valutazione legale privacy", pageWidth - margin, 810, { align: "right" });
       }
 
@@ -991,7 +991,7 @@
 
   function init() {
     if (!data) {
-      console.error("cockpitData non è stato caricato. Controlla data.js per errori di sintassi o caricamento.");
+      console.error("cxWorkbookData non è stato caricato. Controlla cx-data.js per errori di sintassi o caricamento.");
       setFallbackMetrics();
       return;
     }
@@ -1003,7 +1003,7 @@
     setText("project-disclaimer", data.project.disclaimer);
     setText("header-subtitle", data.project.headerSubtitle);
     setText("profile-label", data.project.profileLabel);
-    setText("cta-cockpit", data.project.cockpitCta);
+    setText("cta-dashboard", data.project.dashboardCta);
     setText("cta-adoption", data.project.adoptionCta);
     setText("cta-product", data.project.productCta);
     setText("scoring-disclaimer", data.project.scoringDisclaimer);
@@ -1036,7 +1036,7 @@
     try {
       init();
     } catch (error) {
-      console.error("Inizializzazione cockpit non riuscita.", error);
+      console.error("Inizializzazione workbook non riuscita.", error);
       setFallbackMetrics();
       chartFallback();
     }

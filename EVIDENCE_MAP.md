@@ -4,8 +4,8 @@ This file maps the Customer Experience Data Analyst requirements to concrete pro
 
 | Requirement | Where to inspect it | Evidence shown |
 | --- | --- | --- |
-| Collect, organize, and analyze customer data | `index.html`, `ducati-overrides.js`, `dashboard-workbook/customer_experience_dashboard.xlsx` | Simulated survey/CRM/service/dealer/digital-touchpoint data model and dashboard workflow |
-| Customer satisfaction reporting | Live cockpit `Reporting` section and Excel `Dashboard` sheet | Total feedback volume, weighted insight volume, satisfaction signals, journey-stage reporting |
+| Collect, organize, and analyze customer data | `index.html`, `cx-data.js`, `dashboard-workbook/customer_experience_dashboard.xlsx` | Simulated survey/CRM/service/dealer/digital-touchpoint data model and dashboard workflow |
+| Customer satisfaction reporting | Live workbook `Reporting` section and Excel `Dashboard` sheet | Total feedback volume, weighted insight volume, satisfaction signals, journey-stage reporting |
 | Customer segmentation and profiling | `Customer Segment Scoring` section | Segment categories, scoring components, priority labels, actionability logic |
 | Trend identification | `Journey Bottlenecks and CX Actions` section | Signals, likely causes, recommended actions, expected impact |
 | Cross-functional collaboration | `Insight-to-Action Tracker` and `Stakeholder Map` | CX, CRM, dealer, service, product, digital, data/privacy stakeholder handoff logic |
@@ -29,7 +29,7 @@ customer-analytics, data-analysis, dashboard, excel, cx, portfolio-project, cust
 
 ## Interview Framing
 
-> I built a Customer Experience analytics cockpit using simulated data to show how I would organize customer signals, report satisfaction trends, segment customers, identify journey friction, and translate findings into action-ready recommendations for CX, CRM, dealer, service, product, and data/privacy stakeholders.
+> I built a Customer Experience analytics workbook using simulated data to show how I would organize customer signals, report satisfaction trends, segment customers, identify journey friction, and translate findings into action-ready recommendations for CX, CRM, dealer, service, product, and data/privacy stakeholders.
 
 ## What Not To Claim
 

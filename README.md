@@ -1,14 +1,17 @@
 [`Live Demo`](https://errer441122.github.io/ducati-cx-case-study/)  
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-CC0000?style=for-the-badge)](https://errer441122.github.io/ducati-cx-case-study/)
 
-# Customer Experience Data Analyst Variant
+# Ducati CX Analytics Workbook
 
-This branch contains a standalone Ducati-oriented Customer Experience analytics project. It is intentionally separated from the main AI governance cockpit project and keeps its own project files at the repository root.
+This repository is a standalone Customer Experience analytics workbook. The center of gravity is simulated customer data, Excel dashboarding, journey friction analysis, segmentation, and action tracking for a Data Analyst Customer Experience application.
 
 ## What is inside
 
-- `index.html` - open this to review the Customer Experience analytics cockpit.
-- `ducati-overrides.js` - Ducati/CX-specific data and copy for this standalone cockpit.
+- `index.html` - open this to review the Customer Experience analytics workbook.
+- `cx-data.js` - standalone Ducati/CX simulated dataset and content model.
+- `cx-workbook.js` - rendering logic for the CX workbook.
+- `workbook-base.css` - shared workbook layout styles.
+- `cx-theme.css` - Ducati/CX-specific visual layer.
 - `dashboard-workbook/customer_experience_dashboard.xlsx` - Excel dashboard prototype using simulated CX data.
 - `PROJECT_POSITIONING.md` - short explanation of how to present the project for the Ducati role.
 - `EVIDENCE_MAP.md` - requirement-to-evidence map for recruiter and hiring-manager review.
@@ -22,7 +25,7 @@ This branch contains a standalone Ducati-oriented Customer Experience analytics 
 
 Use this version as a Customer Experience Data Analyst portfolio piece. The strongest angle is:
 
-> I adapted my analytics cockpit into a Customer Experience case study showing how I would collect, organize and analyze customer feedback, build dashboard views, segment customers, identify journey trends and translate findings into clear improvement actions.
+> I built a Customer Experience analytics workbook showing how I would collect, organize and analyze customer feedback, build dashboard views, segment customers, identify journey trends and translate findings into clear improvement actions.
 
 The project uses simulated data only. It does not claim access to Ducati systems, Ducati customer data, dealer data or internal processes.
 

@@ -646,12 +646,12 @@ h3 {
 }
 
 .review-path-card h3,
-.cockpit-overview h3 {
+.workbook-overview h3 {
   margin-bottom: 0;
 }
 
 .review-path-card p,
-.cockpit-overview p,
+.workbook-overview p,
 .section-anchor-copy {
   margin-bottom: 0;
   color: var(--muted);
@@ -816,7 +816,7 @@ h3 {
   color: var(--text);
 }
 
-.cockpit-overview {
+.workbook-overview {
   display: grid;
   grid-template-columns: minmax(260px, 300px) 1fr;
   gap: 24px;
@@ -856,11 +856,11 @@ h3 {
 }
 
 section[id],
-.cockpit-subsection {
+.workbook-subsection {
   scroll-margin-top: var(--sticky-offset);
 }
 
-.cockpit-subsection + .cockpit-subsection {
+.workbook-subsection + .workbook-subsection {
   margin-top: 36px;
   padding-top: 36px;
   border-top: 1px solid var(--border);
@@ -1797,7 +1797,7 @@ select option {
   .playbook-grid,
   .methodology-grid,
   .section-anchor-grid,
-  .cockpit-overview { grid-template-columns: 1fr; }
+  .workbook-overview { grid-template-columns: 1fr; }
   .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .profile-chip { display: none; }
   .site-footer { padding: 0 20px 22px; }
