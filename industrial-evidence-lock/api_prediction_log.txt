@@ -1,0 +1,13 @@
+{
+  "asset_id": "line-01-pump-01",
+  "bike_family": "synthetic-industrial-asset",
+  "decision_boundary": "advisory human-review triage only",
+  "disclaimer": "Simulation only; not a production industrial decision system.",
+  "event_id": "line-01-pump-01",
+  "human_review_required": false,
+  "model_source": "local_simulated_baseline",
+  "predicted_service_escalation": 0,
+  "predicted_service_escalation_probability": 0.4142,
+  "risk_band": "low",
+  "risk_score": 0.4142
+}

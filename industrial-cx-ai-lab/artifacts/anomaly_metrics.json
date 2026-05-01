@@ -1,0 +1,49 @@
+{
+  "dataset": {
+    "positive_anomaly_labels": 78,
+    "rows": 384,
+    "simulation_boundary": "Synthetic labels from controlled anomaly injection."
+  },
+  "disclaimer": "Local CPU simulation only; no real OPC UA, MQTT, Influx, Grafana, Ducati, plant, dealer, or production telemetry integration.",
+  "feature_set": [
+    "rpm",
+    "temperature_c",
+    "vibration_mm_s",
+    "pressure_bar",
+    "torque_nm",
+    "operating_hours",
+    "error_code_count",
+    "service_delay_days",
+    "temperature_over_85",
+    "vibration_over_5",
+    "pressure_under_2",
+    "error_burst_flag",
+    "maintenance_delay_flag"
+  ],
+  "isolation_forest": {
+    "accuracy": 0.9375,
+    "contamination": 0.2031,
+    "f1": 0.8462,
+    "false_negative": 12,
+    "false_positive": 12,
+    "model": "sklearn.ensemble.IsolationForest",
+    "pr_auc": 0.9346,
+    "precision": 0.8462,
+    "recall": 0.8462,
+    "roc_auc": 0.9718,
+    "true_negative": 294,
+    "true_positive": 66
+  },
+  "rule_based": {
+    "accuracy": 0.9479,
+    "f1": 0.8529,
+    "false_negative": 20,
+    "false_positive": 0,
+    "pr_auc": 0.9132,
+    "precision": 1.0,
+    "recall": 0.7436,
+    "roc_auc": 0.9411,
+    "true_negative": 306,
+    "true_positive": 58
+  }
+}

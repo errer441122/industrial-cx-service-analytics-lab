@@ -1,20 +1,19 @@
 # Industrial CX AI Lab
 
-This lab upgrades the Ducati CX workbook from dashboard-only evidence to a small AI/data-engineering project. It uses simulated after-sales and telemetry-style data to connect customer experience, service operations, Industrial IoT, and risk scoring.
+This lab upgrades the Ducati CX workbook from dashboard-only evidence to a small AI/data-engineering project. It uses simulated after-sales and telemetry-style data to connect customer experience, service operations, Industrial IoT, anomaly detection, and service-risk scoring.
 
 It uses simulated data only. It does not represent Ducati systems, customers, dealers, motorcycles, telemetry, or internal processes.
 
 ## What It Demonstrates
 
-- OPC UA/Kepware-style tag naming for simulated field data.
-- Industrial after-sales telemetry features: vibration, temperature, oil pressure, battery voltage, service delay, warranty claims, and telemetry dropouts.
-- Text-mining features from customer notes.
-- Anomaly feature engineering for service-risk triage.
-- A reproducible ML classifier for churn/service escalation risk.
-- SQLite feature mart for SQL/data-engineering review.
-- Influx line protocol export for time-series monitoring.
-- Grafana dashboard JSON stub for BI-REX/industrial monitoring relevance.
-- Slurm batch script for HPC-style scoring.
+- Deterministic simulated time-series telemetry with controlled anomaly injection.
+- Expected fields: `timestamp`, `asset_id`, `rpm`, `temperature_c`, `vibration_mm_s`, `pressure_bar`, `torque_nm`, `operating_hours`, `error_code_count`, `service_delay_days`, `customer_satisfaction_score`, `anomaly_label`, and `service_escalation_label`.
+- Rule-based anomaly baseline and IsolationForest anomaly benchmark.
+- Service-risk classifier with ROC-AUC, PR-AUC, F1, precision, recall, and feature importance.
+- Influx line protocol export for time-series monitoring review.
+- Simulated OPC UA, MQTT, Influx, Grafana, and Telegraf design artifacts in `ops/`.
+- Maintenance policy note with human-in-the-loop boundaries.
+- Slurm batch packaging for HPC-style scoring.
 
 ## Why This Exists
 
@@ -33,11 +32,19 @@ The original workbook was useful for analytics and stakeholder communication but
 From the repository root:
 
 ```bash
-python3 industrial-cx-ai-lab/src/run_pipeline.py
-python3 -m unittest discover industrial-cx-ai-lab/tests
+python industrial-cx-ai-lab/src/run_pipeline.py
+python -m pytest -q industrial-cx-ai-lab/tests
 ```
 
 Outputs are written to `industrial-cx-ai-lab/artifacts/` and ignored by git.
+
+Key outputs:
+
+- `artifacts/anomaly_metrics.json`
+- `artifacts/service_risk_metrics.json`
+- `artifacts/feature_importance.csv`
+- `artifacts/maintenance_policy_note.md`
+- `artifacts/influx_line_protocol.txt`
 
 ## Reviewer Boundary
 

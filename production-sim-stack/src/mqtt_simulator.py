@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import importlib.util
 import json
 import sys
@@ -24,9 +25,9 @@ def _load_pipeline_module():
 pipeline = _load_pipeline_module()
 
 
-def build_messages() -> list[dict[str, object]]:
+def build_messages(limit: int | None = None) -> list[dict[str, object]]:
     messages = []
-    for event in pipeline.score_events(pipeline.load_events()):
+    for event in pipeline.score_events(pipeline.load_events())[:limit]:
         messages.append(
             {
                 "topic": event["mqtt_topic"],
@@ -38,6 +39,7 @@ def build_messages() -> list[dict[str, object]]:
                     "opcua_node": event["opcua_node"],
                     "predicted_service_escalation_probability": event["predicted_service_escalation_probability"],
                     "predicted_service_escalation": event["predicted_service_escalation"],
+                    "simulation_note": "Dry-run simulated MQTT payload; no real broker or industrial integration.",
                     "decision_boundary": "advisory human-review triage only",
                 },
             }
@@ -45,18 +47,29 @@ def build_messages() -> list[dict[str, object]]:
     return messages
 
 
-def write_messages(output_dir: Path = ARTIFACT_DIR) -> Path:
+def write_messages(output_dir: Path = ARTIFACT_DIR, limit: int | None = None) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     path = output_dir / "mqtt_messages.jsonl"
     path.write_text(
-        "\n".join(json.dumps(message, sort_keys=True) for message in build_messages()) + "\n",
+        "\n".join(json.dumps(message, sort_keys=True) for message in build_messages(limit=limit)) + "\n",
         encoding="utf-8",
     )
     return path
 
 
 def main() -> None:
-    path = write_messages()
+    parser = argparse.ArgumentParser(description="Generate simulated MQTT messages for local review.")
+    parser.add_argument("--dry-run", action="store_true", help="Print messages instead of writing JSONL.")
+    parser.add_argument("--messages", type=int, default=None, help="Limit the number of messages.")
+    args = parser.parse_args()
+
+    if args.dry_run:
+        for message in build_messages(limit=args.messages):
+            print(json.dumps(message, sort_keys=True))
+        print("Dry run only: no MQTT broker was contacted.")
+        return
+
+    path = write_messages(limit=args.messages)
     print(f"Generated MQTT simulation messages: {path}")
 
 

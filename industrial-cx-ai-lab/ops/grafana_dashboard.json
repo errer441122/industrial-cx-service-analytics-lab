@@ -1,0 +1,108 @@
+{
+  "title": "Industrial CX Service Telemetry - Simulated",
+  "uid": "industrial-cx-sim",
+  "schemaVersion": 38,
+  "version": 1,
+  "tags": [
+    "portfolio",
+    "simulation",
+    "industrial-cx",
+    "not-real-integration"
+  ],
+  "timezone": "browser",
+  "description": "Simulated Grafana dashboard design artifact. It references local synthetic Influx line protocol only and is not connected to real Ducati, plant, dealer, InfluxDB, Grafana, OPC UA, MQTT, cloud, or edge infrastructure.",
+  "annotations": {
+    "list": [
+      {
+        "name": "Simulation boundary",
+        "type": "dashboard",
+        "enable": true,
+        "hide": false,
+        "iconColor": "red",
+        "text": "Portfolio simulation only; no real industrial telemetry integration."
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Temperature by Asset",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "SIMULATED_INFLUX"
+      },
+      "targets": [
+        {
+          "query": "from(bucket: \"industrial_cx_sim\") |> range(start: -6h) |> filter(fn: (r) => r._measurement == \"industrial_service_telemetry\" and r._field == \"temperature_c\")"
+        }
+      ],
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      }
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Vibration by Asset",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "SIMULATED_INFLUX"
+      },
+      "targets": [
+        {
+          "query": "from(bucket: \"industrial_cx_sim\") |> range(start: -6h) |> filter(fn: (r) => r._measurement == \"industrial_service_telemetry\" and r._field == \"vibration_mm_s\")"
+        }
+      ],
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      }
+    },
+    {
+      "id": 3,
+      "type": "stat",
+      "title": "Synthetic Service Escalation Labels",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "SIMULATED_INFLUX"
+      },
+      "targets": [
+        {
+          "query": "from(bucket: \"industrial_cx_sim\") |> range(start: -6h) |> filter(fn: (r) => r._measurement == \"industrial_service_telemetry\" and r._field == \"service_escalation_label\") |> sum()"
+        }
+      ],
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 8,
+        "h": 6
+      }
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Pressure Drop Watch",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "SIMULATED_INFLUX"
+      },
+      "targets": [
+        {
+          "query": "from(bucket: \"industrial_cx_sim\") |> range(start: -6h) |> filter(fn: (r) => r._measurement == \"industrial_service_telemetry\" and r._field == \"pressure_bar\")"
+        }
+      ],
+      "gridPos": {
+        "x": 8,
+        "y": 8,
+        "w": 16,
+        "h": 6
+      }
+    }
+  ]
+}

@@ -9,6 +9,12 @@ industrial-cx-ai-lab/artifacts/*
 !industrial-cx-ai-lab/artifacts/.gitkeep
 !industrial-cx-ai-lab/artifacts/metrics.example.json
 !industrial-cx-ai-lab/artifacts/model_card.example.json
+!industrial-cx-ai-lab/artifacts/anomaly_metrics.json
+!industrial-cx-ai-lab/artifacts/service_risk_metrics.json
+!industrial-cx-ai-lab/artifacts/feature_importance.csv
+!industrial-cx-ai-lab/artifacts/maintenance_policy_note.md
+!industrial-cx-ai-lab/artifacts/influx_line_protocol.txt
+!industrial-cx-ai-lab/artifacts/run_manifest.json
 production-sim-stack/artifacts/*
 !production-sim-stack/artifacts/.gitkeep
 !production-sim-stack/artifacts/model_card.example.json

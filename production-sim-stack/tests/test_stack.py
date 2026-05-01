@@ -58,7 +58,49 @@ class IndustrialProductionSimulationStackTest(unittest.TestCase):
         payload = pipeline.load_events()[1]
         response = api.score_payload(payload)
         self.assertIn("predicted_service_escalation_probability", response)
+        self.assertIn("risk_score", response)
         self.assertEqual(response["decision_boundary"], "advisory human-review triage only")
+
+    def test_api_anomaly_scoring_function_is_dependency_light(self):
+        payload = {
+            "asset_id": "line-01-pump-01",
+            "temperature_c": 91.0,
+            "vibration_mm_s": 6.4,
+            "pressure_bar": 1.2,
+            "service_delay_days": 14,
+            "error_code_count": 3,
+        }
+        response = api.score_anomaly_payload(payload)
+        self.assertTrue(response["human_review_required"])
+        self.assertEqual(response["model_source"], "local_simulated_rule_baseline")
+
+    def test_fastapi_endpoints_when_available(self):
+        if api.app is None:
+            self.skipTest("FastAPI is not installed.")
+        try:
+            from fastapi.testclient import TestClient
+        except Exception as exc:  # pragma: no cover - optional dependency path
+            self.skipTest(f"FastAPI TestClient unavailable: {exc}")
+
+        client = TestClient(api.app)
+        health = client.get("/health")
+        self.assertEqual(health.status_code, 200)
+        self.assertEqual(health.json()["status"], "ok")
+
+        payload = {
+            "asset_id": "line-01-pump-01",
+            "temperature_c": 91.0,
+            "vibration_mm_s": 6.4,
+            "pressure_bar": 1.2,
+            "service_delay_days": 14,
+            "customer_satisfaction_score": 5.7,
+        }
+        service = client.post("/score/service-risk", json=payload)
+        anomaly = client.post("/score/anomaly", json=payload)
+        self.assertEqual(service.status_code, 200)
+        self.assertEqual(anomaly.status_code, 200)
+        self.assertIn("risk_score", service.json())
+        self.assertIn("anomaly_score", anomaly.json())
 
 
 if __name__ == "__main__":

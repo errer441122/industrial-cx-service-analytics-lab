@@ -1,0 +1,29 @@
+{
+  "version": "v1.0-ai-internship-evidence-lock",
+  "repository": "ducati-cx-case-study",
+  "primary_stack": [
+    "Python",
+    "scikit-learn",
+    "industrial time-series simulation",
+    "MQTT/OPC UA-style contracts",
+    "Influx/Grafana artifacts",
+    "FastAPI-compatible scoring",
+    "Docker Compose",
+    "Slurm-ready scripts"
+  ],
+  "reproduce": [
+    "make setup",
+    "make evidence"
+  ],
+  "outputs": [
+    "evidence-lock/results/portfolio_evidence_report.md",
+    "evidence-lock/results/metrics_summary.json",
+    "evidence-lock/results/api_smoke_test.md",
+    "evidence-lock/results/docker_smoke_test.md",
+    "industrial-evidence-lock/influx_line_protocol_sample.lp",
+    "industrial-evidence-lock/mqtt_terminal_log.txt",
+    "industrial-evidence-lock/api_prediction_log.txt",
+    "industrial-evidence-lock/feature_mart_duckdb_output.md"
+  ],
+  "boundary": "Portfolio evidence only; no production, safety, warranty, employer, HPC, or cloud deployment claim."
+}

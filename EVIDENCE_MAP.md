@@ -1,55 +1,47 @@
-# Evidence Map - Ducati Customer Experience Data Analyst
+# Evidence Map - Industrial CX And Service Analytics
 
-This file maps the Customer Experience Data Analyst requirements and AI/data internship signals to concrete project evidence.
+This file maps target-role requirements to concrete repository evidence. It favors inspectable files, commands, tests, and generated artifacts over broad claims.
 
-| Requirement | Where to inspect it | Evidence shown |
+## Role Evidence
+
+| Target role / employer type | Requirement signal | Where to inspect it | Evidence shown | Honest gap |
+| --- | --- | --- | --- | --- |
+| BI-REX Data Engineer | Python/bash, ETL, time-series data, OPC UA/MQTT, Influx/Grafana, Slurm | `industrial-cx-ai-lab/`, `industrial-cx-ai-lab/ops/`, `production-sim-stack/`, `hpc/`, `benchmarks/` | simulated telemetry, tag map, topic contract, line protocol, dashboard JSON, dry-run MQTT, Slurm array, local CPU benchmark | No real plant, broker, edge, BI-REX, IPAZIA, or production execution |
+| BI-REX AI Engineer | anomaly detection, predictive maintenance direction, service-risk ML | `industrial-cx-ai-lab/src/anomaly_detection.py`, `service_risk_model.py`, artifacts JSON/CSV/MD | rule baseline, IsolationForest, RandomForest service-risk classifier, feature importance, policy note | Synthetic labels and no validated industrial data |
+| PwC Data & AI | dashboard storytelling, stakeholder communication, SQL, recommendations | workbook, `cx-analyst-lab/`, `sql/`, `docs/reviewer/PWC_ANALYTICS_STORY.md` | CX segmentation, KPI reporting, action tracker, SQL/DWH shortcut, communication note | No client deployment |
+| CINECA / IT4LIA | Slurm-ready workload, benchmark, packaging discipline | `hpc/run_industrial_scoring_array.sbatch`, `benchmarks/industrial_scoring_benchmark.py`, benchmark artifact | local CPU benchmark and Slurm job-array packaging | No cluster, GPU, Leonardo, or AI Factory execution |
+| CRIF support evidence | data quality, transparent scoring, model limits | `scripts/validate-data.mjs`, `ml-baseline/`, `production-sim-stack/src/model_adapter.py` | validation, model boundary, dependency-light scoring adapter | Secondary evidence only, no CRIF data |
+| UNDP support evidence | responsible data communication | `docs/reviewer/CLAIMS_AND_LIMITATIONS.md`, maintenance policy note | human review and no automated decision boundary | Context is not development/humanitarian |
+
+## Technical Artifact Map
+
+| If the reviewer is checking for... | Inspect this first | Evidence now present |
 | --- | --- | --- |
-| Collect, organize, and analyze customer data | `index.html`, `cx-data.js`, `dashboard-workbook/customer_experience_dashboard.xlsx` | Simulated survey/CRM/service/dealer/digital-touchpoint data model and dashboard workflow |
-| Customer satisfaction reporting | Live workbook `Reporting` section, Excel `Dashboard` sheet, `cx-analyst-lab/reports/customer_satisfaction_brief.md` | Total feedback volume, weighted insight volume, satisfaction rate, follow-up completion, journey-stage reporting |
-| Customer segmentation and profiling | `Customer Segment Scoring` section, `cx-analyst-lab/src/build_cx_summary.py` | Segment categories, scoring components, priority labels, at-risk segment count, actionability logic |
-| Trend identification | `Journey Bottlenecks and CX Actions` section, `cx-analyst-lab/data/cx_feedback_sample.csv` | Signals, likely causes, recommended actions, expected impact, monthly trend-ready feedback sample |
-| Cross-functional collaboration | `Insight-to-Action Tracker` and `Stakeholder Map` | CX, CRM, dealer, service, product, digital, data/privacy stakeholder handoff logic |
-| Excel / BI evidence | `dashboard-workbook/customer_experience_dashboard.xlsx`, `cx-analyst-lab/powerbi/measure_catalog.md`, `cx-analyst-lab/powerbi/star_schema.md` | Dashboard, raw data, pivot summary, at-risk segments, recommendations, DAX-style measures, star-schema notes |
-| SQL and reproducible analyst workflow | `cx-analyst-lab/` | CSV validation, KPI build script, SQL reporting views, metric unit tests, customer satisfaction brief |
-| Clear communication of complex data | `Customer Insight Brief Simulator`, `Reporting Guide`, `Dashboard MVP Brief` | Structured insight brief, reporting guide, MVP framing, plain-language methodology |
-| Responsible customer-data handling | `Customer Data Quality & Privacy Guardrails`, `Methodology` | Simulated-data disclaimer, aggregation/privacy checks, human-review framing |
-| AI/data engineering supplement | `industrial-cx-ai-lab/` | Simulated OPC UA-style telemetry, anomaly features, churn/service-risk classifier, SQLite feature mart, Influx export, Grafana panel stub, Slurm batch script |
-| Production simulation supplement | `production-sim-stack/` | FastAPI scoring, Docker Compose, MQTT simulation, MLflow-style run metadata, MinIO/S3-style artifact manifest, DuckDB mart SQL, Influx/Grafana monitoring artifacts, Slurm job array |
-| Explicit scikit-learn ML baseline | `ml-baseline/` | Train/test split, logistic model, rule baseline, accuracy, precision, recall, F1, confusion matrix, model coefficients |
-| SQL / DWH shortcut | `sql/reviewer_service_mart.duckdb.sql` | DuckDB mart with service-risk view, line summary, and anomaly checks |
-| HPC / Slurm shortcut | `hpc/run_pipeline.sbatch` | Slurm entrypoint that runs industrial AI, production simulation, MQTT simulator, and ML baseline |
+| Simulated telemetry fields | `industrial-cx-ai-lab/data/simulated_telemetry.csv` | `timestamp`, `asset_id`, `rpm`, `temperature_c`, `vibration_mm_s`, `pressure_bar`, `torque_nm`, `operating_hours`, `error_code_count`, `service_delay_days`, `customer_satisfaction_score`, `anomaly_label`, `service_escalation_label` |
+| Controlled anomaly injection | `industrial-cx-ai-lab/src/telemetry_generator.py` | temperature spike, vibration drift, pressure drop, error burst, delayed maintenance |
+| Anomaly metrics | `industrial-cx-ai-lab/artifacts/anomaly_metrics.json` | rule-based baseline and IsolationForest metrics |
+| Service-risk classifier | `industrial-cx-ai-lab/artifacts/service_risk_metrics.json` | F1, ROC-AUC, PR-AUC, precision, recall |
+| Feature importance | `industrial-cx-ai-lab/artifacts/feature_importance.csv` | reviewer-readable feature ranking |
+| Maintenance policy | `industrial-cx-ai-lab/artifacts/maintenance_policy_note.md` | human-in-the-loop use, false positive/negative tradeoff, BI-REX relevance |
+| OPC UA / MQTT / Influx / Grafana | `industrial-cx-ai-lab/ops/` | simulated tag map, topic contract, schema, dashboard JSON, Telegraf sample |
+| API scoring | `production-sim-stack/src/api.py`, `src/model_adapter.py` | `/health`, `/score/service-risk`, `/score/anomaly` when FastAPI is installed; pure-Python scoring otherwise |
+| MQTT dry-run | `production-sim-stack/src/mqtt_simulator.py --dry-run --messages 5` | broker-free JSON messages |
+| Slurm / benchmark | `hpc/`, `benchmarks/` | job-array packaging and local CPU benchmark JSON |
 
-## AI Internship Reviewer Shortcut
+## Commands
 
-| Target signal | Inspect this first | Evidence now present |
-| --- | --- | --- |
-| BI-REX Industrial AI / IoT | `industrial-cx-ai-lab/`, `production-sim-stack/config/mqtt_topics.json`, `production-sim-stack/src/mqtt_simulator.py` | OPC UA-style nodes, MQTT topics, simulated telemetry, anomaly signals, service-escalation target |
-| Grafana / InfluxDB monitoring | `production-sim-stack/docker-compose.yml`, `production-sim-stack/grafana/industrial_service_dashboard.json`, `industrial-cx-ai-lab/artifacts/service_risk_influx.lp` | Docker Compose service definitions, dashboard JSON, Influx line protocol output |
-| ML model development | `ml-baseline/train_model.py`, `industrial-cx-ai-lab/src/run_pipeline.py` | scikit-learn logistic baseline, local classifier, metrics, model card, predictions |
-| SQL / DWH / analytics engineering | `sql/reviewer_service_mart.duckdb.sql`, `production-sim-stack/sql/service_feature_mart.duckdb.sql` | DuckDB views for service risk, anomaly checks, line summaries, and reviewer decisions |
-| HPC / Slurm | `hpc/run_pipeline.sbatch`, `industrial-cx-ai-lab/slurm/run_industrial_cx_model.sbatch`, `production-sim-stack/slurm/run_iot_scoring_array.sbatch` | CPU job script, job array simulation, batch-packaged AI workload |
-| PwC / CRIF support evidence | `README.md`, `EVIDENCE_MAP.md`, `ml-baseline/`, `sql/` | Dashboard storytelling plus reproducible ML/SQL evidence |
-
-## Recommended GitHub Repository Metadata
-
-Homepage:
-
-```text
-https://errer441122.github.io/ducati-cx-case-study/
+```bash
+npm test
+python -m pytest -q
+python industrial-cx-ai-lab/src/run_pipeline.py
+python production-sim-stack/src/mqtt_simulator.py --dry-run --messages 5
+python benchmarks/industrial_scoring_benchmark.py --quick
+python -m json.tool industrial-cx-ai-lab/ops/opcua_tag_map.json
+python -m json.tool industrial-cx-ai-lab/ops/grafana_dashboard.json
 ```
-
-Topics:
-
-```text
-customer-analytics, data-analysis, dashboard, excel, cx, portfolio-project, customer-experience, segmentation, industrial-iot, machine-learning, opc-ua
-```
-
-## Interview Framing
-
-> I built a Customer Experience analytics workbook using simulated data to show how I would organize customer signals, report satisfaction trends, segment customers, identify journey friction, and translate findings into action-ready recommendations for CX, CRM, dealer, service, product, and data/privacy stakeholders.
 
 ## What Not To Claim
 
-- Do not claim access to Ducati internal systems, customer data, dealer data, or confidential processes.
-- Do not claim this is a production Power BI deployment.
-- Do claim CX analytics reasoning, Excel/BI readiness, segmentation logic, reporting discipline, and responsible customer-data framing.
+- Do not claim access to Ducati internal systems, customer data, dealer data, telemetry, dashboards, or confidential processes.
+- Do not claim real OPC UA/Kepware/MQTT/Influx/Grafana/Telegraf/Slurm/cloud/edge integration.
+- Do not claim production predictive maintenance, safety, warranty, pricing, or customer-treatment automation.
