@@ -11,6 +11,12 @@ This branch contains a standalone Ducati-oriented Customer Experience analytics 
 - `ducati-overrides.js` - Ducati/CX-specific data and copy for this standalone cockpit.
 - `dashboard-workbook/customer_experience_dashboard.xlsx` - Excel dashboard prototype using simulated CX data.
 - `PROJECT_POSITIONING.md` - short explanation of how to present the project for the Ducati role.
+- `EVIDENCE_MAP.md` - requirement-to-evidence map for recruiter and hiring-manager review.
+
+## Recommended repository metadata
+
+- Homepage: `https://errer441122.github.io/ducati-cx-case-study/`
+- Topics: `customer-analytics`, `data-analysis`, `dashboard`, `excel`, `cx`, `portfolio-project`, `customer-experience`, `segmentation`
 
 ## Positioning for the application
 
