@@ -1,0 +1,10 @@
+{
+  "broker": "mqtt://localhost:1883",
+  "topics": [
+    "factory/line1/panigale/service-risk",
+    "factory/line2/multistrada/service-risk",
+    "factory/line3/desertx/service-risk",
+    "dealer/network/cx-escalation"
+  ],
+  "disclaimer": "Portfolio-only MQTT topic map. No Ducati infrastructure is represented."
+}

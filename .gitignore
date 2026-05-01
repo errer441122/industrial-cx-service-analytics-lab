@@ -5,3 +5,14 @@ live-check*.png
 *.bak
 __pycache__/
 .pytest_cache/
+industrial-cx-ai-lab/artifacts/*
+!industrial-cx-ai-lab/artifacts/.gitkeep
+!industrial-cx-ai-lab/artifacts/metrics.example.json
+!industrial-cx-ai-lab/artifacts/model_card.example.json
+production-sim-stack/artifacts/*
+!production-sim-stack/artifacts/.gitkeep
+!production-sim-stack/artifacts/model_card.example.json
+ml-baseline/reports/*
+!ml-baseline/reports/.gitkeep
+!ml-baseline/reports/metrics.example.json
+!ml-baseline/reports/predictions_sample.csv

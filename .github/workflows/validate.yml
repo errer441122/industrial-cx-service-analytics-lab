@@ -1,0 +1,39 @@
+name: Validate CX workbook
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install reviewer ML baseline dependencies
+        run: python -m pip install -r ml-baseline/requirements.txt
+
+      - name: Validate workbook data, wiring, and Industrial CX AI lab
+        run: npm test
+
+      - name: Execute reviewer-visible industrial ML and production pipelines
+        run: |
+          python industrial-cx-ai-lab/src/run_pipeline.py
+          python production-sim-stack/src/orchestrate.py
+          python production-sim-stack/src/mqtt_simulator.py
+          python ml-baseline/train_model.py

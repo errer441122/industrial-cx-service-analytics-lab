@@ -1,0 +1,13 @@
+feedback_id,date,channel,segment,journey_stage,region,satisfaction_score,feedback_volume,issue_category,friction_score,follow_up_required,follow_up_completed,post_action_score,comment
+FB-001,2026-01-08,Email,Urban Commuters,Purchase,North,5,120,Delivery handover,1,no,no,5,Smooth handover and clear delivery timing.
+FB-002,2026-01-12,Dealer,Touring Owners,Service,North,3,80,Appointment wait,4,yes,yes,4,Service booking took longer than expected.
+FB-003,2026-01-17,App,Performance Enthusiasts,Digital,Central,4,95,Connectivity,2,no,no,4,Digital owner area worked but pairing could be clearer.
+FB-004,2026-02-04,Survey,Urban Commuters,Ownership,North,4,110,Documentation,2,yes,yes,5,Ownership documents were complete after follow-up.
+FB-005,2026-02-10,Dealer,First-Time Owners,Purchase,South,2,70,Financing clarity,5,yes,no,2,Financing options were difficult to compare.
+FB-006,2026-02-18,Social,Performance Enthusiasts,Service,Central,3,60,Parts availability,4,yes,yes,4,Parts delay required proactive communication.
+FB-007,2026-03-02,Email,Touring Owners,Ownership,North,5,100,Accessories,1,no,no,5,Accessory recommendation matched riding profile.
+FB-008,2026-03-08,App,First-Time Owners,Digital,South,3,85,Onboarding,3,yes,yes,4,App onboarding improved after guided support.
+FB-009,2026-03-14,Survey,Urban Commuters,Service,North,4,105,Maintenance clarity,2,yes,yes,5,Maintenance explanation was clear after dealer callback.
+FB-010,2026-04-03,Dealer,Touring Owners,Purchase,Central,4,75,Test ride,2,no,no,4,Test ride handoff was effective.
+FB-011,2026-04-11,Email,First-Time Owners,Ownership,South,2,65,Insurance documentation,5,yes,no,2,Insurance and warranty documents caused confusion.
+FB-012,2026-04-20,App,Performance Enthusiasts,Digital,Central,5,90,App personalization,1,no,no,5,App personalization matched service needs.

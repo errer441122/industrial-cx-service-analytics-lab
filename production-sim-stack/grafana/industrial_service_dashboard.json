@@ -1,0 +1,22 @@
+{
+  "title": "Industrial Service Risk Monitor",
+  "schemaVersion": 39,
+  "tags": ["portfolio", "bi-rex", "industrial-iot", "mlops"],
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Service escalation probability",
+      "datasource": "InfluxDB",
+      "targets": [
+        {
+          "query": "from(bucket: \"portfolio\") |> range(start: -24h) |> filter(fn: (r) => r._measurement == \"industrial_service_risk\")"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "title": "MQTT review queue",
+      "description": "Count of MQTT events where predicted_service_escalation_probability exceeds the advisory threshold."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+services:
+  api:
+    build: .
+    command: uvicorn src.api:app --host 0.0.0.0 --port 8081
+    ports:
+      - "8081:8081"
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      MQTT_BROKER: mqtt
+      MINIO_ENDPOINT: http://minio:9000
+      INFLUX_URL: http://influxdb:8086
+    depends_on:
+      - mlflow
+      - mqtt
+      - minio
+      - influxdb
+
+  mqtt:
+    image: eclipse-mosquitto:2.0
+    ports:
+      - "1883:1883"
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.18.0
+    command: mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:////mlflow/mlflow.db --default-artifact-root s3://industrial-mlflow/
+    ports:
+      - "5001:5000"
+    volumes:
+      - mlflow-data:/mlflow
+
+  minio:
+    image: quay.io/minio/minio:RELEASE.2025-04-22T22-12-26Z
+    command: server /data --console-address ":9001"
+    ports:
+      - "9010:9000"
+      - "9011:9001"
+    environment:
+      MINIO_ROOT_USER: portfolio
+      MINIO_ROOT_PASSWORD: portfolio-password
+    volumes:
+      - minio-data:/data
+
+  influxdb:
+    image: influxdb:2.7
+    ports:
+      - "8087:8086"
+    volumes:
+      - influx-data:/var/lib/influxdb2
+
+  grafana:
+    image: grafana/grafana:11.3.0
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./grafana:/var/lib/grafana/dashboards
+    depends_on:
+      - influxdb
+
+volumes:
+  mlflow-data:
+  minio-data:
+  influx-data:

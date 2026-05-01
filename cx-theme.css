@@ -312,12 +312,188 @@ select {
   background: rgba(18, 24, 38, 0.04);
 }
 
+.primary-demo-cta {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.cx-demo-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.cx-demo-selector,
+.cx-demo-stage-panel {
+  background: #ffffff;
+}
+
+.cx-demo-selector h3,
+.cx-demo-stage-panel h3 {
+  margin: 8px 0 14px;
+}
+
+.cx-demo-segment-list {
+  display: grid;
+  gap: 10px;
+}
+
+.cx-demo-segment-button,
+.cx-demo-step {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(18, 24, 38, 0.035);
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.cx-demo-segment-button {
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+}
+
+.cx-demo-segment-button span,
+.cx-demo-step {
+  font-weight: 800;
+}
+
+.cx-demo-segment-button strong {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.cx-demo-segment-button.active,
+.cx-demo-step.active {
+  background: rgba(201, 0, 24, 0.08);
+  border-color: rgba(201, 0, 24, 0.36);
+  color: var(--text);
+}
+
+.cx-demo-kicker,
+.cx-demo-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.cx-demo-kicker {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.cx-demo-stage-panel > p {
+  max-width: 900px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.cx-demo-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.cx-demo-step {
+  min-height: 72px;
+  padding: 14px;
+  display: grid;
+  align-content: space-between;
+  line-height: 1.2;
+}
+
+.cx-demo-step span {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+.cx-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--border);
+}
+
+.cx-demo-grid > div,
+.cx-demo-footer > div {
+  background: rgba(18, 24, 38, 0.035);
+  padding: 16px;
+}
+
+.cx-demo-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cx-demo-grid p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.cx-demo-footer {
+  margin-top: 16px;
+}
+
+.cx-demo-footer > div {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.cx-demo-footer strong {
+  color: var(--text);
+}
+
+.demo-control-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.demo-control-row .jump-button {
+  justify-content: center;
+}
+
+.demo-control-row .jump-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 @media (max-width: 980px) {
   .cx-workflow-strip {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .cx-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cx-demo-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cx-demo-timeline,
+  .cx-demo-grid {
     grid-template-columns: 1fr;
   }
 }

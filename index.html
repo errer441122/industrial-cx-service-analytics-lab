@@ -36,6 +36,7 @@
 
       <nav class="nav-menu">
         <button class="nav-item active" type="button" data-target="overview"><i class="fa-solid fa-compass"></i>Panoramica</button>
+        <button class="nav-item" type="button" data-target="demo-lab"><i class="fa-solid fa-route"></i>Demo guidata</button>
         <button class="nav-item" type="button" data-target="case-study"><i class="fa-solid fa-layer-group"></i>Sintesi caso studio</button>
         <button class="nav-item" type="button" data-target="commercial-ops"><i class="fa-solid fa-chart-line"></i>Dashboard CX</button>
         <button class="nav-item" type="button" data-target="adoption"><i class="fa-solid fa-sitemap"></i>Tracker insight-azione</button>
@@ -74,6 +75,7 @@
 
             <div class="hero-divider"></div>
             <div class="hero-actions">
+              <button class="jump-button primary-demo-cta" id="cta-demo" type="button" data-nav-target="demo-lab">Avvia demo navigabile</button>
               <button class="jump-button" id="cta-dashboard" type="button" data-nav-target="commercial-ops">Rivedi il livello CX Analytics</button>
               <button class="jump-button" id="cta-adoption" type="button" data-nav-target="adoption">Rivedi il livello insight-azione</button>
               <button class="jump-button" id="cta-product" type="button" data-nav-target="product">Rivedi il brief dashboard MVP</button>
@@ -163,6 +165,70 @@
             <p>Segnali cliente, cause probabili e azioni abilitate dal workbook.</p>
           </div>
           <div class="insights-grid" id="insights-grid"></div>
+        </section>
+
+        <section id="demo-lab" class="view-section">
+          <div class="section-heading">
+            <div class="eyebrow">Demo navigabile</div>
+            <h2>Dal feedback cliente all'azione CX</h2>
+            <p>Un reviewer puo selezionare un segmento, avanzare negli step del journey e vedere quali evidenze, owner e output cambiano prima di aprire dashboard e tracker.</p>
+          </div>
+
+          <div class="cx-demo-layout">
+            <aside class="glass-panel cx-demo-selector">
+              <div class="eyebrow">Segmenti simulati</div>
+              <h3>Scegli un percorso</h3>
+              <div class="cx-demo-segment-list" id="cx-demo-segments"></div>
+            </aside>
+
+            <article class="glass-panel cx-demo-stage-panel">
+              <div class="cx-demo-kicker">
+                <span id="cx-demo-sector">Segmento</span>
+                <strong id="cx-demo-step-count">Step 1 di 1</strong>
+              </div>
+              <h3 id="cx-demo-title">Caricamento demo...</h3>
+              <p id="cx-demo-persona"></p>
+
+              <div class="cx-demo-timeline" id="cx-demo-timeline" aria-label="Step della demo CX"></div>
+
+              <div class="cx-demo-grid">
+                <div>
+                  <span class="cx-demo-label">Segnale</span>
+                  <p id="cx-demo-signal"></p>
+                </div>
+                <div>
+                  <span class="cx-demo-label">Evidenza dati</span>
+                  <p id="cx-demo-evidence"></p>
+                </div>
+                <div>
+                  <span class="cx-demo-label">Decisione operativa</span>
+                  <p id="cx-demo-decision"></p>
+                </div>
+                <div>
+                  <span class="cx-demo-label">Output verificabile</span>
+                  <p id="cx-demo-output"></p>
+                </div>
+              </div>
+
+              <div class="cx-demo-footer">
+                <div>
+                  <span class="cx-demo-label">Owner</span>
+                  <strong id="cx-demo-owner"></strong>
+                </div>
+                <div>
+                  <span class="cx-demo-label">Metrica follow-up</span>
+                  <strong id="cx-demo-metric"></strong>
+                </div>
+              </div>
+
+              <div class="demo-control-row">
+                <button class="jump-button" id="cx-demo-prev" type="button"><i class="fa-solid fa-arrow-left"></i>Step precedente</button>
+                <button class="jump-button" id="cx-demo-next" type="button">Step successivo<i class="fa-solid fa-arrow-right"></i></button>
+                <button class="jump-button" type="button" data-nav-target="commercial-ops">Apri dashboard dati</button>
+                <button class="jump-button" type="button" data-nav-target="adoption">Apri action tracker</button>
+              </div>
+            </article>
+          </div>
         </section>
 
         <section id="case-study" class="view-section">

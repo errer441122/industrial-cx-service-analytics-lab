@@ -11,6 +11,7 @@
     "headerSubtitle": "Survey signals - Journey friction - Excel dashboard",
     "profileLabel": "Caso studio per Data Analyst Customer Experience",
     "heroReviewLine": "Progettato per evidenziare raccolta dati, segmentazione, reporting Excel, trend analysis e follow-up operativo.",
+    "demoCta": "Avvia demo navigabile",
     "dashboardCta": "Apri dashboard CX",
     "adoptionCta": "Apri action tracker",
     "productCta": "Apri brief workbook",
@@ -100,6 +101,107 @@
       "title": "Metodologia",
       "note": "Controlla i confini dei dati simulati e le dichiarazioni non-production prima di valutare la dashboard come evidenza.",
       "target": "methodology"
+    }
+  ],
+  "demoScenarios": [
+    {
+      "accountId": 5,
+      "label": "Service appointment friction",
+      "owner": "After-sales + dealer operations",
+      "metric": "Riduzione tempi di attesa post-booking",
+      "persona": "Cliente service con appuntamento prenotato, aspettativa di comunicazione chiara e follow-up tracciabile.",
+      "steps": [
+        {
+          "title": "Raccogli segnale service",
+          "stage": "Fonte dati",
+          "signal": "Feedback ripetuti su attesa, reminder e chiarezza della spiegazione post-service.",
+          "evidence": "Survey service, note dealer, record appuntamento e ticket customer care aggregati per journey.",
+          "decision": "Separare frizione di booking da frizione di consegna veicolo.",
+          "output": "Scheda segmento con fonte dati, campione e owner del processo."
+        },
+        {
+          "title": "Prioritizza intervento",
+          "stage": "Diagnosi",
+          "signal": "Fit CX alto e stage Action Pilot con volume insight ponderato superiore alla media.",
+          "evidence": "Score alto su valore use case, chiarezza stakeholder, complessita dati e actionability.",
+          "decision": "Aprire pilot su reminder appuntamento e template di spiegazione post-service.",
+          "output": "Brief operativo per after-sales, dealer operations e CX."
+        },
+        {
+          "title": "Chiudi action loop",
+          "stage": "Follow-up",
+          "signal": "Il pilot ha bisogno di owner, timing e metrica di confronto prima/dopo.",
+          "evidence": "Action tracker con owner, prossima azione, metrica follow-up e nota privacy-aware.",
+          "decision": "Misurare soddisfazione post-service e tempi di risposta dopo due cicli reporting.",
+          "output": "Voce action tracker pronta per review mensile CX."
+        }
+      ]
+    },
+    {
+      "accountId": 1,
+      "label": "Onboarding nuovi proprietari",
+      "owner": "Customer Experience + CRM",
+      "metric": "NPS primi 30 giorni e completamento follow-up",
+      "persona": "Nuovo proprietario che ha appena ritirato la moto e riceve comunicazioni dealer, CRM e contenuti onboarding.",
+      "steps": [
+        {
+          "title": "Mappa i touchpoint iniziali",
+          "stage": "Data intake",
+          "signal": "Feedback disomogenei su consegna, documenti, spiegazione feature e aspettative post-acquisto.",
+          "evidence": "Survey 30 giorni, note consegna, touchpoint CRM e motivi di contatto customer care.",
+          "decision": "Creare vista unica dei touchpoint iniziali senza usare dati personali non necessari.",
+          "output": "Mappa fonti CX con controlli qualita e campi minimi."
+        },
+        {
+          "title": "Segmenta bisogno di supporto",
+          "stage": "Segmentazione",
+          "signal": "Alcuni clienti hanno alta soddisfazione brand ma bassa chiarezza sui prossimi step.",
+          "evidence": "Driver di soddisfazione separati per follow-up dealer, contenuti CRM e supporto digitale.",
+          "decision": "Distinguere clienti da informare, clienti da recuperare e clienti pronti per community/loyalty.",
+          "output": "Segmenti operativi per reporting e raccomandazioni."
+        },
+        {
+          "title": "Attiva follow-up misurabile",
+          "stage": "Action tracker",
+          "signal": "Le raccomandazioni devono diventare task assegnabili, non solo insight descrittivi.",
+          "evidence": "Owner CRM, timing follow-up, metrica NPS e confronto completamento contatto.",
+          "decision": "Programmare digest ricorrente sui nuovi proprietari con ritardi o low-score.",
+          "output": "Routine di review con KPI di completamento e nota di escalation."
+        }
+      ]
+    },
+    {
+      "accountId": 9,
+      "label": "App e connected services",
+      "owner": "Digital product + CX",
+      "metric": "Ticket digitali risolti e sentiment app",
+      "persona": "Cliente che usa app e servizi connessi e lascia feedback su funzionalita, supporto e stabilita del servizio.",
+      "steps": [
+        {
+          "title": "Isola feedback digitale",
+          "stage": "Pulizia dati",
+          "signal": "Ticket supporto e feedback funzionalita sono mescolati nello stesso flusso.",
+          "evidence": "Tag app, ticket customer care, commenti survey e categoria issue collegati al journey digitale.",
+          "decision": "Separare problema tecnico, bisogno di istruzione e richiesta feature.",
+          "output": "Dataset pulito con tassonomia feedback digitale."
+        },
+        {
+          "title": "Costruisci brief prodotto",
+          "stage": "Reporting",
+          "signal": "Le ricorrenze piu frequenti devono essere lette da CX e product nello stesso linguaggio.",
+          "evidence": "Volume per tema, severita, segmento cliente e impatto atteso sul journey.",
+          "decision": "Generare brief con segnali, rischio operativo e azione consigliata.",
+          "output": "Brief strutturato per revisione umana prima della condivisione."
+        },
+        {
+          "title": "Misura miglioramento",
+          "stage": "Backlog",
+          "signal": "Il backlog digitale deve collegarsi a metriche customer, non solo a ticket chiusi.",
+          "evidence": "Trend ticket, sentiment app e note di follow-up dopo intervento.",
+          "decision": "Confrontare sentiment e ticket sul tema dopo la release o fix.",
+          "output": "Decision log prodotto con metrica di customer impact."
+        }
+      ]
     }
   ],
   "adoptionGovernance": {

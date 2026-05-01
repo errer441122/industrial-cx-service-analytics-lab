@@ -163,6 +163,108 @@
     `).join("");
   }
 
+  function renderCxDemo() {
+    const scenarios = data.demoScenarios || [];
+    const segmentList = byId("cx-demo-segments");
+    const timeline = byId("cx-demo-timeline");
+    const prevButton = byId("cx-demo-prev");
+    const nextButton = byId("cx-demo-next");
+
+    if (!segmentList || !timeline || !scenarios.length) return;
+
+    let scenarioIndex = 0;
+    let stepIndex = 0;
+
+    function activeScenario() {
+      return scenarios[scenarioIndex];
+    }
+
+    function activeStep() {
+      const scenario = activeScenario();
+      return scenario.steps[stepIndex] || scenario.steps[0];
+    }
+
+    function accountForScenario(scenario) {
+      return data.accounts.find(account => account.id === scenario.accountId);
+    }
+
+    function renderScenarioButtons() {
+      segmentList.innerHTML = scenarios.map((scenario, index) => {
+        const account = accountForScenario(scenario);
+        return `
+          <button class="cx-demo-segment-button${index === scenarioIndex ? " active" : ""}" type="button" data-demo-index="${index}">
+            <span>${scenario.label}</span>
+            <strong>${account ? account.sector : "CX journey"}</strong>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function renderTimeline() {
+      const scenario = activeScenario();
+      timeline.innerHTML = scenario.steps.map((step, index) => `
+        <button class="cx-demo-step${index === stepIndex ? " active" : ""}" type="button" data-step-index="${index}">
+          <span>${String(index + 1).padStart(2, "0")}</span>
+          ${step.stage}
+        </button>
+      `).join("");
+    }
+
+    function updateDemo() {
+      const scenario = activeScenario();
+      const step = activeStep();
+      const account = accountForScenario(scenario);
+
+      setText("cx-demo-sector", account ? account.sector : "CX journey");
+      setText("cx-demo-step-count", `Step ${stepIndex + 1} di ${scenario.steps.length}`);
+      setText("cx-demo-title", step.title);
+      setText("cx-demo-persona", scenario.persona);
+      setText("cx-demo-signal", step.signal);
+      setText("cx-demo-evidence", step.evidence);
+      setText("cx-demo-decision", step.decision);
+      setText("cx-demo-output", step.output);
+      setText("cx-demo-owner", scenario.owner);
+      setText("cx-demo-metric", scenario.metric);
+
+      renderScenarioButtons();
+      renderTimeline();
+
+      if (prevButton) prevButton.disabled = stepIndex === 0;
+      if (nextButton) nextButton.disabled = stepIndex === scenario.steps.length - 1;
+    }
+
+    segmentList.addEventListener("click", event => {
+      const button = event.target.closest("[data-demo-index]");
+      if (!button) return;
+      scenarioIndex = Number(button.getAttribute("data-demo-index"));
+      stepIndex = 0;
+      updateDemo();
+    });
+
+    timeline.addEventListener("click", event => {
+      const button = event.target.closest("[data-step-index]");
+      if (!button) return;
+      stepIndex = Number(button.getAttribute("data-step-index"));
+      updateDemo();
+    });
+
+    if (prevButton) {
+      prevButton.addEventListener("click", () => {
+        stepIndex = Math.max(0, stepIndex - 1);
+        updateDemo();
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", () => {
+        stepIndex = Math.min(activeScenario().steps.length - 1, stepIndex + 1);
+        updateDemo();
+      });
+    }
+
+    updateDemo();
+  }
+
   function renderStageProbabilities() {
     const container = byId("stage-probability-row");
     if (!container) return;
@@ -1003,6 +1105,7 @@
     setText("project-disclaimer", data.project.disclaimer);
     setText("header-subtitle", data.project.headerSubtitle);
     setText("profile-label", data.project.profileLabel);
+    setText("cta-demo", data.project.demoCta);
     setText("cta-dashboard", data.project.dashboardCta);
     setText("cta-adoption", data.project.adoptionCta);
     setText("cta-product", data.project.productCta);
@@ -1011,6 +1114,7 @@
 
     renderReviewPaths();
     renderReviewerGuide();
+    renderCxDemo();
     initNavigation();
     renderKpis();
     renderInsights();

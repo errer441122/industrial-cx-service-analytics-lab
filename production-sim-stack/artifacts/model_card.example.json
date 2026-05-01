@@ -1,0 +1,28 @@
+{
+  "intended_use": "Human-reviewed service triage and monitoring",
+  "limitations": [
+    "simulated data only",
+    "no real OPC UA server",
+    "no real MQTT broker required for CI",
+    "no production plant integration",
+    "no safety certification"
+  ],
+  "metrics": {
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "false_negative": 0,
+    "false_positive": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "true_negative": 10,
+    "true_positive": 10
+  },
+  "model_name": "industrial_service_escalation_baseline",
+  "model_type": "transparent weighted baseline",
+  "not_for": [
+    "warranty automation",
+    "safety decision automation",
+    "customer treatment automation"
+  ],
+  "threshold": 0.45
+}
