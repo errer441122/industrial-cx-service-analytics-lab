@@ -1,6 +1,6 @@
 {
   "artifact_type": "simulated_mqtt_topic_contract",
-  "disclaimer": "Simulated MQTT topic design for local dry-run messages only; no real MQTT broker, Ducati system, dealer system, plant system, or edge integration is claimed.",
+  "disclaimer": "Simulated MQTT topic design for local dry-run messages only; no real MQTT broker, company system, dealer system, plant system, or edge integration is claimed.",
   "broker": {
     "local_design_endpoint": "mqtt://localhost:1883",
     "executed": false,

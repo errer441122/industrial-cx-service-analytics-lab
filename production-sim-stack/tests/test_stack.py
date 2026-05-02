@@ -38,7 +38,7 @@ class IndustrialProductionSimulationStackTest(unittest.TestCase):
         messages = mqtt_simulator.build_messages()
         self.assertEqual(len(messages), 20)
         self.assertTrue(all("topic" in message and "payload" in message for message in messages))
-        self.assertIn("factory/line2/multistrada/service-risk", {message["topic"] for message in messages})
+        self.assertIn("factory/line2/Compressor-B/service-risk", {message["topic"] for message in messages})
 
     def test_orchestration_writes_lifecycle_artifacts(self):
         with tempfile.TemporaryDirectory() as temp_dir:

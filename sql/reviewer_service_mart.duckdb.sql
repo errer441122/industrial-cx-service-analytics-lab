@@ -5,7 +5,7 @@ FROM read_csv_auto('industrial-cx-ai-lab/data/opcua_service_events.csv', HEADER 
 CREATE OR REPLACE VIEW mart_service_risk AS
 SELECT
   event_id,
-  bike_family,
+  asset_family,
   region,
   opcua_node,
   vibration_rms,
@@ -37,7 +37,7 @@ FROM stg_opcua_service_events;
 CREATE OR REPLACE VIEW dq_anomaly_checks AS
 SELECT
   event_id,
-  bike_family,
+  asset_family,
   region,
   CASE WHEN vibration_rms >= 4.5 THEN 1 ELSE 0 END AS vibration_anomaly,
   CASE WHEN temperature_c >= 92 THEN 1 ELSE 0 END AS temperature_anomaly,
@@ -47,11 +47,11 @@ FROM stg_opcua_service_events;
 
 CREATE OR REPLACE VIEW reporting_family_summary AS
 SELECT
-  bike_family,
+  asset_family,
   COUNT(*) AS event_count,
   ROUND(AVG(service_risk_index), 3) AS avg_service_risk_index,
   SUM(churn_risk) AS human_review_queue,
   SUM(CASE WHEN reviewer_decision_band = 'monitor_industrial_signal' THEN 1 ELSE 0 END) AS monitoring_queue
 FROM mart_service_risk
-GROUP BY bike_family
+GROUP BY asset_family
 ORDER BY avg_service_risk_index DESC;

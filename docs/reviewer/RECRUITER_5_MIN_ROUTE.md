@@ -1,28 +1,33 @@
 # Recruiter 5-Minute Route
 
-Use this repository as a secondary but strong industrial analytics and industrial AI portfolio project. It combines a simulated Ducati-themed CX workbook with an executable industrial-service analytics lab.
+Use this repository as a secondary but strong industrial analytics and applied AI portfolio project.
 
-## Review In This Order
+It combines:
 
-1. `README.md` - confirms positioning, executable paths, and simulation limits.
-2. `dashboard-workbook/customer_experience_dashboard.xlsx` - shows the original CX analytics and communication layer.
-3. `industrial-cx-ai-lab/artifacts/maintenance_policy_note.md` - explains the anomaly and service-risk workflow in plain language.
-4. `EVIDENCE_MAP.md` - maps role requirements to concrete files and commands.
-5. `docs/reviewer/COMPANY_FIT_MATRIX.md` - shows which companies this supports and which gaps remain honest.
+- a simulated customer-experience analytics workbook;
+- an industrial telemetry simulation lab;
+- anomaly detection and service-risk scoring;
+- API/MLOps-style local simulation;
+- explicit claims and limitations.
 
-## Best Fit
+## Review in this order
 
-| Target | Strongest evidence |
+1. `README.md` - positioning, executable paths and simulation limits.
+2. `dashboard-workbook/customer_experience_dashboard.xlsx` - CX analytics and communication layer.
+3. `industrial-cx-ai-lab/artifacts/maintenance_policy_note.md` - plain-language model and workflow explanation.
+4. `EVIDENCE_MAP.md` - role requirements mapped to concrete files and commands.
+5. `docs/reviewer/CLAIMS_AND_LIMITATIONS.md` - honest boundaries.
+
+## Best fit
+
+| Target area | Strongest evidence |
 | --- | --- |
-| BI-REX Data Engineer / Industrial AI | `industrial-cx-ai-lab/`, `production-sim-stack/`, `hpc/`, `benchmarks/` |
-| PwC Data & AI Consulting | CX workbook, action tracker, SQL, reviewer story docs |
-| CINECA / IT4LIA supplement | Slurm-ready packaging and local CPU benchmark |
-| CRIF support evidence | transparent scoring limits, data quality, ML baseline |
+| Industrial AI / Data Engineering | `industrial-cx-ai-lab/`, `production-sim-stack/`, `hpc/`, `benchmarks/` |
+| Applied ML / Anomaly Detection | ML baseline, anomaly metrics, service-risk metrics |
+| CX / Product Analytics | workbook, action tracker, KPI logic, SQL views |
+| Responsible AI / Model Evidence | claims, limitations, policy notes, human-review framing |
+| HPC / Batch Packaging | Slurm-ready scripts and local CPU benchmark |
 
-## What This Is
+## What this is not
 
-A simulated industrial CX and service analytics case study with local Python pipelines, deterministic telemetry, anomaly scoring, service-risk classification, MQTT/OPC UA-style design artifacts, Influx/Grafana files, FastAPI-compatible scoring, and Slurm packaging.
-
-## What This Is Not
-
-This is not Ducati data, not a Ducati project, not a real industrial integration, not a production model, not a real Slurm/HPC run, and not the main AI engineering project for CRIF or UNDP.
+This is not real customer data, not a real industrial integration, not a production model, not a real Slurm/HPC run and not an endorsed project by any company.

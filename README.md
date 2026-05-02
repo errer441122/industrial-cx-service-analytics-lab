@@ -1,41 +1,37 @@
-[`Live Demo`](https://errer441122.github.io/ducati-cx-case-study/)  
-[![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-CC0000?style=for-the-badge)](https://errer441122.github.io/ducati-cx-case-study/)
-[![Validation](https://github.com/errer441122/ducati-cx-case-study/actions/workflows/validate.yml/badge.svg)](https://github.com/errer441122/ducati-cx-case-study/actions/workflows/validate.yml)
+[`Live Demo`](https://errer441122.github.io/industrial-cx-service-analytics-lab/)
+[![Validation](https://github.com/errer441122/industrial-cx-service-analytics-lab/actions/workflows/validate.yml/badge.svg)](https://github.com/errer441122/industrial-cx-service-analytics-lab/actions/workflows/validate.yml)
 
-# Ducati CX & Industrial Service Analytics Workbook
+# Industrial CX & Service Analytics Lab
 
-## Evidence Lock v1.0
+Simulated portfolio project combining customer-experience analytics, industrial telemetry simulation, anomaly detection, service-risk scoring and reviewer-ready AI/data evidence.
 
-This repository is a customer-experience workbook plus an executable industrial analytics evidence package.
+This project was originally designed as a Ducati-oriented portfolio case study. It is not affiliated with, endorsed by, or based on internal data from Ducati or any other organization. All data, telemetry, labels, dashboards and operational scenarios are simulated.
 
-### What is executable
+## What it demonstrates
 
-- Python industrial telemetry generator
-- Service-risk and anomaly scoring baseline
-- MQTT dry-run payload generator
-- Influx line protocol output
-- DuckDB/SQLite-style feature mart artifacts
-- FastAPI-compatible scoring simulation
-- Docker Compose packaging for API, MQTT, MLflow, MinIO, InfluxDB, and Grafana
-- Slurm-ready industrial scoring batch scripts
-- Local CPU benchmark for BI-REX/CINECA/IT4LIA-style review
+- Customer-experience analytics workbook and dashboard storytelling.
+- Data validation, KPI generation and SQL-style reporting.
+- Simulated industrial telemetry generation.
+- Rule-based and IsolationForest anomaly detection baseline.
+- Service-risk scoring with reviewer-visible model metrics.
+- MQTT/OPC UA-style contracts and Influx/Grafana-style artifacts.
+- FastAPI-compatible local scoring simulation.
+- Docker Compose packaging for local review.
+- Slurm-ready batch scripts and local CPU benchmark.
+- Explicit claims, limitations and human-review boundaries.
 
-### Reproduce
+## Best fit
 
-```bash
-make setup
-make evidence
-```
+This repository is useful evidence for:
 
-Evidence report: `evidence-lock/results/portfolio_evidence_report.md`
+- Industrial AI / Data Engineering internships.
+- Applied ML / Anomaly Detection internships.
+- CX Analytics / Product Analytics roles.
+- AI Product Operations roles.
+- Responsible AI / Model Evidence roles.
+- HPC / AI Factory readiness review.
 
-Scope boundaries: this is not a Ducati system, not a production industrial integration, not a real dealer/customer dataset, not a warranty/safety decision tool, and not a real BI-REX/CINECA/IT4LIA/PwC/CRIF deployment.
-
-## Technical evidence
-
-Primary stack: Python, scikit-learn, industrial time-series simulation, MQTT/OPC UA-style contracts, Influx/Grafana artifacts, FastAPI-compatible API, Docker, Slurm-ready batch scripts.
-
-Run:
+## Reproduce
 
 ```bash
 make setup
@@ -44,58 +40,60 @@ make smoke
 make evidence
 ```
 
-## Portfolio positioning
+Evidence report:
 
-A simulated portfolio case study combining customer experience analytics with an industrial-service AI lab: telemetry simulation, anomaly detection, service-risk scoring, MQTT/OPC UA-style artifacts, Influx/Grafana monitoring stubs, FastAPI-compatible local scoring, DuckDB SQL, and Slurm-ready batch packaging.
+`evidence-lock/results/portfolio_evidence_report.md`
 
-Best for: BI-REX Data Engineer / Industrial AI support, PwC Data & AI analytics storytelling, and CINECA/IT4LIA industrial AI workload supplement.
+## Reviewer routes
 
-What is executable: `npm test`, `python -m pytest -q`, `python industrial-cx-ai-lab/src/run_pipeline.py`, `python production-sim-stack/src/mqtt_simulator.py --dry-run --messages 5`, and `python benchmarks/industrial_scoring_benchmark.py --quick`.
-
-What is simulated: all Ducati/CX data, telemetry, anomaly labels, service-risk labels, OPC UA/MQTT/Influx/Grafana designs, FastAPI scoring, Docker services, Slurm/HPC packaging, and cloud/edge context.
-
-Start here if you have 5 minutes: `docs/reviewer/RECRUITER_5_MIN_ROUTE.md`.
-
-This is not a Ducati system, not a production industrial integration, not a real dealer/customer dataset, not a warranty/safety decision tool, and not the main AI engineering project for CRIF or UNDP.
+| Time available | Start here |
+| --- | --- |
+| 5 minutes | `docs/reviewer/RECRUITER_5_MIN_ROUTE.md` |
+| 20 minutes | `docs/reviewer/TECHNICAL_20_MIN_ROUTE.md` |
+| Technical evidence map | `EVIDENCE_MAP.md` |
+| Claims and limitations | `docs/reviewer/CLAIMS_AND_LIMITATIONS.md` |
+| Original application context | `docs/application-specific/DUCATI_CX_APPLICATION_NOTE.md` |
 
 ## Role-to-evidence snapshot
 
-| Role | Evidence | What not to claim |
+| Target role area | Evidence | Honest boundary |
 | --- | --- | --- |
-| BI-REX Data Engineer / Industrial AI | `industrial-cx-ai-lab/`, `industrial-cx-ai-lab/ops/`, `production-sim-stack/`, `hpc/`, `benchmarks/` | No real plant, edge, OPC UA, MQTT, Influx, Grafana, Slurm, BI-REX, or IPAZIA execution |
-| PwC Data & AI | CX workbook, `cx-analyst-lab/`, `sql/`, `docs/reviewer/PWC_ANALYTICS_STORY.md` | No client engagement or production dashboard deployment |
-| CINECA / IT4LIA supplement | Slurm scripts, local CPU benchmark, Docker/local stack docs | No real cluster, GPU, Leonardo, or AI Factory access |
-| CRIF support evidence | transparent scoring limits, `ml-baseline/`, data-quality validation | Secondary evidence only, no CRIF data or regulated credit model |
+| Industrial AI / Data Engineering | `industrial-cx-ai-lab/`, `production-sim-stack/`, `sql/`, `benchmarks/` | Simulated telemetry only; no real plant, broker, edge device or production system |
+| Applied ML / Anomaly Detection | `industrial-cx-ai-lab/src/`, `ml-baseline/`, generated metrics artifacts | Synthetic labels; not validated on real industrial data |
+| CX / Product Analytics | static workbook, `dashboard-workbook/`, `cx-analyst-lab/` | Simulated CX data; no real customer/dealer data |
+| API / MLOps Simulation | `production-sim-stack/src/api.py`, Docker files, scoring adapter | Local simulation; not a deployed production service |
+| HPC / Batch Packaging | `hpc/`, `production-sim-stack/slurm/`, `benchmarks/` | Slurm-ready packaging only; no real cluster/GPU execution |
+| Responsible AI / Human Review | `docs/reviewer/CLAIMS_AND_LIMITATIONS.md`, policy notes | Advisory scoring only; no automated customer, warranty, safety or pricing decision |
 
 ## What is inside
 
-- `index.html` - open this to review the Customer Experience analytics workbook.
-- `cx-data.js` - standalone Ducati/CX simulated dataset and content model.
+- `index.html` - static customer-experience analytics workbook.
+- `cx-data.js` - standalone simulated CX dataset and content model.
 - `cx-workbook.js` - rendering logic for the CX workbook.
 - `workbook-base.css` - shared workbook layout styles.
-- `cx-theme.css` - Ducati/CX-specific visual layer.
-- `scripts/validate-data.mjs` - local validation script for the dataset, demo wiring, navigation targets, and computed KPI logic.
-- `cx-analyst-lab/` - analyst technical lab with CSV validation, KPI formulas, SQL reporting views, Power BI-style model notes, customer satisfaction brief, and metric tests.
-- `industrial-cx-ai-lab/` - executable AI/data-engineering lab with simulated time-series telemetry, controlled anomaly injection, rule-based and IsolationForest anomaly detection, service-risk classifier, metrics, feature importance, Influx line protocol, and maintenance policy note.
-- `industrial-cx-ai-lab/ops/` - simulated OPC UA tag map, MQTT topic contract, Influx schema, Grafana dashboard JSON, and Telegraf config sample.
-- `production-sim-stack/` - local production-style simulation with FastAPI-compatible scoring, Docker Compose, MQTT dry run, MLflow-style run metadata, MinIO/S3-style artifact manifest, DuckDB mart SQL, Influx/Grafana monitoring artifacts, and Slurm job array.
+- `cx-theme.css` - project-specific CX visual layer.
+- `scripts/validate-data.mjs` - local validation script for the dataset, demo wiring, navigation targets and computed KPI logic.
+- `cx-analyst-lab/` - analyst technical lab with CSV validation, KPI formulas, SQL reporting views, Power BI-style model notes, customer satisfaction brief and metric tests.
+- `industrial-cx-ai-lab/` - executable AI/data-engineering lab with simulated time-series telemetry, controlled anomaly injection, rule-based and IsolationForest anomaly detection, service-risk classifier, metrics, feature importance, Influx line protocol and maintenance policy note.
+- `industrial-cx-ai-lab/ops/` - simulated OPC UA tag map, MQTT topic contract, Influx schema, Grafana dashboard JSON and Telegraf config sample.
+- `production-sim-stack/` - local production-style simulation with FastAPI-compatible scoring, Docker Compose, MQTT dry run, MLflow-style run metadata, MinIO/S3-style artifact manifest, DuckDB mart SQL, Influx/Grafana monitoring artifacts and Slurm job array.
 - `ml-baseline/` - reviewer-visible scikit-learn model baseline for industrial service-escalation scoring.
 - `sql/` - top-level DuckDB mart shortcut for BI/DWH reviewers.
-- `hpc/` - top-level Slurm shortcut for CINECA/IT4LIA/BI-REX-style review.
+- `hpc/` - top-level Slurm shortcut for HPC/AI Factory-style review.
 - `benchmarks/` - local CPU-only industrial scoring benchmark with generated JSON artifact.
-- `docs/reviewer/` - recruiter route, technical route, limitations, company fit matrix, and industrial/PwC story docs.
+- `docs/reviewer/` - recruiter route, technical route, limitations and role/domain reviewer notes.
+- `docs/application-specific/` - optional application notes for targeted review contexts.
 - `dashboard-workbook/customer_experience_dashboard.xlsx` - Excel dashboard prototype using simulated CX data.
-- `PROJECT_POSITIONING.md` - short explanation of how to present the project for the Ducati role.
+- `PORTFOLIO_POSITIONING.md` - neutral portfolio positioning note.
 - `EVIDENCE_MAP.md` - requirement-to-evidence map for recruiter and hiring-manager review.
-- `AI_INTERNSHIP_FIT.md` - strict note explaining why this is secondary evidence for AI/data internships, not the main AI engineering project.
 
-For technical review, start with `cx-analyst-lab/`: it includes data validation, KPI generation, SQL reporting views, Power BI-style measures, and metric tests.
+For technical review, start with `cx-analyst-lab/`: it includes data validation, KPI generation, SQL reporting views, Power BI-style measures and metric tests.
 
-For industrial AI review, start with `industrial-cx-ai-lab/src/run_pipeline.py`, `industrial-cx-ai-lab/artifacts/`, `industrial-cx-ai-lab/ops/`, and `production-sim-stack/src/api.py`.
+For industrial AI review, start with `industrial-cx-ai-lab/src/run_pipeline.py`, `industrial-cx-ai-lab/artifacts/`, `industrial-cx-ai-lab/ops/` and `production-sim-stack/src/api.py`.
 
 ## Navigable demo
 
-The `Demo guidata` section is a reviewer-facing walkthrough. It lets a reviewer select a simulated CX segment, move through journey steps, and inspect the signal, evidence, operating decision, owner, follow-up metric, and output before opening the dashboard or action tracker.
+The `Demo guidata` section is a reviewer-facing walkthrough. It lets a reviewer select a simulated CX segment, move through journey steps, and inspect the signal, evidence, operating decision, owner, follow-up metric and output before opening the dashboard or action tracker.
 
 ## Local validation
 
@@ -107,7 +105,7 @@ Run the reproducible validation script with:
 npm test
 ```
 
-The validation checks dataset integrity, scoring weights, demo scenario wiring, navigation targets, computed total versus weighted insight volume, and the executable Industrial CX AI lab.
+The validation checks dataset integrity, scoring weights, demo scenario wiring, navigation targets, computed total versus weighted insight volume and the executable Industrial CX AI lab.
 
 Run only the workbook validation with:
 
@@ -152,21 +150,18 @@ python3 -m pip install -r ml-baseline/requirements.txt
 python3 ml-baseline/train_model.py
 ```
 
-The GitHub Action runs the workbook validator, Python unit tests, industrial pipeline, production simulation, MQTT dry run, scikit-learn baseline, local CPU benchmark, and JSON validation for simulated industrial artifacts.
+The GitHub Action runs the workbook validator, Python unit tests, industrial pipeline, production simulation, MQTT dry run, scikit-learn baseline, local CPU benchmark and JSON validation for simulated industrial artifacts.
 
 ## Recommended repository metadata
 
-- Homepage: `https://errer441122.github.io/ducati-cx-case-study/`
-- Topics: `customer-analytics`, `data-analysis`, `dashboard`, `excel`, `cx`, `portfolio-project`, `customer-experience`, `segmentation`, `industrial-iot`, `machine-learning`, `opc-ua`
+- Repository name: `industrial-cx-service-analytics-lab`
+- Homepage: `https://errer441122.github.io/industrial-cx-service-analytics-lab/`
+- Topics: `industrial-ai`, `data-engineering`, `machine-learning`, `anomaly-detection`, `time-series`, `industrial-iot`, `fastapi`, `docker`, `scikit-learn`, `slurm`, `hpc`, `customer-analytics`, `cx`, `portfolio-project`
 
-## Positioning for the application
+## Scope boundaries
 
-For the original Ducati Customer Experience Data Analyst application, use this as a CX analytics portfolio piece. The strongest angle is:
+This is not a Ducati system, not a production industrial integration, not a real dealer/customer dataset, not a warranty/safety/pricing decision tool and not a real cluster/HPC deployment.
 
-> I built a Customer Experience analytics workbook showing how I would collect, organize and analyze customer feedback, build dashboard views, segment customers, identify journey trends and translate findings into clear improvement actions.
+All scoring outputs are advisory and designed for human review.
 
-The project uses simulated data only. It does not claim access to Ducati systems, Ducati customer data, dealer data or internal processes.
-
-The project is not intended to simulate Ducati internal data. It is a portfolio case study showing how I would structure a CX analytics workflow if approved survey, CRM, service, dealer or digital-touchpoint data were available.
-
-For BI-REX/PwC/CINECA/IT4LIA-style AI/data internships, use `industrial-cx-ai-lab/`, `production-sim-stack/`, `hpc/`, and `benchmarks/` as the technical supplement. The original workbook remains the communication layer; the labs are the evidence for ML, Industrial IoT-style data, MQTT/OPC UA-style messaging, time-series monitoring, MLOps-style lifecycle, and HPC-style batch packaging.
+For the original Ducati-oriented application context, see `docs/application-specific/DUCATI_CX_APPLICATION_NOTE.md`.

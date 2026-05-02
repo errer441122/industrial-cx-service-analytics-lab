@@ -37,7 +37,7 @@ def score_payload(payload: dict[str, Any]) -> dict[str, Any]:
     return {
         **response,
         "event_id": payload.get("event_id", response["asset_id"]),
-        "bike_family": payload.get("bike_family", "synthetic-industrial-asset"),
+        "asset_family": payload.get("asset_family", "synthetic-industrial-asset"),
         "predicted_service_escalation_probability": probability,
         "predicted_service_escalation": int(probability >= 0.45),
         "decision_boundary": "advisory human-review triage only",

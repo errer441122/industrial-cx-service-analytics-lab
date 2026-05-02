@@ -1,4 +1,4 @@
-name: ducati-cx-industrial-evidence
+name: industrial-cx-service-evidence
 channels:
   - conda-forge
 dependencies:

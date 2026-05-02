@@ -1,6 +1,6 @@
 {
   "artifact_type": "simulated_opcua_tag_map",
-  "disclaimer": "Simulated OPC UA-style tag map for portfolio review only; not connected to Ducati, dealer systems, plant equipment, Kepware, or any real OPC UA server.",
+  "disclaimer": "Simulated OPC UA-style tag map for portfolio review only; not connected to company systems, dealer systems, plant equipment, Kepware, or any real OPC UA server.",
   "namespace": "ns=2;s=IndustrialCxLab",
   "assets": [
     {

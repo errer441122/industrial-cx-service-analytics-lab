@@ -10,7 +10,7 @@ CREATE OR REPLACE TABLE industrial_service_feature_mart AS
 SELECT
     event_id,
     line,
-    bike_family,
+    asset_family,
     timestamp,
     opcua_node,
     vibration_rms,

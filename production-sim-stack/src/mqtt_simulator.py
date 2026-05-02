@@ -34,7 +34,7 @@ def build_messages(limit: int | None = None) -> list[dict[str, object]]:
                 "payload": {
                     "event_id": event["event_id"],
                     "line": event["line"],
-                    "bike_family": event["bike_family"],
+                    "asset_family": event["asset_family"],
                     "timestamp": event["timestamp"],
                     "opcua_node": event["opcua_node"],
                     "predicted_service_escalation_probability": event["predicted_service_escalation_probability"],

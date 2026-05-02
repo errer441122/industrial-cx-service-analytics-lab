@@ -1,6 +1,6 @@
 # Scikit-learn Industrial Service Baseline
 
-This folder makes the machine-learning evidence explicit for BI-REX, PwC Data & AI, and CRIF-style technical review.
+This folder makes the machine-learning evidence explicit for applied ML, anomaly/service-risk scoring and reviewer-visible model evidence.
 
 The task is advisory: predict whether a simulated after-sales / industrial telemetry event should be escalated to human service review. It does not automate warranty, customer, dealer, or commercial decisions.
 

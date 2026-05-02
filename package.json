@@ -1,8 +1,8 @@
 {
-  "name": "ducati-cx-case-study",
+  "name": "industrial-cx-service-analytics-lab",
   "version": "1.0.0",
   "private": true,
-  "description": "Static customer experience analytics workbook using simulated CX data and dashboard logic.",
+  "description": "Simulated industrial CX analytics, telemetry simulation and service-risk scoring portfolio lab.",
   "scripts": {
     "test": "npm run test:node && npm run test:cx-analyst && npm run test:industrial-ai && npm run test:prod-sim",
     "test:node": "node scripts/validate-data.mjs",

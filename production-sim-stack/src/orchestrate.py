@@ -34,7 +34,7 @@ def write_predictions(scored: list[dict[str, object]], output_dir: Path) -> Path
     fields = [
         "event_id",
         "line",
-        "bike_family",
+        "asset_family",
         "predicted_service_escalation_probability",
         "predicted_service_escalation",
         "service_escalation",
@@ -57,7 +57,7 @@ def write_sqlite_mart(scored: list[dict[str, object]], output_dir: Path) -> Path
             CREATE TABLE industrial_service_features (
                 event_id TEXT PRIMARY KEY,
                 line TEXT NOT NULL,
-                bike_family TEXT NOT NULL,
+                asset_family TEXT NOT NULL,
                 timestamp TEXT NOT NULL,
                 opcua_node TEXT NOT NULL,
                 vibration_rms REAL NOT NULL,
@@ -79,7 +79,7 @@ def write_sqlite_mart(scored: list[dict[str, object]], output_dir: Path) -> Path
             INSERT INTO industrial_service_features VALUES (
                 :event_id,
                 :line,
-                :bike_family,
+                :asset_family,
                 :timestamp,
                 :opcua_node,
                 :vibration_rms,
@@ -106,7 +106,7 @@ def write_influx(scored: list[dict[str, object]], output_dir: Path) -> Path:
     lines = []
     for index, row in enumerate(scored):
         timestamp_ns = 1_741_158_000_000_000_000 + index * 60_000_000_000
-        tags = f"line={row['line']},bike_family={row['bike_family']}"
+        tags = f"line={row['line']},asset_family={row['asset_family']}"
         fields = (
             f"risk_probability={row['predicted_service_escalation_probability']},"
             f"text_risk_hits={row['text_risk_hits']}i,"

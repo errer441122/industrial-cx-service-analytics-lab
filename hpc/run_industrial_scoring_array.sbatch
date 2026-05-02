@@ -8,8 +8,8 @@
 
 set -euo pipefail
 
-# HPC-ready packaging only. Not executed on a real BI-REX, CINECA, IT4LIA,
-# Ducati, or other industrial cluster.
+# HPC-ready packaging only. Not executed on a real cluster, partner,
+# employer, or production scheduler.
 
 cd "${SLURM_SUBMIT_DIR:-$PWD}"
 

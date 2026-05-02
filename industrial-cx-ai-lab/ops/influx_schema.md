@@ -1,6 +1,6 @@
 # Influx Schema - Simulated Industrial CX Lab
 
-This is a simulated design artifact. It is not connected to a real InfluxDB instance, Ducati system, dealer system, production line, edge gateway, or telemetry source.
+This is a simulated design artifact. It is not connected to a real InfluxDB instance, company system, dealer system, production line, edge gateway, or telemetry source.
 
 ## Measurement
 

@@ -9,7 +9,7 @@
       "datasource": "InfluxDB",
       "targets": [
         {
-          "query": "from(bucket: \"portfolio\") |> range(start: -24h) |> filter(fn: (r) => r._measurement == \"ducati_service_risk\")"
+          "query": "from(bucket: \"portfolio\") |> range(start: -24h) |> filter(fn: (r) => r._measurement == \"industrial_service_risk\")"
         }
       ]
     },

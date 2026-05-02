@@ -40,7 +40,7 @@ def _copy_if_exists(source: Path, target: Path) -> bool:
 
 def _load_api_module():
     api_path = ROOT / "production-sim-stack" / "src" / "api.py"
-    spec = importlib.util.spec_from_file_location("ducati_production_api", api_path)
+    spec = importlib.util.spec_from_file_location("industrial_service_api", api_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Could not load {api_path}.")
     module = importlib.util.module_from_spec(spec)
@@ -85,7 +85,7 @@ def _write_feature_mart_summary() -> None:
         "# Feature Mart Output\n\n"
         f"SQLite mart rows generated locally: `{rows}`\n\n"
         f"DuckDB-compatible SQL artifact: `{_rel(sql_path)}`\n\n"
-        "Boundary: local feature-mart evidence only; no production DWH or BI-REX deployment.\n",
+        "Boundary: local feature-mart evidence only; no production DWH or partner deployment.\n",
         encoding="utf-8",
     )
 
@@ -95,19 +95,19 @@ def _write_cards_and_limits() -> None:
         "# Industrial Data Card\n\n"
         "Dataset: synthetic customer-experience and industrial-service telemetry samples.\n\n"
         "Sources: repository-local simulated CX feedback, simulated telemetry, service event seeds, MQTT-style payloads, and OPC UA-style tag maps.\n\n"
-        "Limitations: no real Ducati customer, dealer, plant, vehicle, warranty, safety, or industrial-control data.\n"
+        "Limitations: no real customer, dealer, plant, vehicle, warranty, safety, or industrial-control data.\n"
     )
     model_card = (
         "# Industrial Service Risk Model Card\n\n"
         "Model: transparent service-risk and anomaly scoring baseline with scikit-learn lab artifacts.\n\n"
-        "Intended use: portfolio evidence for BI-REX/PwC/CINECA/IT4LIA-style screening.\n\n"
+        "Intended use: portfolio evidence for industrial AI, data engineering, applied ML and CX analytics review.\n\n"
         "Out of scope: safety decisions, warranty automation, customer treatment automation, or production industrial control.\n"
     )
     limitations = (
         "# Limitations\n\n"
-        "- All Ducati/CX and industrial telemetry data is simulated.\n"
+        "- All CX and industrial telemetry data is simulated.\n"
         "- OPC UA, MQTT, InfluxDB, Grafana, MLflow, MinIO, Docker, and Slurm files are local portfolio artifacts unless a separate smoke log states they were executed.\n"
-        "- No real BI-REX, CINECA, IT4LIA, Ducati, plant, dealer, edge, cloud, GPU, or HPC execution is claimed.\n"
+        "- No real plant, dealer, edge, cloud, GPU, cluster, partner, employer or production execution is claimed.\n"
         "- Service-risk outputs are advisory and require human review.\n"
     )
     (RESULTS_DIR / "data_card.md").write_text(data_card, encoding="utf-8")
@@ -199,7 +199,7 @@ Equivalent shell steps are listed in `evidence-lock/commands.sh`.
 | API smoke probability | {api_response.get("predicted_service_escalation_probability", "missing")} |
 | Local benchmark rows/sec | {rows_per_second} |
 
-## BI-REX / Industrial Stack Evidence
+## Industrial Stack Evidence
 
 | Artifact | Path |
 | --- | --- |
@@ -213,7 +213,7 @@ Equivalent shell steps are listed in `evidence-lock/commands.sh`.
 
 ## Scope Boundaries
 
-This is not a Ducati system, not a production industrial integration, not a real dealer/customer dataset, not a warranty/safety decision tool, and not a real BI-REX/CINECA/IT4LIA/PwC/CRIF deployment.
+This is not a company system, not a production industrial integration, not a real dealer/customer dataset, not a warranty/safety/pricing decision tool, and not a real partner, employer, client, cluster or production deployment.
 """
     report_path = RESULTS_DIR / "portfolio_evidence_report.md"
     report_path.write_text(report, encoding="utf-8")

@@ -18,9 +18,9 @@ This repository is an honest portfolio simulation. Every reviewer-facing claim s
 
 ## Do Not Claim
 
-- No access to Ducati systems, customer data, dealer data, telemetry, dashboards, or internal processes.
+- No access to any company's systems, customer data, dealer data, telemetry, dashboards, or internal processes.
 - No real OPC UA, Kepware, MQTT, InfluxDB, Grafana, Telegraf, Slurm, cloud, edge, or production integration.
-- No real BI-REX, CINECA, IT4LIA, IPAZIA, Ducati, PwC, CRIF, or UNDP execution.
+- No real employer, partner, client, cluster or production execution.
 - No production predictive-maintenance model, warranty model, safety model, pricing model, or automated customer-treatment system.
 - No validated model quality beyond local metrics on synthetic data.
 

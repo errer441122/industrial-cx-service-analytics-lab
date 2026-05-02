@@ -56,4 +56,4 @@ python production-sim-stack/src/api.py --example
 | `benchmarks/industrial_scoring_benchmark.py` | local CPU timing path |
 | `benchmarks/artifacts/local_cpu_benchmark.json` | generated local benchmark artifact |
 
-No real BI-REX, CINECA, IT4LIA, IPAZIA, cloud, GPU, edge, or Slurm execution is claimed.
+No real cluster, cloud, GPU, edge, partner, production or Slurm execution is claimed.

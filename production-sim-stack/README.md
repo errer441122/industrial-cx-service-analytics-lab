@@ -1,10 +1,10 @@
 # Production Simulation Stack
 
-This folder is the local production-style simulation layer for BI-REX, PwC, CINECA/IT4LIA, and industrial AI screening.
+This folder is the local production-style simulation layer for industrial AI, data engineering, applied ML and reviewer-facing portfolio screening.
 
 It turns the CX workbook into a production-like industrial analytics simulation: API scoring, MQTT/OPC UA-style events, MLflow-style tracking, MinIO/S3-style artifact layout, DuckDB mart SQL, Influx line protocol, Grafana dashboard, and Slurm batch entrypoint.
 
-It uses simulated data only. No Ducati system, customer, dealer, motorcycle, telemetry, or production plant data is represented.
+It uses simulated data only. No company system, customer, dealer, vehicle, telemetry, equipment or production plant data is represented.
 
 ## What This Adds
 

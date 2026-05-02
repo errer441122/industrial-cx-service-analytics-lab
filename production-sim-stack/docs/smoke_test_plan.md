@@ -1,6 +1,6 @@
 # Smoke Test Plan
 
-This plan distinguishes local checks that were executed from optional service checks that require Docker or external infrastructure. No real Ducati, plant, dealer, cloud, Slurm, OPC UA, MQTT, InfluxDB, or Grafana integration is claimed.
+This plan distinguishes local checks that were executed from optional service checks that require Docker or external infrastructure. No real company, plant, dealer, cloud, Slurm, OPC UA, MQTT, InfluxDB, or Grafana integration is claimed.
 
 ## Executed Local Checks
 

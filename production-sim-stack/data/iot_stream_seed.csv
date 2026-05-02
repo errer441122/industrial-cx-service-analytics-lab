@@ -1,21 +1,21 @@
-event_id,line,bike_family,timestamp,opcua_node,vibration_rms,temperature_c,battery_voltage,oil_pressure_bar,service_delay_days,nps,warranty_claims,telemetry_dropouts,mqtt_topic,customer_note,service_escalation
-IE-001,line1,Panigale,2026-03-05T08:00:00Z,ns=2;s=line1.panigale.vibration,1.8,78,12.7,3.2,3,9,0,0,factory/line1/panigale/service-risk,"smooth service resolved",0
-IE-002,line2,Multistrada,2026-03-05T08:05:00Z,ns=2;s=line2.multistrada.temperature,5.9,98,11.7,1.8,23,4,2,2,factory/line2/multistrada/service-risk,"repeat fault overheating complaint delay",1
-IE-003,line3,DesertX,2026-03-05T08:10:00Z,ns=2;s=line3.desertx.oil_pressure,4.8,94,12.0,1.9,18,5,1,1,factory/line3/desertx/service-risk,"remote repair warning unresolved",1
-IE-004,line1,Monster,2026-03-05T08:15:00Z,ns=2;s=line1.monster.battery,2.2,81,12.6,3.0,5,8,0,0,dealer/network/cx-escalation,"dealer explained issue",0
-IE-005,line1,Diavel,2026-03-05T08:20:00Z,ns=2;s=line1.diavel.vibration,2.5,83,12.5,2.9,7,7,0,0,dealer/network/cx-escalation,"minor vibration monitored",0
-IE-006,line1,Panigale,2026-03-05T08:25:00Z,ns=2;s=line1.panigale.temperature,5.7,101,11.5,1.6,28,2,3,3,factory/line1/panigale/service-risk,"critical overheating unresolved complaint",1
-IE-007,line2,Scrambler,2026-03-05T08:30:00Z,ns=2;s=line2.scrambler.battery,1.7,77,12.9,3.2,2,10,0,0,dealer/network/cx-escalation,"excellent service fast resolution",0
-IE-008,line2,Multistrada,2026-03-05T08:35:00Z,ns=2;s=line2.multistrada.oil_pressure,4.6,92,11.9,2.0,17,5,1,1,factory/line2/multistrada/service-risk,"oil warning delayed parts complaint",1
-IE-009,line3,DesertX,2026-03-05T08:40:00Z,ns=2;s=line3.desertx.vibration,5.3,96,11.8,1.8,22,4,2,2,factory/line3/desertx/service-risk,"remote breakdown repeat issue",1
-IE-010,line1,Monster,2026-03-05T08:45:00Z,ns=2;s=line1.monster.temperature,2.4,82,12.6,3.0,4,8,0,0,dealer/network/cx-escalation,"routine check successful",0
-IE-011,line1,Panigale,2026-03-05T08:50:00Z,ns=2;s=line1.panigale.oil_pressure,5.1,99,11.6,1.7,25,3,3,2,factory/line1/panigale/service-risk,"pressure warning escalation delay",1
-IE-012,line2,Scrambler,2026-03-05T08:55:00Z,ns=2;s=line2.scrambler.vibration,1.9,79,12.8,3.1,2,9,0,0,dealer/network/cx-escalation,"fast booking resolved",0
-IE-013,line2,Multistrada,2026-03-05T09:00:00Z,ns=2;s=line2.multistrada.vibration,5.0,95,11.9,1.9,20,4,2,2,factory/line2/multistrada/service-risk,"vibration complaint repeat dealer delay",1
-IE-014,line3,DesertX,2026-03-05T09:05:00Z,ns=2;s=line3.desertx.temperature,4.9,93,12.0,2.0,16,5,1,1,factory/line3/desertx/service-risk,"warning unresolved status unclear",1
-IE-015,line1,Diavel,2026-03-05T09:10:00Z,ns=2;s=line1.diavel.battery,2.0,80,12.8,3.1,3,9,0,0,dealer/network/cx-escalation,"smooth pickup issue closed",0
-IE-016,line1,Monster,2026-03-05T09:15:00Z,ns=2;s=line1.monster.vibration,2.3,82,12.6,3.0,6,8,0,0,dealer/network/cx-escalation,"minor issue communication clear",0
-IE-017,line1,Panigale,2026-03-05T09:20:00Z,ns=2;s=line1.panigale.vibration,5.8,100,11.5,1.7,27,2,3,3,factory/line1/panigale/service-risk,"repeat complaint overheating unresolved",1
-IE-018,line2,Multistrada,2026-03-05T09:25:00Z,ns=2;s=line2.multistrada.oil_pressure,4.7,94,11.9,1.9,19,4,2,1,factory/line2/multistrada/service-risk,"oil warning complaint delayed",1
-IE-019,line2,Scrambler,2026-03-05T09:30:00Z,ns=2;s=line2.scrambler.temperature,1.8,78,12.9,3.2,2,9,0,0,dealer/network/cx-escalation,"preventive check satisfied",0
-IE-020,line1,Diavel,2026-03-05T09:35:00Z,ns=2;s=line1.diavel.temperature,2.6,84,12.5,2.8,8,7,0,0,dealer/network/cx-escalation,"issue monitored customer informed",0
+event_id,line,asset_family,timestamp,opcua_node,vibration_rms,temperature_c,battery_voltage,oil_pressure_bar,service_delay_days,nps,warranty_claims,telemetry_dropouts,mqtt_topic,customer_note,service_escalation
+IE-001,line1,Pump-A,2026-03-05T08:00:00Z,ns=2;s=line1.Pump-A.vibration,1.8,78,12.7,3.2,3,9,0,0,factory/line1/Pump-A/service-risk,"smooth service resolved",0
+IE-002,line2,Compressor-B,2026-03-05T08:05:00Z,ns=2;s=line2.Compressor-B.temperature,5.9,98,11.7,1.8,23,4,2,2,factory/line2/Compressor-B/service-risk,"repeat fault overheating complaint delay",1
+IE-003,line3,Press-C,2026-03-05T08:10:00Z,ns=2;s=line3.Press-C.oil_pressure,4.8,94,12.0,1.9,18,5,1,1,factory/line3/Press-C/service-risk,"remote repair warning unresolved",1
+IE-004,line1,Conveyor-D,2026-03-05T08:15:00Z,ns=2;s=line1.Conveyor-D.battery,2.2,81,12.6,3.0,5,8,0,0,dealer/network/cx-escalation,"dealer explained issue",0
+IE-005,line1,Pump-E,2026-03-05T08:20:00Z,ns=2;s=line1.Pump-E.vibration,2.5,83,12.5,2.9,7,7,0,0,dealer/network/cx-escalation,"minor vibration monitored",0
+IE-006,line1,Pump-A,2026-03-05T08:25:00Z,ns=2;s=line1.Pump-A.temperature,5.7,101,11.5,1.6,28,2,3,3,factory/line1/Pump-A/service-risk,"critical overheating unresolved complaint",1
+IE-007,line2,RobotCell-F,2026-03-05T08:30:00Z,ns=2;s=line2.RobotCell-F.battery,1.7,77,12.9,3.2,2,10,0,0,dealer/network/cx-escalation,"excellent service fast resolution",0
+IE-008,line2,Compressor-B,2026-03-05T08:35:00Z,ns=2;s=line2.Compressor-B.oil_pressure,4.6,92,11.9,2.0,17,5,1,1,factory/line2/Compressor-B/service-risk,"oil warning delayed parts complaint",1
+IE-009,line3,Press-C,2026-03-05T08:40:00Z,ns=2;s=line3.Press-C.vibration,5.3,96,11.8,1.8,22,4,2,2,factory/line3/Press-C/service-risk,"remote breakdown repeat issue",1
+IE-010,line1,Conveyor-D,2026-03-05T08:45:00Z,ns=2;s=line1.Conveyor-D.temperature,2.4,82,12.6,3.0,4,8,0,0,dealer/network/cx-escalation,"routine check successful",0
+IE-011,line1,Pump-A,2026-03-05T08:50:00Z,ns=2;s=line1.Pump-A.oil_pressure,5.1,99,11.6,1.7,25,3,3,2,factory/line1/Pump-A/service-risk,"pressure warning escalation delay",1
+IE-012,line2,RobotCell-F,2026-03-05T08:55:00Z,ns=2;s=line2.RobotCell-F.vibration,1.9,79,12.8,3.1,2,9,0,0,dealer/network/cx-escalation,"fast booking resolved",0
+IE-013,line2,Compressor-B,2026-03-05T09:00:00Z,ns=2;s=line2.Compressor-B.vibration,5.0,95,11.9,1.9,20,4,2,2,factory/line2/Compressor-B/service-risk,"vibration complaint repeat dealer delay",1
+IE-014,line3,Press-C,2026-03-05T09:05:00Z,ns=2;s=line3.Press-C.temperature,4.9,93,12.0,2.0,16,5,1,1,factory/line3/Press-C/service-risk,"warning unresolved status unclear",1
+IE-015,line1,Pump-E,2026-03-05T09:10:00Z,ns=2;s=line1.Pump-E.battery,2.0,80,12.8,3.1,3,9,0,0,dealer/network/cx-escalation,"smooth pickup issue closed",0
+IE-016,line1,Conveyor-D,2026-03-05T09:15:00Z,ns=2;s=line1.Conveyor-D.vibration,2.3,82,12.6,3.0,6,8,0,0,dealer/network/cx-escalation,"minor issue communication clear",0
+IE-017,line1,Pump-A,2026-03-05T09:20:00Z,ns=2;s=line1.Pump-A.vibration,5.8,100,11.5,1.7,27,2,3,3,factory/line1/Pump-A/service-risk,"repeat complaint overheating unresolved",1
+IE-018,line2,Compressor-B,2026-03-05T09:25:00Z,ns=2;s=line2.Compressor-B.oil_pressure,4.7,94,11.9,1.9,19,4,2,1,factory/line2/Compressor-B/service-risk,"oil warning complaint delayed",1
+IE-019,line2,RobotCell-F,2026-03-05T09:30:00Z,ns=2;s=line2.RobotCell-F.temperature,1.8,78,12.9,3.2,2,9,0,0,dealer/network/cx-escalation,"preventive check satisfied",0
+IE-020,line1,Pump-E,2026-03-05T09:35:00Z,ns=2;s=line1.Pump-E.temperature,2.6,84,12.5,2.8,8,7,0,0,dealer/network/cx-escalation,"issue monitored customer informed",0

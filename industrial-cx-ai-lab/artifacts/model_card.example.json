@@ -15,7 +15,7 @@
   ],
   "limitations": [
     "simulated data only",
-    "no real Ducati telemetry",
+    "no real company telemetry",
     "small sample size",
     "not calibrated for commercial action",
     "no live OPC UA, InfluxDB, Grafana, Slurm, or cloud execution"

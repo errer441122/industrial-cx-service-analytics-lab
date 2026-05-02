@@ -45,7 +45,7 @@ def generate_telemetry(
     """Build deterministic simulated industrial-service telemetry.
 
     The signals are synthetic and designed only for local analytics tests. They
-    are not Ducati, dealer, plant, equipment, or production telemetry.
+    are not company, dealer, plant, equipment, or production telemetry.
     """
 
     if asset_count < 1:
@@ -179,7 +179,7 @@ def write_service_events(rows: list[dict[str, object]], path: Path) -> Path:
                         mean(float(row["customer_satisfaction_score"]) for row in asset_rows),
                         3,
                     ),
-                    "simulation_note": "Synthetic service summary; no real Ducati data.",
+                    "simulation_note": "Synthetic service summary; no real company data.",
                 }
             )
     return path

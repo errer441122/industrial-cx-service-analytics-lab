@@ -1,18 +1,18 @@
 {
   "artifacts": {
-    "anomaly_metrics": "C:\\Users\\errer\\Desktop\\ducati-cx-case-study\\industrial-cx-ai-lab\\artifacts\\anomaly_metrics.json",
-    "feature_importance": "C:\\Users\\errer\\Desktop\\ducati-cx-case-study\\industrial-cx-ai-lab\\artifacts\\feature_importance.csv",
-    "influx_line_protocol": "C:\\Users\\errer\\Desktop\\ducati-cx-case-study\\industrial-cx-ai-lab\\artifacts\\influx_line_protocol.txt",
-    "maintenance_policy_note": "C:\\Users\\errer\\Desktop\\ducati-cx-case-study\\industrial-cx-ai-lab\\artifacts\\maintenance_policy_note.md",
-    "service_risk_metrics": "C:\\Users\\errer\\Desktop\\ducati-cx-case-study\\industrial-cx-ai-lab\\artifacts\\service_risk_metrics.json"
+    "anomaly_metrics": "C:\\Users\\errer\\Desktop\\industrial-cx-service-analytics-lab-work\\industrial-cx-ai-lab\\artifacts\\anomaly_metrics.json",
+    "feature_importance": "C:\\Users\\errer\\Desktop\\industrial-cx-service-analytics-lab-work\\industrial-cx-ai-lab\\artifacts\\feature_importance.csv",
+    "influx_line_protocol": "C:\\Users\\errer\\Desktop\\industrial-cx-service-analytics-lab-work\\industrial-cx-ai-lab\\artifacts\\influx_line_protocol.txt",
+    "maintenance_policy_note": "C:\\Users\\errer\\Desktop\\industrial-cx-service-analytics-lab-work\\industrial-cx-ai-lab\\artifacts\\maintenance_policy_note.md",
+    "service_risk_metrics": "C:\\Users\\errer\\Desktop\\industrial-cx-service-analytics-lab-work\\industrial-cx-ai-lab\\artifacts\\service_risk_metrics.json"
   },
   "assets": 4,
   "data": {
-    "simulated_service_events": "C:\\Users\\errer\\Desktop\\ducati-cx-case-study\\industrial-cx-ai-lab\\data\\simulated_service_events.csv",
-    "simulated_telemetry": "C:\\Users\\errer\\Desktop\\ducati-cx-case-study\\industrial-cx-ai-lab\\data\\simulated_telemetry.csv"
+    "simulated_service_events": "C:\\Users\\errer\\Desktop\\industrial-cx-service-analytics-lab-work\\industrial-cx-ai-lab\\data\\simulated_service_events.csv",
+    "simulated_telemetry": "C:\\Users\\errer\\Desktop\\industrial-cx-service-analytics-lab-work\\industrial-cx-ai-lab\\data\\simulated_telemetry.csv"
   },
-  "disclaimer": "Synthetic local-only industrial analytics simulation; no real Ducati, customer, dealer, plant, telemetry, OPC UA, MQTT, Influx, Grafana, Slurm, cloud, or edge execution.",
-  "generated_at_utc": "2026-05-01T17:18:39+00:00",
+  "disclaimer": "Synthetic local-only industrial analytics simulation; no real company, customer, dealer, plant, telemetry, OPC UA, MQTT, Influx, Grafana, Slurm, cloud, or edge execution.",
+  "generated_at_utc": "2026-05-02T21:59:39+00:00",
   "partition": null,
   "periods_per_asset": 96,
   "rows": 384

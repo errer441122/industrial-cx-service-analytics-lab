@@ -123,6 +123,6 @@ def run_anomaly_detection(rows: list[dict[str, object]]) -> dict[str, Any]:
     report["feature_set"] = ANOMALY_FEATURES
     report["disclaimer"] = (
         "Local CPU simulation only; no real OPC UA, MQTT, Influx, Grafana, "
-        "Ducati, plant, dealer, or production telemetry integration."
+        "company, plant, dealer, or production telemetry integration."
     )
     return report

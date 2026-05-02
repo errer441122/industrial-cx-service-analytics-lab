@@ -46,7 +46,7 @@ def load_events(path: Path = DATA_PATH) -> list[dict[str, object]]:
                 {
                     "event_id": raw["event_id"],
                     "line": raw["line"],
-                    "bike_family": raw["bike_family"],
+                    "asset_family": raw["asset_family"],
                     "timestamp": raw["timestamp"],
                     "opcua_node": raw["opcua_node"],
                     "vibration_rms": _float(raw["vibration_rms"], "vibration_rms"),

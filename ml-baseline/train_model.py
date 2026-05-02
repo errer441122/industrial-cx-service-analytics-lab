@@ -60,7 +60,7 @@ def note_risk_count(note: str) -> int:
 
 def build_features(row: dict[str, str]) -> dict[str, Any]:
     return {
-        "bike_family": row["bike_family"],
+        "asset_family": row["asset_family"],
         "region": row["region"],
         "vibration_rms": float(row["vibration_rms"]),
         "temperature_c": float(row["temperature_c"]),

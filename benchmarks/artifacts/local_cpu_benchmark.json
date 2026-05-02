@@ -1,7 +1,7 @@
 {
   "asset_count": 4,
-  "disclaimer": "Local CPU benchmark only. Not executed on a real BI-REX, CINECA, IT4LIA, Ducati, Slurm, cloud, GPU, or edge environment.",
-  "generated_at_utc": "2026-05-01T17:18:42+00:00",
+  "disclaimer": "Local CPU benchmark only. Not executed on a real cluster, partner, production, Slurm, cloud, GPU, or edge environment.",
+  "generated_at_utc": "2026-05-02T21:59:42+00:00",
   "hardware_note": {
     "cpu_count": 8,
     "platform": "Windows-10-10.0.26200-SP0",
@@ -16,11 +16,11 @@
   "mode": "quick",
   "periods_per_asset": 48,
   "rows": 192,
-  "rows_per_second_feature_plus_scoring": 154.5,
+  "rows_per_second_feature_plus_scoring": 125.33,
   "timing_seconds": {
-    "anomaly_and_service_scoring": 1.240131,
-    "feature_engineering": 0.002553,
-    "feature_plus_scoring": 1.242683,
-    "telemetry_generation": 0.001129
+    "anomaly_and_service_scoring": 1.52937,
+    "feature_engineering": 0.002612,
+    "feature_plus_scoring": 1.531981,
+    "telemetry_generation": 0.001186
   }
 }

@@ -1,6 +1,6 @@
 {
+  "asset_family": "synthetic-industrial-asset",
   "asset_id": "line-01-pump-01",
-  "bike_family": "synthetic-industrial-asset",
   "decision_boundary": "advisory human-review triage only",
   "disclaimer": "Simulation only; not a production industrial decision system.",
   "event_id": "line-01-pump-01",

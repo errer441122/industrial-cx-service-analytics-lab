@@ -10,7 +10,7 @@
     "not-real-integration"
   ],
   "timezone": "browser",
-  "description": "Simulated Grafana dashboard design artifact. It references local synthetic Influx line protocol only and is not connected to real Ducati, plant, dealer, InfluxDB, Grafana, OPC UA, MQTT, cloud, or edge infrastructure.",
+  "description": "Simulated Grafana dashboard design artifact. It references local synthetic Influx line protocol only and is not connected to real company, plant, dealer, InfluxDB, Grafana, OPC UA, MQTT, cloud, or edge infrastructure.",
   "annotations": {
     "list": [
       {

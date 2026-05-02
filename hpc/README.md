@@ -2,7 +2,7 @@
 
 This folder makes HPC evidence visible from the repository root.
 
-The project does not claim real CINECA, IT4LIA, BI-REX, IPAZIA, Ducati, or other cluster execution. It shows how the workload would be packaged for a Linux/Slurm environment and points to runnable local CPU equivalents.
+The project does not claim real cluster, partner, production or scheduler execution. It shows how the workload would be packaged for a Linux/Slurm environment and points to runnable local CPU equivalents.
 
 ## Files
 

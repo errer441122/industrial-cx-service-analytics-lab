@@ -1,6 +1,6 @@
 # Portfolio Evidence Report
 
-Generated at: 2026-05-01T17:25:10+00:00
+Generated at: 2026-05-02T21:59:44+00:00
 
 ## Executive Summary
 
@@ -24,9 +24,9 @@ Equivalent shell steps are listed in `evidence-lock/commands.sh`.
 | Anomaly rule F1 | 0.8529 |
 | Production-sim rows | 20 |
 | API smoke probability | 0.4142 |
-| Local benchmark rows/sec | 154.5 |
+| Local benchmark rows/sec | 125.33 |
 
-## BI-REX / Industrial Stack Evidence
+## Industrial Stack Evidence
 
 | Artifact | Path |
 | --- | --- |
@@ -40,4 +40,4 @@ Equivalent shell steps are listed in `evidence-lock/commands.sh`.
 
 ## Scope Boundaries
 
-This is not a Ducati system, not a production industrial integration, not a real dealer/customer dataset, not a warranty/safety decision tool, and not a real BI-REX/CINECA/IT4LIA/PwC/CRIF deployment.
+This is not a company system, not a production industrial integration, not a real dealer/customer dataset, not a warranty/safety/pricing decision tool, and not a real partner, employer, client, cluster or production deployment.

@@ -146,13 +146,13 @@ if (data) {
   assert(weightedVolume <= totalVolume, "weighted insight volume cannot exceed total feedback volume");
 
   if (!errors.length) {
-    console.log(`Ducati CX validation passed: ${accounts.length} segments, ${deals.length} records, ${demoScenarios.length} demo scenarios.`);
+    console.log(`Industrial CX validation passed: ${accounts.length} segments, ${deals.length} records, ${demoScenarios.length} demo scenarios.`);
     console.log(`Computed volumes: total=${Math.round(totalVolume)} weighted=${Math.round(weightedVolume)}.`);
   }
 }
 
 if (errors.length) {
-  console.error("Ducati CX validation failed:");
+  console.error("Industrial CX validation failed:");
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }

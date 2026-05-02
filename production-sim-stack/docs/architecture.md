@@ -1,6 +1,6 @@
 # Production Simulation Architecture
 
-This is a local-only production-style simulation for reviewer inspection. It does not claim real Ducati systems, dealer data, plant telemetry, OPC UA, MQTT, InfluxDB, Grafana, Slurm, cloud, or edge deployment.
+This is a local-only production-style simulation for reviewer inspection. It does not claim real company systems, dealer data, plant telemetry, OPC UA, MQTT, InfluxDB, Grafana, Slurm, cloud, or edge deployment.
 
 ## Components
 

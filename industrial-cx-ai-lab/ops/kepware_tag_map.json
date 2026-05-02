@@ -1,24 +1,24 @@
 {
   "source_type": "simulated_opcua_kepware_mapping",
-  "disclaimer": "Portfolio-only tag map. No Ducati systems are represented.",
+  "disclaimer": "Portfolio-only tag map. No company systems are represented.",
   "tags": [
     {
-      "opcua_node_pattern": "ns=2;s=Line*.Panigale.Vibration",
+      "opcua_node_pattern": "ns=2;s=Line*.Pump-A.Vibration",
       "feature": "vibration_rms",
       "unit": "g"
     },
     {
-      "opcua_node_pattern": "ns=2;s=Line*.Multistrada.Temperature",
+      "opcua_node_pattern": "ns=2;s=Line*.Compressor-B.Temperature",
       "feature": "temperature_c",
       "unit": "celsius"
     },
     {
-      "opcua_node_pattern": "ns=2;s=Line*.DesertX.OilPressure",
+      "opcua_node_pattern": "ns=2;s=Line*.Press-C.OilPressure",
       "feature": "oil_pressure_bar",
       "unit": "bar"
     },
     {
-      "opcua_node_pattern": "ns=2;s=Line*.Monster.Battery",
+      "opcua_node_pattern": "ns=2;s=Line*.Conveyor-D.Battery",
       "feature": "battery_voltage",
       "unit": "volt"
     }

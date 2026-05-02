@@ -4,16 +4,16 @@ Date: 2026-05-01
 
 ## Summary
 
-Implemented the Ducati repository hardening plan for a secondary industrial analytics / industrial AI portfolio project. The work strengthens BI-REX, PwC, CINECA/IT4LIA, and supporting CRIF evidence while preserving the simulated-data boundary.
+Implemented the repository hardening plan for a secondary industrial analytics / industrial AI portfolio project. The work strengthens industrial AI, data engineering, applied ML, CX analytics, HPC packaging and model-evidence review while preserving the simulated-data boundary.
 
 ## Created Files
 
 - `docs/reviewer/RECRUITER_5_MIN_ROUTE.md`
 - `docs/reviewer/TECHNICAL_20_MIN_ROUTE.md`
 - `docs/reviewer/CLAIMS_AND_LIMITATIONS.md`
-- `docs/reviewer/COMPANY_FIT_MATRIX.md`
-- `docs/reviewer/PWC_ANALYTICS_STORY.md`
-- `docs/reviewer/BI_REX_INDUSTRIAL_STORY.md`
+- `docs/reviewer/ROLE_FIT_MATRIX.md`
+- `docs/reviewer/CONSULTING_ANALYTICS_STORY.md`
+- `docs/reviewer/INDUSTRIAL_AI_REVIEWER_STORY.md`
 - `docs/reviewer/CX_TO_INDUSTRIAL_AI_BRIDGE.md`
 - `industrial-cx-ai-lab/src/telemetry_generator.py`
 - `industrial-cx-ai-lab/src/feature_engineering.py`
@@ -97,8 +97,8 @@ Implemented the Ducati repository hardening plan for a secondary industrial anal
 
 ## Remaining Honest Gaps
 
-- No real Ducati data, systems, telemetry, dealer data, customer data, dashboards, or production processes.
-- No real OPC UA, Kepware, MQTT broker, Telegraf, InfluxDB, Grafana, cloud, edge, Docker service smoke, Slurm, BI-REX, IPAZIA, CINECA, or IT4LIA execution was performed in this hardening pass.
+- No real company data, systems, telemetry, dealer data, customer data, dashboards, or production processes.
+- No real OPC UA, Kepware, MQTT broker, Telegraf, InfluxDB, Grafana, cloud, edge, Docker service smoke, Slurm, partner, cluster or production execution was performed in this hardening pass.
 - The anomaly labels and service-risk labels are synthetic.
 - The benchmark is local CPU only.
-- The repository remains secondary evidence for CRIF and UNDP; the regulated governance cockpit should remain the primary project there.
+- The repository remains portfolio evidence for industrial analytics and applied AI review; it is not a regulated governance, credit-risk, humanitarian or production audit project.

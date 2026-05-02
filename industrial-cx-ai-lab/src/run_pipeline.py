@@ -78,7 +78,7 @@ def run_pipeline(
                 "synthetic data only",
                 "controlled anomaly labels",
                 "local CPU execution only",
-                "no real Ducati, OPC UA, MQTT, Influx, Grafana, Slurm, cloud, or edge integration",
+                "no real company, OPC UA, MQTT, Influx, Grafana, Slurm, cloud, or edge integration",
             ],
         },
         output_dir / "model_card.json",
@@ -106,7 +106,7 @@ def run_pipeline(
             "influx_line_protocol": str(influx_path),
         },
         "disclaimer": (
-            "Synthetic local-only industrial analytics simulation; no real Ducati, "
+            "Synthetic local-only industrial analytics simulation; no real company, "
             "customer, dealer, plant, telemetry, OPC UA, MQTT, Influx, Grafana, "
             "Slurm, cloud, or edge execution."
         ),

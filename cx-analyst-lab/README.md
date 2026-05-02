@@ -1,6 +1,6 @@
 # CX Analyst Technical Lab
 
-This lab is the analyst-toolchain layer for the Ducati Customer Experience case study. It stays inside the CX, Excel, SQL, BI, customer satisfaction, segmentation, trend, and insight-brief perimeter.
+This lab is the analyst-toolchain layer for the simulated customer-experience case study. It stays inside the CX, Excel, SQL, BI, customer satisfaction, segmentation, trend and insight-brief perimeter.
 
 ## What It Shows
 
@@ -23,4 +23,4 @@ python -m unittest discover cx-analyst-lab/tests
 
 ## Boundary
 
-The data is simulated. This is not Ducati customer, dealer, CRM, service, survey, or internal process data. The lab is intended to demonstrate Customer Experience analyst discipline, not AI engineering.
+The data is simulated. This is not real customer, dealer, CRM, service, survey or internal process data. The lab is intended to demonstrate Customer Experience analyst discipline, not AI engineering.

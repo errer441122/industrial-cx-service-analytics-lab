@@ -58,7 +58,7 @@
       "coefficient": 0.331
     },
     {
-      "feature": "bike_family=Multistrada",
+      "feature": "asset_family=Compressor-B",
       "coefficient": 0.3221
     },
     {

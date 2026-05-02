@@ -1,8 +1,8 @@
 # Industrial CX AI Lab
 
-This lab upgrades the Ducati CX workbook from dashboard-only evidence to a small AI/data-engineering project. It uses simulated after-sales and telemetry-style data to connect customer experience, service operations, Industrial IoT, anomaly detection, and service-risk scoring.
+This lab extends a simulated CX analytics workbook into a small AI/data-engineering project. It uses simulated after-sales and telemetry-style data to connect customer experience, service operations, Industrial IoT, anomaly detection, and service-risk scoring.
 
-It uses simulated data only. It does not represent Ducati systems, customers, dealers, motorcycles, telemetry, or internal processes.
+It uses simulated data only. It does not represent any organization's systems, customers, dealers, vehicles, telemetry, equipment or internal processes.
 
 ## What It Demonstrates
 
@@ -17,15 +17,14 @@ It uses simulated data only. It does not represent Ducati systems, customers, de
 
 ## Why This Exists
 
-The original workbook was useful for analytics and stakeholder communication but too weak for AI engineering. This folder adds technical evidence for PwC Data & AI, BI-REX AI/Industrial IoT, and CINECA/IT4LIA-style workload packaging.
+The original workbook demonstrates analytics and stakeholder communication. This folder adds technical evidence for applied AI, industrial analytics, anomaly detection, service-risk scoring, time-series data handling and batch-processing readiness.
 
-| Internship signal | Evidence in this lab |
+| Reviewer signal | Evidence in this lab |
 | --- | --- |
-| PwC Data & AI | ML classifier, feature mart, model card, reproducible metrics |
-| BI-REX | OPC UA-style data, time-series export, Grafana stub, industrial anomaly signals |
-| CINECA / IT4LIA | Slurm-ready batch script and packaged AI workload |
-| CRIF | Text features, risk triage, transparent model limitations |
-| UNDP | Responsible AI boundary and human escalation framing |
+| Applied ML / Anomaly Detection | ML classifier, anomaly metrics, feature mart, model card, reproducible metrics |
+| Industrial AI / Data Engineering | OPC UA-style data, time-series export, Grafana stub, industrial anomaly signals |
+| HPC / Batch Packaging | Slurm-ready batch script and packaged AI workload |
+| Responsible AI / Model Evidence | risk triage, transparent model limitations and human escalation framing |
 
 ## Run Locally
 

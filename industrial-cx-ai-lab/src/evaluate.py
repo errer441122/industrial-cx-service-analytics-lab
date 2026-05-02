@@ -57,7 +57,7 @@ def write_policy_note(
     path.parent.mkdir(parents=True, exist_ok=True)
     text = f"""# Maintenance Policy Note
 
-This note summarizes a simulated industrial CX and service analytics workflow. It uses synthetic telemetry and service labels only; it is not connected to Ducati systems, dealer systems, production equipment, OPC UA servers, MQTT brokers, InfluxDB, Grafana, Slurm, cloud, or edge infrastructure.
+This note summarizes a simulated industrial CX and service analytics workflow. It uses synthetic telemetry and service labels only; it is not connected to company systems, dealer systems, production equipment, OPC UA servers, MQTT brokers, InfluxDB, Grafana, Slurm, cloud, or edge infrastructure.
 
 ## What The Lab Flags
 
@@ -81,9 +81,9 @@ Use model output as a queueing signal for a service analyst or industrial data r
 
 False positives waste reviewer time but can be acceptable in a triage queue. False negatives are more serious because they may hide a deteriorating asset or unresolved customer/service issue. Thresholds should be tuned with validated operating data before any real use.
 
-## BI-REX / IPAZIA / HPC Relevance
+## Industrial AI / HPC Relevance
 
-The local pipeline mirrors the shape of a BI-REX-style industrial analytics PoC: time-series ingestion, protocol mapping, anomaly scoring, service-risk classification, Influx/Grafana-style monitoring artifacts, and Slurm-ready batch packaging. The evidence here is packaging and local CPU execution only, not a real BI-REX, IPAZIA, CINECA, or IT4LIA run.
+The local pipeline mirrors the shape of an industrial analytics proof of concept: time-series ingestion, protocol mapping, anomaly scoring, service-risk classification, Influx/Grafana-style monitoring artifacts, and Slurm-ready batch packaging. The evidence here is packaging and local CPU execution only, not a real cluster, partner, employer or production run.
 """
     path.write_text(text, encoding="utf-8")
     return path

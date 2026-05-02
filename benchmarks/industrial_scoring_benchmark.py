@@ -79,8 +79,8 @@ def run_benchmark(quick: bool = False) -> dict[str, object]:
             "cpu_count": os.cpu_count(),
         },
         "disclaimer": (
-            "Local CPU benchmark only. Not executed on a real BI-REX, CINECA, "
-            "IT4LIA, Ducati, Slurm, cloud, GPU, or edge environment."
+            "Local CPU benchmark only. Not executed on a real cluster, partner, "
+            "production, Slurm, cloud, GPU, or edge environment."
         ),
     }
 
