@@ -1,8 +1,8 @@
 {
-  "name": "industrial-cx-service-analytics-lab",
+  "name": "industrial-cx-service-analytics-workbook",
   "version": "1.0.0",
   "private": true,
-  "description": "Simulated industrial CX analytics, telemetry simulation and service-risk scoring portfolio lab.",
+  "description": "Static customer experience analytics workbook using simulated CX data and dashboard logic.",
   "scripts": {
     "test": "npm run test:node && npm run test:cx-analyst && npm run test:industrial-ai && npm run test:prod-sim",
     "test:node": "node scripts/validate-data.mjs",

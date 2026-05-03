@@ -789,7 +789,7 @@
       y = 100;
       doc.setTextColor(100, 100, 100);
       doc.setFontSize(9);
-      doc.text("Industrial CX & Service Analytics Lab | Caso Studio Portfolio", margin, y);
+    doc.text("Industrial CX & Service Analytics Workbook | Caso Studio Portfolio", margin, y);
 
       y += 22;
       doc.setTextColor(60, 60, 60);
@@ -918,7 +918,7 @@
         doc.setPage(i);
         doc.setFontSize(8);
         doc.setTextColor(150, 150, 150);
-        doc.text(`Pagina ${i} di ${totalPages} | Industrial CX & Service Analytics Lab | Caso Studio`, margin, 810);
+      doc.text(`Pagina ${i} di ${totalPages} | Industrial CX & Service Analytics Workbook | Caso Studio`, margin, 810);
         doc.text("Dati simulati | Non è una valutazione legale privacy", pageWidth - margin, 810, { align: "right" });
       }
 

@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import re
 import sqlite3
 import sys
 import tempfile
@@ -9,6 +10,8 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]
+COMPOSE_FILE = BASE_DIR / "docker-compose.yml"
+REQUIREMENTS_FILE = BASE_DIR / "requirements.txt"
 
 
 def load_module(name: str, relative_path: str):
@@ -28,6 +31,45 @@ mqtt_simulator = load_module("industrial_prod_mqtt_test", "src/mqtt_simulator.py
 
 
 class IndustrialProductionSimulationStackTest(unittest.TestCase):
+    def test_compose_published_ports_are_loopback_only(self):
+        compose_text = COMPOSE_FILE.read_text(encoding="utf-8")
+        published_ports = []
+        for line in compose_text.splitlines():
+            stripped = line.strip()
+            if re.match(r"^-\s+['\"]?([0-9.]+:)?[0-9]+:[0-9]+['\"]?$", stripped):
+                published_ports.append(stripped.removeprefix("-").strip().strip("\"'"))
+
+        self.assertGreater(len(published_ports), 0)
+        for published_port in published_ports:
+            self.assertTrue(
+                published_port.startswith("127.0.0.1:"),
+                f"{published_port} must bind to localhost for the local simulation stack",
+            )
+
+    def test_compose_does_not_commit_minio_root_credentials(self):
+        compose_text = COMPOSE_FILE.read_text(encoding="utf-8")
+        env_example = BASE_DIR / ".env.example"
+
+        self.assertIn("${MINIO_ROOT_USER:?", compose_text)
+        self.assertIn("${MINIO_ROOT_PASSWORD:?", compose_text)
+        self.assertNotIn("MINIO_ROOT_USER: portfolio", compose_text)
+        self.assertNotIn("MINIO_ROOT_PASSWORD: portfolio-password", compose_text)
+        self.assertTrue(env_example.exists())
+
+        env_example_text = env_example.read_text(encoding="utf-8")
+        self.assertIn("MINIO_ROOT_USER=", env_example_text)
+        self.assertIn("MINIO_ROOT_PASSWORD=", env_example_text)
+        self.assertNotIn("portfolio-password", env_example_text)
+
+    def test_mlflow_dependency_is_not_known_vulnerable_scan_version(self):
+        compose_text = COMPOSE_FILE.read_text(encoding="utf-8")
+        requirements_text = REQUIREMENTS_FILE.read_text(encoding="utf-8")
+
+        self.assertNotIn("ghcr.io/mlflow/mlflow:v2.18.0", compose_text)
+        self.assertNotIn("mlflow==2.18.0", requirements_text)
+        self.assertRegex(compose_text, r"ghcr\.io/mlflow/mlflow:v[0-9]+\.[0-9]+\.[0-9]+")
+        self.assertRegex(requirements_text, r"(?m)^mlflow==[0-9]+\.[0-9]+\.[0-9]+$")
+
     def test_scoring_flags_repeat_fault_context(self):
         events = pipeline.load_events()
         event = next(row for row in events if row["event_id"] == "IE-002")

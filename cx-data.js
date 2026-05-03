@@ -3,8 +3,8 @@
 
   window.cxWorkbookData = {
   "project": {
-    "title": "Industrial CX & Service Analytics Lab",
-    "subtitle": "Portfolio workbook statico per customer-experience analytics: dataset simulato, segmentazione clienti, dashboard Excel, diagnostica del journey e action log.",
+    "title": "Industrial CX & Service Analytics Workbook",
+    "subtitle": "Portfolio workbook statico per un ruolo Data Analyst Customer Experience: dataset simulato, segmentazione clienti, dashboard Excel, diagnostica del journey e action log.",
     "disclaimer": "Questo e un caso studio portfolio indipendente basato su dati Customer Experience simulati. Non e collegato a sistemi aziendali reali, non usa dati cliente riservati ed e pensato per dimostrare ragionamento analitico, logica dashboard e gestione responsabile dei dati.",
     "positioning": "Workbook autonomo per Data Analyst CX: fonti cliente simulate, controlli di qualita, segmentazione, dashboard Excel e raccomandazioni operative.",
     "oneLineSummary": "Workbook CX che trasforma survey, service feedback, touchpoint dealer e segnali digitali simulati in segmenti, trend, dashboard e azioni tracciabili.",
@@ -16,7 +16,7 @@
     "adoptionCta": "Apri action tracker",
     "productCta": "Apri brief workbook",
     "caseStudyCta": "Leggi la sintesi del caso studio",
-    "scoringDisclaimer": "Punteggi ed esempi di segmento sono illustrativi.\nUsano assunzioni simulate di Customer Experience e non rappresentano dati cliente reali, valutazioni reali dei clienti o informazioni aziendali riservate."
+    "scoringDisclaimer": "Punteggi ed esempi di segmento sono illustrativi.\nUsano assunzioni simulate di Customer Experience e non rappresentano dati aziendali reali, valutazioni reali dei clienti o informazioni riservate."
   },
   "caseStudy": {
     "context": "Un brand premium automotive o motociclistico ha bisogno di modalita strutturate per comprendere soddisfazione cliente, esperienza service, comportamento digitale, follow-up dealer e segnali del journey dei proprietari su piu touchpoint.",
@@ -523,7 +523,7 @@
         "Prototipo frontend statico per revisione portfolio."
       ],
       "outOfScope": [
-        "Integrazione live con CRM, dealer, survey o sistemi industriali.",
+        "Integrazione live con sistemi Ducati, CRM, dealer o survey.",
         "Profilazione individuale dei clienti o decisioni cliente automatizzate.",
         "Autenticazione, controlli accesso o pipeline dati di produzione.",
         "Deploy Power BI reale.",
@@ -703,7 +703,7 @@
   "accounts": [
     {
       "id": 1,
-      "company": "Onboarding nuovi clienti premium",
+      "company": "Onboarding nuovi proprietari Ducati",
       "type": "Segmento cliente simulato",
       "sector": "Onboarding proprietari",
       "useCasePotential": "Analisi soddisfazione primi 30 giorni, feedback consegna e rilevazione frizioni onboarding",
@@ -722,7 +722,7 @@
     },
     {
       "id": 2,
-      "company": "Clienti touring premium",
+      "company": "Clienti Touring Multistrada",
       "type": "Segmento cliente simulato",
       "sector": "Loyalty",
       "useCasePotential": "Segmentare il feedback dei proprietari long-distance per bisogni service, accessori, community e supporto post-viaggio",
@@ -741,7 +741,7 @@
     },
     {
       "id": 3,
-      "company": "Proprietari performance premium",
+      "company": "Proprietari Panigale Performance",
       "type": "Segmento cliente simulato",
       "sector": "Premium Owners",
       "useCasePotential": "Analizzare soddisfazione, aspettative, bisogni di supporto tecnico ed esperienza post-consegna dei proprietari premium",
@@ -760,7 +760,7 @@
     },
     {
       "id": 4,
-      "company": "Clienti entry alla prima esperienza",
+      "company": "Rider Scrambler alla Prima Esperienza",
       "type": "Segmento cliente simulato",
       "sector": "Onboarding proprietari",
       "useCasePotential": "Profilare bisogni dei nuovi rider, contenuti per costruire confidenza, educazione dealer e domande delle prime fasi da proprietario",
@@ -1335,7 +1335,7 @@
       "title": "Cosa e simulato",
       "items": [
         "Segmenti cliente, volumi feedback, stage del journey, segnali trend, action readiness e componenti score.",
-        "Gli score sono illustrativi e progettati per mostrare logica di prioritizzazione, non giudizi fattuali su clienti, dealer o prodotti.",
+        "Gli score sono illustrativi e progettati per mostrare logica di prioritizzazione, non giudizi fattuali su clienti, dealer o prodotti Ducati.",
         "I brief insight sono generati da dati strutturati predefiniti e assunzioni simulate di Customer Experience."
       ]
     },
@@ -1361,8 +1361,8 @@
       "title": "Cosa non è il progetto",
       "items": [
         "Un sistema CX analytics di produzione, un'integrazione CRM o un deployment Power BI.",
-        "Una rappresentazione di dati cliente riservati, survey interne o informazioni dealer.",
-        "Un affermazione che una qualsiasi organizzazione usi o valuti questa soluzione specifica."
+        "Una rappresentazione di dati cliente Ducati riservati, survey interne o informazioni dealer.",
+        "Un affermazione che Ducati usi o valuti questa soluzione specifica."
       ]
     }
   ]

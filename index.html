@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Industrial CX & Service Analytics Lab</title>
-  <meta name="description" content="Simulated portfolio lab for Customer Experience analytics, industrial telemetry, service-risk scoring and reviewer-ready AI/data evidence.">
+  <title>Industrial CX & Service Analytics Workbook</title>
+  <meta name="description" content="Portfolio workbook per Customer Experience analytics, segmentazione, Excel dashboard e journey improvement tracking.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://errer441122.github.io/industrial-cx-service-analytics-lab/">
-  <meta property="og:title" content="Industrial CX & Service Analytics Lab">
-  <meta property="og:description" content="Simulated portfolio lab for Customer Experience analytics, industrial telemetry, service-risk scoring and reviewer-ready AI/data evidence.">
-  <meta property="og:image" content="https://errer441122.github.io/industrial-cx-service-analytics-lab/social-preview.png">
+  <meta property="og:url" content="https://errer441122.github.io/ducati-cx-case-study/">
+  <meta property="og:title" content="Industrial CX & Service Analytics Workbook">
+  <meta property="og:description" content="Portfolio workbook per Customer Experience analytics, segmentazione, Excel dashboard e journey improvement tracking.">
+  <meta property="og:image" content="https://errer441122.github.io/ducati-cx-case-study/social-preview.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230A66C2'/%3E%3Cstop offset='100%25' stop-color='%2316785F'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='IBM Plex Mono, monospace' font-size='24' font-weight='700' fill='white'%3ECX%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23d4a853'/%3E%3Cstop offset='100%25' stop-color='%23c75b3a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='IBM Plex Mono, monospace' font-size='24' font-weight='700' fill='white'%3ECX%3C/text%3E%3C/svg%3E">
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+
   <link rel="stylesheet" href="workbook-base.css">
   <link rel="stylesheet" href="cx-theme.css">
-
 </head>
 <body>
   <div class="app-shell">
@@ -30,96 +31,96 @@
         <div class="brand-mark">CX</div>
         <div>
           <div class="brand-title">CX Workbook</div>
-          <div class="brand-subtitle">Dati + Excel</div>
+          <div class="brand-subtitle">Data + Insight</div>
         </div>
       </div>
 
-      <nav class="nav-menu">
+      <nav class="nav-menu" aria-label="Sezioni principali">
         <button class="nav-item active" type="button" data-target="overview"><i class="fa-solid fa-compass"></i>Panoramica</button>
-        <button class="nav-item" type="button" data-target="demo-lab"><i class="fa-solid fa-route"></i>Demo guidata</button>
-        <button class="nav-item" type="button" data-target="case-study"><i class="fa-solid fa-layer-group"></i>Sintesi caso studio</button>
+        <button class="nav-item" type="button" data-target="demo-lab"><i class="fa-solid fa-route"></i>Demo Guidata</button>
+        <button class="nav-item" type="button" data-target="case-study"><i class="fa-solid fa-layer-group"></i>Caso Studio</button>
         <button class="nav-item" type="button" data-target="commercial-ops"><i class="fa-solid fa-chart-line"></i>Dashboard CX</button>
-        <button class="nav-item" type="button" data-target="adoption"><i class="fa-solid fa-sitemap"></i>Tracker insight-azione</button>
-        <button class="nav-item" type="button" data-target="training-material"><i class="fa-solid fa-chalkboard-user"></i>Guida al Reporting</button>
-        <button class="nav-item" type="button" data-target="automations"><i class="fa-solid fa-bolt"></i>Flussi di follow-up</button>
-        <button class="nav-item" type="button" data-target="product"><i class="fa-solid fa-box-open"></i>Brief dashboard MVP</button>
+        <button class="nav-item" type="button" data-target="adoption"><i class="fa-solid fa-sitemap"></i>Insight → Azione</button>
+        <button class="nav-item" type="button" data-target="training-material"><i class="fa-solid fa-chalkboard-user"></i>Guida Reporting</button>
+        <button class="nav-item" type="button" data-target="automations"><i class="fa-solid fa-bolt"></i>Flussi Follow-up</button>
+        <button class="nav-item" type="button" data-target="product"><i class="fa-solid fa-box-open"></i>Brief MVP</button>
         <button class="nav-item" type="button" data-target="methodology"><i class="fa-solid fa-flask"></i>Metodologia</button>
       </nav>
 
       <div class="sidebar-note">
-        Dataset simulato<br>
-        Excel dashboard + action log
+        <div><i class="fa-solid fa-circle-info"></i> Dataset simulato</div>
+        <div style="margin-top:4px; color:var(--subtle)">Excel dashboard + action log</div>
       </div>
     </aside>
 
     <main class="main-content">
-      <header class="top-header">
+      <header class="top-header" aria-label="Header pagina">
         <div>
           <div class="header-title" id="current-view-title">CX Analytics Workbook</div>
-          <div class="header-subtitle" id="header-subtitle">Survey signals &middot; Journey friction &middot; Excel dashboard</div>
+          <div class="header-subtitle" id="header-subtitle">Survey signals · Journey friction · Excel dashboard</div>
         </div>
         <div class="profile-chip">
-          <span class="profile-dot"></span>
-          <span id="profile-label">Caso studio per Data Analyst Customer Experience</span>
+          <span class="profile-dot" aria-hidden="true"></span>
+          <span id="profile-label">Caso studio Data Analyst Customer Experience</span>
         </div>
       </header>
 
       <div class="views-container">
         <section id="overview" class="view-section active">
-          <div class="glass-panel hero-section">
-            <div class="eyebrow">Customer Experience data analyst portfolio</div>
-            <h1 id="project-title">Industrial CX & Service Analytics Lab</h1>
-            <p class="hero-subtitle" id="project-subtitle"></p>
-            <p class="hero-intent" id="project-positioning"></p>
-            <p class="hero-review-line" id="hero-review-line"></p>
+          <div class="glass-panel hero-section" role="banner">
+            <div class="eyebrow">Customer Experience Data Analyst Portfolio</div>
+            <h1 id="project-title">Industrial CX & Service Analytics Workbook</h1>
+            <p class="hero-subtitle" id="project-subtitle">Trasforma segnali cliente frammentati in insight azionabili: survey, service, dealer e dati digitali in un unico workflow di analisi.</p>
+            <p class="hero-intent" id="project-positioning">Workbook autonomo per Data Analyst CX: fonti cliente simulate, controlli di qualità, segmentazione, dashboard Excel e raccomandazioni operative.</p>
+            <p class="hero-review-line" id="hero-review-line">Progettato per evidenziare raccolta dati, segmentazione, reporting Excel, trend analysis e follow-up operativo.</p>
 
-            <div class="hero-divider"></div>
+            <div class="hero-divider" aria-hidden="true"></div>
             <div class="hero-actions">
-              <button class="jump-button primary-demo-cta" id="cta-demo" type="button" data-nav-target="demo-lab">Avvia demo navigabile</button>
-              <button class="jump-button" id="cta-dashboard" type="button" data-nav-target="commercial-ops">Rivedi il livello CX Analytics</button>
-              <button class="jump-button" id="cta-adoption" type="button" data-nav-target="adoption">Rivedi il livello insight-azione</button>
-              <button class="jump-button" id="cta-product" type="button" data-nav-target="product">Rivedi il brief dashboard MVP</button>
-              <a class="jump-button" href="dashboard-workbook/customer_experience_dashboard.xlsx" download>Scarica il prototipo dashboard Excel</a>
+              <button class="jump-button primary-demo-cta" id="cta-demo" type="button" data-nav-target="demo-lab">Avvia Demo Navigabile</button>
+              <button class="jump-button" id="cta-dashboard" type="button" data-nav-target="commercial-ops">Apri Dashboard CX</button>
+              <button class="jump-button" id="cta-adoption" type="button" data-nav-target="adoption">Apri Action Tracker</button>
+              <button class="jump-button" id="cta-product" type="button" data-nav-target="product">Apri Brief MVP</button>
+              <a class="jump-button" href="dashboard-workbook/customer_experience_dashboard.xlsx" download><i class="fa-solid fa-download"></i>Scarica Dashboard Excel</a>
             </div>
 
             <div class="cx-workflow-strip" aria-label="Workflow di analisi Customer Experience">
               <div><span>01</span>Fonti CX</div>
               <div><span>02</span>Pulizia CSV</div>
               <div><span>03</span>Segmenti</div>
-              <div><span>04</span>Journey friction</div>
-              <div><span>05</span>Excel dashboard</div>
-              <div><span>06</span>Action log</div>
+              <div><span>04</span>Journey Friction</div>
+              <div><span>05</span>Excel Dashboard</div>
+              <div><span>06</span>Action Log</div>
             </div>
 
-            <div class="cx-evidence-grid" aria-label="Evidenze tecniche del progetto industrial CX">
+            <div class="cx-evidence-grid" aria-label="Evidenze tecniche del progetto Industrial CX">
               <article>
-                <strong>Dataset model</strong>
+                <strong>Dataset Model</strong>
                 <span>Survey, service, dealer, digital touchpoint e feedback campaign simulati.</span>
               </article>
               <article>
-                <strong>Excel prototype</strong>
-                <span>Workbook scaricabile con dashboard Customer Experience.</span>
+                <strong>Excel Prototype</strong>
+                <span>Workbook scaricabile con dashboard Customer Experience interattiva.</span>
               </article>
               <article>
-                <strong>Action tracking</strong>
+                <strong>Action Tracking</strong>
                 <span>Insight collegati a owner, next step e metrica di follow-up.</span>
               </article>
             </div>
 
-            <div class="role-fit-block" aria-label="Allineamento con ruoli CX e product analytics">
-              <h2>Costruito per ruoli CX e Product Analytics</h2>
-              <p>Questo caso studio dimostra:</p>
+            <div class="role-fit-block" aria-label="Allineamento con il ruolo Data Analyst Customer Experience">
+              <h2>Costruito per il ruolo Data Analyst Customer Experience</h2>
+              <p>Questo caso studio dimostra competenze operative chiave per un profilo CX Analytics:</p>
               <ul class="role-fit-list">
-                <li>logica di raccolta e organizzazione dei dati;</li>
-                <li>reporting di soddisfazione cliente;</li>
-                <li>segmentazione e profilazione clienti;</li>
-                <li>identificazione dei trend;</li>
-                <li>raccomandazioni di miglioramento dei processi;</li>
-                <li>comunicazione cross-funzionale degli insight.</li>
+                <li>Logica di raccolta e organizzazione dei dati;</li>
+                <li>Reporting di soddisfazione cliente;</li>
+                <li>Segmentazione e profilazione clienti;</li>
+                <li>Identificazione dei trend;</li>
+                <li>Raccomandazioni di miglioramento dei processi;</li>
+                <li>Comunicazione cross-funzionale degli insight.</li>
               </ul>
             </div>
 
-            <div class="kpi-grid">
+            <div class="kpi-grid" role="region" aria-label="Metriche chiave">
               <article class="kpi-card">
                 <div class="kpi-label">Feedback Totale</div>
                 <div class="kpi-value" id="kpi-total-pipeline" aria-live="polite">Caricamento...</div>
@@ -133,11 +134,11 @@
                 <div class="kpi-value" id="kpi-accounts" aria-live="polite">Caricamento...</div>
               </article>
               <article class="kpi-card">
-                <div class="kpi-label">Età Media Stage Attuale</div>
+                <div class="kpi-label">Età Media Stage</div>
                 <div class="kpi-value" id="kpi-stage-age" aria-live="polite">Caricamento...</div>
               </article>
               <article class="kpi-card">
-                <div class="kpi-label">Media prontezza azione</div>
+                <div class="kpi-label">Prontezza Azione</div>
                 <div class="kpi-value" id="kpi-poc" aria-live="polite">Caricamento...</div>
               </article>
             </div>
@@ -150,13 +151,14 @@
 
           <div class="section-heading compact">
             <h2>Quattro Percorsi di Lettura</h2>
-            <p>Inizia dall'angolo più vicino al ruolo: reporting di soddisfazione, segmentazione, diagnostica del journey o ragionamento prodotto/reporting.</p>
+            <p>Scegli l'angolo più vicino al tuo ruolo: reporting, segmentazione, diagnostica journey o visione prodotto.</p>
           </div>
           <div class="review-paths-grid" id="review-paths-grid"></div>
+
           <div class="glass-panel reviewer-guide-panel">
             <div class="eyebrow">Percorso rapido per valutatori</div>
             <h3>Per valutatori Customer Experience e Data</h3>
-            <p>Un percorso rapido nel progetto per vedere prima le evidenze più forti e poi i dettagli operativi.</p>
+            <p>Un percorso veloce nel progetto per vedere prima le evidenze più forti e poi i dettagli operativi.</p>
             <div class="checklist reviewer-guide-list" id="reviewer-guide-list"></div>
           </div>
 
@@ -170,8 +172,8 @@
         <section id="demo-lab" class="view-section">
           <div class="section-heading">
             <div class="eyebrow">Demo navigabile</div>
-            <h2>Dal feedback cliente all'azione CX</h2>
-            <p>Un reviewer puo selezionare un segmento, avanzare negli step del journey e vedere quali evidenze, owner e output cambiano prima di aprire dashboard e tracker.</p>
+            <h2>Dal Feedback Cliente all'Azione CX</h2>
+            <p>Seleziona un segmento, avanza negli step del journey e osserva come evidenze, owner e output cambiano prima di aprire dashboard e tracker.</p>
           </div>
 
           <div class="cx-demo-layout">
@@ -197,15 +199,15 @@
                   <p id="cx-demo-signal"></p>
                 </div>
                 <div>
-                  <span class="cx-demo-label">Evidenza dati</span>
+                  <span class="cx-demo-label">Evidenza Dati</span>
                   <p id="cx-demo-evidence"></p>
                 </div>
                 <div>
-                  <span class="cx-demo-label">Decisione operativa</span>
+                  <span class="cx-demo-label">Decisione Operativa</span>
                   <p id="cx-demo-decision"></p>
                 </div>
                 <div>
-                  <span class="cx-demo-label">Output verificabile</span>
+                  <span class="cx-demo-label">Output Verificabile</span>
                   <p id="cx-demo-output"></p>
                 </div>
               </div>
@@ -216,16 +218,16 @@
                   <strong id="cx-demo-owner"></strong>
                 </div>
                 <div>
-                  <span class="cx-demo-label">Metrica follow-up</span>
+                  <span class="cx-demo-label">Metrica Follow-up</span>
                   <strong id="cx-demo-metric"></strong>
                 </div>
               </div>
 
               <div class="demo-control-row">
-                <button class="jump-button" id="cx-demo-prev" type="button"><i class="fa-solid fa-arrow-left"></i>Step precedente</button>
-                <button class="jump-button" id="cx-demo-next" type="button">Step successivo<i class="fa-solid fa-arrow-right"></i></button>
-                <button class="jump-button" type="button" data-nav-target="commercial-ops">Apri dashboard dati</button>
-                <button class="jump-button" type="button" data-nav-target="adoption">Apri action tracker</button>
+                <button class="jump-button" id="cx-demo-prev" type="button"><i class="fa-solid fa-arrow-left"></i>Precedente</button>
+                <button class="jump-button" id="cx-demo-next" type="button">Successivo<i class="fa-solid fa-arrow-right"></i></button>
+                <button class="jump-button" type="button" data-nav-target="commercial-ops">Apri Dashboard</button>
+                <button class="jump-button" type="button" data-nav-target="adoption">Apri Action Tracker</button>
               </div>
             </article>
           </div>
@@ -234,15 +236,15 @@
         <section id="case-study" class="view-section">
           <div class="section-heading">
             <div class="eyebrow">Sintesi del caso studio</div>
-            <h2>Sintesi del Progetto per Contesto Aziendale</h2>
-            <p>Questa pagina è pensata per recruiter o hiring manager che devono capire il progetto in meno di due minuti prima di esplorare dashboard, segmenti e action tracker.</p>
+            <h2>Visione d'Insieme per Contesto Aziendale</h2>
+            <p>Pensata per recruiter e hiring manager che devono capire il progetto in meno di due minuti prima di esplorare dashboard e segmenti.</p>
           </div>
 
           <div class="summary-grid">
             <article class="glass-panel summary-card summary-card-wide">
               <div class="eyebrow">Sintesi in una riga</div>
               <h3 id="case-study-summary"></h3>
-              <p class="method-note">Progettato come caso studio portfolio per organizzazione dei dati cliente, reporting, segmentazione, uso responsabile dei dati e comunicazione orientata all'azione.</p>
+              <p class="method-note">Caso studio portfolio per organizzazione dei dati cliente, reporting, segmentazione, uso responsabile dei dati e comunicazione orientata all'azione.</p>
             </article>
 
             <article class="glass-panel summary-card">
@@ -261,7 +263,7 @@
             </article>
 
             <article class="glass-panel summary-card">
-              <h3>Il mio ruolo</h3>
+              <h3>Il Mio Ruolo</h3>
               <p id="case-study-role"></p>
             </article>
 
@@ -280,7 +282,6 @@
             <h2>Output Chiave</h2>
             <p>Il progetto è documentato in modo che lo stesso prototipo possa essere letto da un angolo customer analytics, reporting, miglioramento del journey o prodotto.</p>
           </div>
-
           <div class="key-output-grid" id="case-study-outputs"></div>
 
           <div class="glass-panel final-note">
@@ -292,41 +293,40 @@
         <section id="commercial-ops" class="view-section">
           <div class="section-heading">
             <div class="eyebrow">Analisi Customer Experience</div>
-            <h2>Segmentazione, Reporting, Diagnostica del Journey e Segnali d'Azione</h2>
-            <p>Questa sezione raccoglie il livello CX analytics in un punto di ingresso facile da leggere, mantenendo accessibili tutti i moduli sottostanti.</p>
+            <h2>Segmentazione, Reporting e Diagnostica del Journey</h2>
+            <p>Punto di ingresso unificato per il livello CX analytics: reporting, flusso, scoring, simulatori e playbook in un'unica vista.</p>
           </div>
 
           <div class="glass-panel workbook-overview">
             <div class="workbook-overview-copy">
-              <div class="eyebrow">Livello analytics</div>
-              <h3>Una sezione, sei viste operative</h3>
-              <p>Usa queste sottosezioni per leggere logica di reporting, stage del journey, prioritizzazione segmenti, brief strutturati, qualità degli handoff e colli di bottiglia CX senza affollare la navigazione principale.</p>
+              <div class="eyebrow">Livello Analytics</div>
+              <h3>Sei viste operative</h3>
+              <p>Usa queste sottosezioni per leggere logica di reporting, stage del journey, prioritizzazione segmenti, brief strutturati, qualità degli handoff e colli di bottiglia CX.</p>
             </div>
-
             <div class="section-anchor-grid">
               <a class="section-anchor-card" href="#forecast-section">
                 <span class="section-anchor-label">Reporting</span>
-                <span class="section-anchor-copy">Volume insight ponderato, mix per stage e concentrazione dei segmenti.</span>
+                <span class="section-anchor-copy">Volume insight ponderato, mix per stage e concentrazione segmenti.</span>
               </a>
               <a class="section-anchor-card" href="#pipeline-section">
                 <span class="section-anchor-label">Flusso</span>
-                <span class="section-anchor-copy">Avanzamento degli stage CX, pesi degli stage e criteri di uscita.</span>
+                <span class="section-anchor-copy">Avanzamento stage CX, pesi e criteri di uscita.</span>
               </a>
               <a class="section-anchor-card" href="#scoring-section">
                 <span class="section-anchor-label">Scoring</span>
-                <span class="section-anchor-copy">Il modello ponderato di prioritizzazione dietro il focus sui segmenti.</span>
+                <span class="section-anchor-copy">Modello ponderato di prioritizzazione dei segmenti.</span>
               </a>
               <a class="section-anchor-card" href="#brief-section">
-                <span class="section-anchor-label">Simulatore brief</span>
-                <span class="section-anchor-copy">Workflow strutturato per brief di insight cliente con revisione umana.</span>
+                <span class="section-anchor-label">Simulatore Brief</span>
+                <span class="section-anchor-copy">Workflow strutturato per brief insight con revisione umana.</span>
               </a>
               <a class="section-anchor-card" href="#playbook-section">
                 <span class="section-anchor-label">Playbook</span>
-                <span class="section-anchor-copy">Logica di handoff insight-azione e guardrail sull'uso dei dati.</span>
+                <span class="section-anchor-copy">Handoff insight-azione e guardrail sull'uso dei dati.</span>
               </a>
               <a class="section-anchor-card" href="#diagnostics-section">
                 <span class="section-anchor-label">Diagnostica</span>
-                <span class="section-anchor-copy">Segnali, cause probabili e interventi operativi suggeriti.</span>
+                <span class="section-anchor-copy">Segnali, cause probabili e interventi operativi.</span>
               </a>
             </div>
           </div>
@@ -335,16 +335,16 @@
             <div class="section-heading compact">
               <div class="eyebrow">Reporting</div>
               <h2>Stato dei Feedback e Volume Insight Ponderato</h2>
-              <p>Il volume insight ponderato applica la confidenza dello stage al volume feedback grezzo, separando il volume del segnale dalla quota di insight pronta per l'azione.</p>
+              <p>Il volume insight ponderato applica la confidenza dello stage al volume grezzo, separando segnale da insight pronta per l'azione.</p>
             </div>
 
             <div class="metric-strip">
               <article class="metric-card">
-                <div class="metric-label">Volume feedback totale</div>
+                <div class="metric-label">Volume Feedback</div>
                 <div class="metric-value" id="dashboard-total-pipeline" aria-live="polite">Caricamento...</div>
               </article>
               <article class="metric-card">
-                <div class="metric-label">Volume insight ponderato</div>
+                <div class="metric-label">Insight Ponderato</div>
                 <div class="metric-value" id="dashboard-weighted-pipeline" aria-live="polite">Caricamento...</div>
               </article>
               <article class="metric-card">
@@ -352,18 +352,18 @@
                 <div class="metric-value" id="dashboard-open-opps" aria-live="polite">Caricamento...</div>
               </article>
               <article class="metric-card">
-                <div class="metric-label">Fit score CX medio</div>
+                <div class="metric-label">Fit Score Medio</div>
                 <div class="metric-value" id="dashboard-fit-score" aria-live="polite">Caricamento...</div>
               </article>
             </div>
 
             <div class="charts-grid">
               <article class="glass-panel chart-card wide">
-                <div class="chart-header">Volume totale vs volume insight ponderato per stage</div>
+                <div class="chart-header">Volume Totale vs Insight Ponderato per Stage</div>
                 <div class="chart-container"><canvas id="pipelineChart"></canvas></div>
               </article>
               <article class="glass-panel chart-card">
-                <div class="chart-header">Segmenti cliente per categoria</div>
+                <div class="chart-header">Segmenti Cliente per Categoria</div>
                 <div class="chart-container"><canvas id="sectorChart"></canvas></div>
               </article>
               <article class="glass-panel chart-card">
@@ -393,20 +393,20 @@
 
             <div class="section-heading compact">
               <h2>Criteri Critici di Uscita dagli Stage</h2>
-              <p>L'obiettivo non è solo visualizzare feedback: il processo deve evitare che insight deboli avanzino senza evidenze adeguate.</p>
+              <p>Il processo deve evitare che insight deboli avanzino senza evidenze adeguate.</p>
             </div>
             <div class="criteria-grid" id="exit-criteria-grid"></div>
           </div>
 
           <div class="workbook-subsection" id="scoring-section">
             <div class="section-heading compact">
-              <div class="eyebrow">Framework di prioritizzazione</div>
+              <div class="eyebrow">Framework di Prioritizzazione</div>
               <h2>Scoring dei Segmenti Cliente</h2>
               <p>Il fit è calcolato tramite un modello ponderato esplicito, non assegnato arbitrariamente.</p>
             </div>
 
             <div class="glass-panel formula-panel">
-              <h3>Metodologia di scoring</h3>
+              <h3>Metodologia di Scoring</h3>
               <p class="formula-text" id="scoring-formula"></p>
               <p class="method-note" id="scoring-scale"></p>
               <div class="weights-grid" id="scoring-weights"></div>
@@ -437,9 +437,9 @@
 
           <div class="workbook-subsection" id="brief-section">
             <div class="section-heading compact">
-              <div class="eyebrow">Simulazione workflow insight</div>
-              <h2>Simulatore brief insight cliente</h2>
-              <p>Questo modulo mostra come un brief strutturato possa supportare l'analisi Customer Experience usando fonti dati approvate, contesto del journey e revisione umana.</p>
+              <div class="eyebrow">Simulazione Workflow Insight</div>
+              <h2>Simulatore Brief Cliente</h2>
+              <p>Mostra come un brief strutturato possa supportare l'analisi CX usando fonti dati approvate, contesto del journey e revisione umana.</p>
             </div>
 
             <div class="brief-layout">
@@ -447,7 +447,6 @@
                 <label for="account-select">Segmento cliente</label>
                 <select id="account-select"></select>
                 <button id="generate-brief" class="primary-button" type="button">Genera Brief Strutturato</button>
-
                 <div class="prompt-box">
                   <h3>Struttura del Prompt</h3>
                   <ol id="brief-prompt-structure"></ol>
@@ -457,7 +456,7 @@
               <div class="glass-panel brief-output-panel" id="brief-output">
                 <div class="empty-state">
                   <i class="fa-regular fa-file-lines"></i>
-                  <p>Seleziona un segmento cliente per generare una simulazione di brief insight strutturato.</p>
+                  <p>Seleziona un segmento per generare una simulazione di brief.</p>
                 </div>
               </div>
             </div>
@@ -465,8 +464,8 @@
 
           <div class="workbook-subsection" id="playbook-section">
             <div class="section-heading compact">
-              <div class="eyebrow">Documentazione operativa</div>
-              <h2>Playbook handoff insight-azione cliente</h2>
+              <div class="eyebrow">Documentazione Operativa</div>
+              <h2>Playbook Handoff Insight → Azione</h2>
               <p>Il valore della CX analytics nasce da handoff ispezionabili, ripetibili e meno dipendenti dal trasferimento di contesto ad hoc.</p>
             </div>
 
@@ -477,8 +476,8 @@
               </article>
 
               <article class="glass-panel playbook-card">
-                <h3>Qualificazione uso dati per analisi CX</h3>
-                <p class="method-note">Non è una valutazione legale. È un livello di qualificazione CX analytics per identificare qualità delle fonti, privacy, aggregazione e responsabilità prima di usare dati cliente nel reporting.</p>
+                <h3>Qualificazione Uso Dati per Analisi CX</h3>
+                <p class="method-note">Non è una valutazione legale. È un livello di qualificazione CX analytics per identificare qualità delle fonti, privacy, aggregazione e responsabilità.</p>
                 <ul class="checklist" id="compliance-checklist"></ul>
               </article>
             </div>
@@ -488,7 +487,7 @@
             <div class="section-heading compact">
               <div class="eyebrow">Diagnostica</div>
               <h2>Colli di Bottiglia del Journey e Azioni CX</h2>
-              <p>La dashboard non dovrebbe solo mostrare dati: dovrebbe trasformare i segnali in interventi sulla customer experience.</p>
+              <p>La dashboard non dovrebbe solo mostrare dati: deve trasformare i segnali in interventi sulla customer experience.</p>
             </div>
 
             <div class="glass-panel table-container">
@@ -498,7 +497,7 @@
                     <th>Area</th>
                     <th>Segnale</th>
                     <th>Causa Probabile</th>
-                    <th>Azione Operativa Suggerita</th>
+                    <th>Azione Operativa</th>
                     <th>Impatto Atteso</th>
                   </tr>
                 </thead>
@@ -510,14 +509,14 @@
 
         <section id="automations" class="view-section">
           <div class="section-heading">
-            <div class="eyebrow">Livello flussi di follow-up</div>
-            <h2>Dal segnale cliente al flusso di follow-up</h2>
-            <p>Questa sezione mostra come i segnali cliente del workbook potrebbero attivare assegnazione responsabili, alert e routine ricorrenti di follow-up tramite strumenti no-code o low-code.</p>
+            <div class="eyebrow">Livello Flussi di Follow-up</div>
+            <h2>Dal Segnale al Flusso Operativo</h2>
+            <p>Mostra come i segnali cliente del workbook potrebbero attivare assegnazione, alert e routine di follow-up tramite strumenti no-code/low-code.</p>
           </div>
 
           <div class="glass-panel automation-intro">
             <h3>Perché i workflow di follow-up contano per questo profilo</h3>
-            <p>Il workbook identifica segnali cliente come frizioni ricorrenti nel journey, bassa soddisfazione, follow-up in ritardo, reclami service e basso engagement. I flussi di follow-up chiudono il ciclo trasformando quei segnali in task assegnati, alert e revisioni pianificate. Questo collega analisi ed esecuzione: il valore centrale di un profilo analisi Customer Experience.</p>
+            <p>I flussi di follow-up chiudono il ciclo trasformando segnali in task assegnati, alert e revisioni pianificate. Questo collega analisi ed esecuzione: il valore centrale di un profilo CX Analytics.</p>
           </div>
 
           <div class="workflow-grid" id="workflow-grid"></div>
@@ -530,9 +529,9 @@
 
         <section id="adoption" class="view-section">
           <div class="section-heading">
-            <div class="eyebrow">Livello insight-azione</div>
-            <h2>Tracker insight-azione</h2>
-            <p>Questa estensione inquadra il workbook come workflow di customer analytics: allineamento stakeholder, logica di rollout, guida al reporting, privacy guardrail e risultati di follow-up misurabili.</p>
+            <div class="eyebrow">Livello Insight → Azione</div>
+            <h2>Tracker Insight e Azione</h2>
+            <p>Workflow di customer analytics: allineamento stakeholder, logica di rollout, guida al reporting, privacy guardrail e risultati misurabili.</p>
           </div>
 
           <div class="glass-panel table-container">
@@ -569,7 +568,7 @@
 
           <div class="adoption-grid">
             <article class="glass-panel playbook-card">
-              <h3>Guardrail Qualità Dati Cliente e Privacy</h3>
+              <h3>Guardrail Qualità Dati e Privacy</h3>
               <p class="panel-note">Guardrail di riferimento per il caso studio. Intenzionalmente in sola lettura.</p>
               <ul class="checklist reference-list" id="guardrails-list"></ul>
             </article>
@@ -583,7 +582,7 @@
 
           <div class="section-heading compact">
             <h2>Deliverable di Reporting e Azione</h2>
-            <p>Questi sono gli output concreti che produrrei intorno al reporting CX, non solo l'interfaccia.</p>
+            <p>Output concreti che produrrei intorno al reporting CX, non solo l'interfaccia.</p>
           </div>
 
           <div class="glass-panel table-container">
@@ -600,24 +599,24 @@
 
           <div class="section-heading compact">
             <h2>KPI di Tracciamento Azioni</h2>
-            <p>Il follow-up dovrebbe essere misurato come comportamento operativo, non solo come revisione della dashboard.</p>
+            <p>Il follow-up misurato come comportamento operativo, non solo revisione della dashboard.</p>
           </div>
 
           <div class="key-output-grid" id="adoption-metrics"></div>
 
           <div class="section-heading compact">
             <h2>Deliverable Esportabile</h2>
-            <p>Scarica una checklist sui dati cliente generata dai dati del workbook.</p>
+            <p>Scarica una checklist sui dati cliente generata dal workbook.</p>
           </div>
 
           <div class="glass-panel pdf-export-panel">
             <div class="pdf-export-info">
               <div>
-                <h3>Checklist PDF Qualità Dati Cliente e Privacy</h3>
-                <p>Deliverable di una pagina su guardrail dei dati cliente, revisione umana, controlli qualità fonte e confini di rischio operativo. Generato dinamicamente dal livello action del workbook.</p>
+                <h3>Checklist PDF Qualità Dati e Privacy</h3>
+                <p>Deliverable di una pagina su guardrail dati cliente, revisione umana, controlli qualità fonte e confini di rischio operativo.</p>
               </div>
               <button class="primary-button pdf-button" id="export-governance-pdf" type="button">
-                <i class="fa-solid fa-file-pdf"></i> Scarica Checklist Qualità Dati Cliente
+                <i class="fa-solid fa-file-pdf"></i> Scarica Checklist
               </button>
             </div>
           </div>
@@ -625,7 +624,7 @@
 
         <section id="training-material" class="view-section">
           <div class="section-heading">
-            <div class="eyebrow">Deliverable di enablement</div>
+            <div class="eyebrow">Deliverable di Enablement</div>
             <h2>Guida al Reporting</h2>
             <p id="training-material-intro"></p>
           </div>
@@ -646,7 +645,7 @@
 
           <div class="section-heading compact">
             <h2>Obiettivi di Apprendimento</h2>
-            <p>Esempi di risultati che vorrei lasciare ai partecipanti dopo un workshop di reporting CX analytics.</p>
+            <p>Risultati che vorrei lasciare ai partecipanti dopo un workshop di reporting CX analytics.</p>
           </div>
 
           <div class="glass-panel">
@@ -664,8 +663,8 @@
         <section id="product" class="view-section">
           <div class="section-heading">
             <div class="eyebrow">Dashboard MVP</div>
-            <h2>Brief dashboard MVP</h2>
-            <p>Questa pagina inquadra il workbook come caso prodotto di reporting: bisogni utenti, confini MVP, metriche e backlog realistico.</p>
+            <h2>Brief Dashboard MVP</h2>
+            <p>Caso prodotto di reporting: bisogni utenti, confini MVP, metriche e backlog realistico.</p>
           </div>
 
           <div class="summary-grid">
@@ -676,7 +675,7 @@
           </div>
 
           <div class="glass-panel table-container">
-            <div class="panel-title">Utenti target</div>
+            <div class="panel-title">Utenti Target</div>
             <table id="users-table">
               <thead>
                 <tr>
@@ -689,8 +688,8 @@
           </div>
 
           <div class="section-heading compact">
-            <h2>Storie utente</h2>
-            <p>L'obiettivo è mostrare che il flusso può essere tradotto in ragionamento da MVP della dashboard, non trattato solo come report statico.</p>
+            <h2>Storie Utente</h2>
+            <p>Mostra che il flusso può essere tradotto in ragionamento da MVP della dashboard.</p>
           </div>
 
           <div class="story-grid" id="user-stories"></div>
@@ -718,7 +717,7 @@
 
           <div class="section-heading compact">
             <h2>Framework Metriche Business</h2>
-            <p>Le metriche dashboard dovrebbero sempre collegarsi a risultati business misurabili. Questo framework collega i segnali di utilizzo del workbook all'impatto sulla customer experience.</p>
+            <p>Collega i segnali di utilizzo del workbook ai risultati business misurabili.</p>
           </div>
 
           <div class="glass-panel table-container">
@@ -734,15 +733,15 @@
           </div>
 
           <div class="section-heading compact">
-            <h2>Note di Ricerca e Validazione</h2>
-            <p>Come le decisioni della dashboard sono state informate da desk research, pattern di settore e interviste stakeholder simulate.</p>
+            <h2>Note di Ricerca</h2>
+            <p>Decisioni informate da desk research, pattern di settore e interviste stakeholder simulate.</p>
           </div>
 
           <div class="research-grid" id="research-grid"></div>
 
           <div class="section-heading compact">
             <h2>Backlog</h2>
-            <p>Il backlog privilegia chiarezza business, spiegabilità e utilità del workflow rispetto alla complessità tecnica fine a sé stessa.</p>
+            <p>Privilegia chiarezza business, spiegabilità e utilità del workflow.</p>
           </div>
 
           <div class="glass-panel table-container">
@@ -759,8 +758,8 @@
           </div>
 
           <div class="section-heading compact">
-            <h2>Registro decisioni dashboard</h2>
-            <p>Questo rende esplicito il giudizio progettuale della dashboard: cosa è stato semplificato, vincolato o prioritizzato intenzionalmente nel prototipo.</p>
+            <h2>Registro Decisioni Dashboard</h2>
+            <p>Giudizio progettuale esplicito: cosa è stato semplificato, vincolato o prioritizzato.</p>
           </div>
 
           <div class="glass-panel table-container">
@@ -779,21 +778,21 @@
         <section id="methodology" class="view-section">
           <div class="section-heading">
             <div class="eyebrow">Trasparenza</div>
-            <h2>Metodologia e assunzioni</h2>
-            <p>Questa sezione è volutamente esplicita per evitare di presentare dati simulati come customer intelligence reale.</p>
+            <h2>Metodologia e Assunzioni</h2>
+            <p>Espressamente dichiarate per evitare di presentare dati simulati come intelligence reale.</p>
           </div>
 
           <div class="methodology-grid" id="methodology-grid"></div>
 
           <div class="glass-panel final-note">
-            <h3>Cosa farei con dati CX reali</h3>
-            <p>Con accesso a dati Customer Experience approvati, validerei la qualità delle fonti, controllerei valori mancanti e dimensioni campione, segmenterei la soddisfazione per stage del journey, confronterei i cambiamenti dei trend dopo le azioni e costruirei viste ricorrenti di reporting per stakeholder CX.</p>
+            <h3>Cosa Farei con Dati CX Reali</h3>
+            <p>Con accesso a dati Customer Experience approvati, validerei la qualità delle fonti, controllerei valori mancanti e dimensioni campione, segmenterei la soddisfazione per stage del journey, confronterei i trend dopo le azioni e costruirei viste ricorrenti di reporting.</p>
           </div>
         </section>
       </div>
 
       <footer class="site-footer">
-        <small>Ultimo aggiornamento: aprile 2026 &middot; Variante Data Analyst Customer Experience con dati simulati</small>
+        <small>Ultimo aggiornamento: Maggio 2026 · Variante Data Analyst Customer Experience · Dati simulati</small>
       </footer>
     </main>
   </div>

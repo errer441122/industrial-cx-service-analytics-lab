@@ -18,6 +18,7 @@ industrial-cx-ai-lab/artifacts/*
 production-sim-stack/artifacts/*
 !production-sim-stack/artifacts/.gitkeep
 !production-sim-stack/artifacts/model_card.example.json
+production-sim-stack/.env
 ml-baseline/reports/*
 !ml-baseline/reports/.gitkeep
 !ml-baseline/reports/metrics.example.json
