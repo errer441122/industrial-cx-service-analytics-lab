@@ -1,8 +1,8 @@
 # Industrial CX & Service Analytics Workbook
 
-[`Static Demo`](https://errer441122.github.io/ducati-cx-case-study/)
-[![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-CC0000?style=for-the-badge)](https://errer441122.github.io/ducati-cx-case-study/)
-[![Validation](https://github.com/errer441122/ducati-cx-case-study/actions/workflows/validate.yml/badge.svg)](https://github.com/errer441122/ducati-cx-case-study/actions/workflows/validate.yml)
+[`Static Demo`](https://errer441122.github.io/industrial-cx-service-analytics-lab/)
+[![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-CC0000?style=for-the-badge)](https://errer441122.github.io/industrial-cx-service-analytics-lab/)
+[![Validation](https://github.com/errer441122/industrial-cx-service-analytics-lab/actions/workflows/validate.yml/badge.svg)](https://github.com/errer441122/industrial-cx-service-analytics-lab/actions/workflows/validate.yml)
 
 ## Evidence Lock v1.0
 
@@ -156,8 +156,8 @@ The GitHub Action runs the workbook validator, Python unit tests, industrial pip
 
 ## Recommended repository metadata
 
-- Homepage: `https://errer441122.github.io/ducati-cx-case-study/`
-- Recommended neutral repository name: `industrial-cx-service-analytics-workbook`
+- Homepage: `https://errer441122.github.io/industrial-cx-service-analytics-lab/`
+- Recommended neutral repository name: `industrial-cx-service-analytics-lab`
 - Topics: `customer-analytics`, `data-analysis`, `dashboard`, `excel`, `cx`, `portfolio-project`, `customer-experience`, `segmentation`, `industrial-iot`, `machine-learning`, `opc-ua`
 
 ## Original Application Context
