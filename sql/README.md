@@ -12,7 +12,7 @@ The deeper project already contains SQL in:
 ## Example
 
 ```bash
-duckdb ducati_cx_review.duckdb < sql/reviewer_service_mart.duckdb.sql
+duckdb premium-mobility-brand_cx_review.duckdb < sql/reviewer_service_mart.duckdb.sql
 ```
 
 It creates service-risk, anomaly-check, and line-summary views from the simulated industrial/CX dataset.

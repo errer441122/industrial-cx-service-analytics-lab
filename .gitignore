@@ -3,8 +3,19 @@ live-check*.png
 *.log
 *.err.log
 *.bak
+*.zip
 __pycache__/
 .pytest_cache/
+.codex*
+docs/superpowers/
+.obsidian/
+**/.obsidian/
+docs/reviewer/CODEX_CHANGELOG.md
+docs/reviewer/COMPANY_FIT_MATRIX.md
+docs/application-specific/
+CV_Riccardo Capanna*
+CV_Riccardo_Capanna_*
+Cover_Letter_*
 industrial-cx-ai-lab/artifacts/*
 !industrial-cx-ai-lab/artifacts/.gitkeep
 !industrial-cx-ai-lab/artifacts/metrics.example.json

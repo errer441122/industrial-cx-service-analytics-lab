@@ -46,7 +46,7 @@
     },
     {
       "title": "Segmentazione e Profilazione",
-      "bestFor": "Team che valutano se i gruppi cliente possono essere organizzati in priorità d'azione significative.",
+      "bestFor": "Team che valutano se i gruppi cliente possono essere organizzati in prioritÃ  d'azione significative.",
       "whatToInspect": "Segmenti cliente, componenti di score, categorie journey, volume feedback e logica di next action.",
       "target": "commercial-ops",
       "cta": "Rivedi lo scoring segmenti"
@@ -74,7 +74,7 @@
     },
     {
       "title": "Scoring dei Segmenti Cliente",
-      "note": "Rivedi il modello di scoring ponderato, priorità dei segmenti, assunzioni di qualità dati e logica di actionability.",
+      "note": "Rivedi il modello di scoring ponderato, prioritÃ  dei segmenti, assunzioni di qualitÃ  dati e logica di actionability.",
       "target": "commercial-ops"
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "title": "Simulatore brief insight",
-      "note": "Vedi come un brief strutturato può trasformare input dati approvati in una sintesi insight cliente revisionata da una persona.",
+      "note": "Vedi come un brief strutturato puÃ² trasformare input dati approvati in una sintesi insight cliente revisionata da una persona.",
       "target": "commercial-ops"
     },
     {
@@ -208,7 +208,7 @@
     "stakeholderMap": [
       {
         "stakeholder": "Team Customer Experience",
-        "need": "Viste affidabili sulla soddisfazione, priorità segmenti chiare e visibilità dei trend ricorrenti.",
+        "need": "Viste affidabili sulla soddisfazione, prioritÃ  segmenti chiare e visibilitÃ  dei trend ricorrenti.",
         "role": "Responsabile degli insight"
       },
       {
@@ -233,8 +233,8 @@
       },
       {
         "stakeholder": "Data / IT / Privacy",
-        "need": "Qualità dati, chiarezza fonti, controlli accesso e gestione responsabile delle informazioni cliente.",
-        "role": "Enabler qualità dati e privacy"
+        "need": "QualitÃ  dati, chiarezza fonti, controlli accesso e gestione responsabile delle informazioni cliente.",
+        "role": "Enabler qualitÃ  dati e privacy"
       }
     ],
     "rolloutPlan": [
@@ -246,7 +246,7 @@
       {
         "phase": "Prototipo",
         "goal": "Testare una vista reporting simulata con un piccolo gruppo di stakeholder CX, CRM e service.",
-        "output": "Feedback, metriche mancanti, note di qualità dati e backlog di refinement."
+        "output": "Feedback, metriche mancanti, note di qualitÃ  dati e backlog di refinement."
       },
       {
         "phase": "Routine di Reporting",
@@ -255,7 +255,7 @@
       },
       {
         "phase": "Revisione privacy",
-        "goal": "Validare confini dei dati cliente, regole di aggregazione e responsabilità di accesso.",
+        "goal": "Validare confini dei dati cliente, regole di aggregazione e responsabilitÃ  di accesso.",
         "output": "Checklist uso dati e logica di escalation."
       },
       {
@@ -270,7 +270,7 @@
       "I risultati dashboard devono essere controllati per campione, valori mancanti e bias survey prima di essere condivisi come evidenze.",
       "Le bozze di sintesi insight cliente devono essere etichettate chiaramente come materiale di supporto e revisionate da un responsabile umano.",
       "Il feedback cliente deve essere usato per migliorare processi, non per formulare assunzioni individuali non supportate.",
-      "La qualità dei dati CRM, survey e dealer deve essere controllata prima di confrontare segmenti o stage del journey.",
+      "La qualitÃ  dei dati CRM, survey e dealer deve essere controllata prima di confrontare segmenti o stage del journey.",
       "Usi poco chiari di dati personali devono essere escalati a Privacy, Legal o Data/IT prima di ogni pilot."
     ],
     "trainingPlan": [
@@ -315,7 +315,7 @@
         "purpose": "Ordinare gruppi cliente per impatto sulla soddisfazione, confidenza dati e actionability."
       },
       {
-        "deliverable": "Checklist Qualità Dati Cliente e Privacy",
+        "deliverable": "Checklist QualitÃ  Dati Cliente e Privacy",
         "purpose": "Definire guardrail di aggregazione, privacy, revisione umana ed escalation."
       },
       {
@@ -343,7 +343,7 @@
       {
         "slot": "10-20 min",
         "topic": "Walkthrough delle fonti dati",
-        "purpose": "Rivedere segnali survey, CRM, service, dealer e digitali più i limiti noti di qualità dati."
+        "purpose": "Rivedere segnali survey, CRM, service, dealer e digitali piÃ¹ i limiti noti di qualitÃ  dati."
       },
       {
         "slot": "20-35 min",
@@ -358,12 +358,12 @@
       {
         "slot": "50-60 min",
         "topic": "Cadenza e follow-up",
-        "purpose": "Confermare responsabile del reporting, campi tracker azioni, cadenza di revisione e prossimi controlli qualità dati."
+        "purpose": "Confermare responsabile del reporting, campi tracker azioni, cadenza di revisione e prossimi controlli qualitÃ  dati."
       }
     ],
     "learningObjectives": [
       "Spiegare il workflow target del customer journey e dove l analytics supporta le decisioni.",
-      "Riconoscere limiti di qualità dati come campione, valori mancanti, bias e fonti frammentate.",
+      "Riconoscere limiti di qualitÃ  dati come campione, valori mancanti, bias e fonti frammentate.",
       "Usare il simulatore di brief insight come materiale di supporto strutturato, non come conclusione automatica.",
       "Identificare condizioni minime di dati, responsabile e metrica di successo prima che un pilot di miglioramento proceda.",
       "Uscire dalla sessione con azioni di follow-up, responsabile e metriche di adozione chiare."
@@ -378,7 +378,7 @@
         ]
       },
       {
-        "title": "Slide 2 - Fonti dati e limiti qualità",
+        "title": "Slide 2 - Fonti dati e limiti qualitÃ ",
         "points": [
           "Quali input sono approvati",
           "Quali dati sono mancanti o incoerenti",
@@ -414,7 +414,7 @@
   "automationLayer": {
     "title": "Flussi di follow-up Customer Experience",
     "subtitle": "Come i segnali cliente potrebbero attivare follow-up, assegnazione dei responsabili e routine di reporting.",
-    "description": "Questa sezione mostra come i segnali operativi del workbook potrebbero collegarsi a strumenti no-code o low-code per ridurre follow-up manuale e rendere più coerente il tracking insight-azione.",
+    "description": "Questa sezione mostra come i segnali operativi del workbook potrebbero collegarsi a strumenti no-code o low-code per ridurre follow-up manuale e rendere piÃ¹ coerente il tracking insight-azione.",
     "workflows": [
       {
         "platform": "Power Automate / Zapier",
@@ -440,7 +440,7 @@
         ],
         "action": "Inviare un digest a dealer operations con segnali principali, stage del journey coinvolti e azioni non risolte",
         "delay": "Settimanale",
-        "value": "Migliora la visibilità tra CX centrale e team retail frontline."
+        "value": "Migliora la visibilitÃ  tra CX centrale e team retail frontline."
       },
       {
         "platform": "Power Automate",
@@ -507,11 +507,11 @@
       }
     ],
     "userStories": [
-      "Come CX analyst, voglio identificare driver di soddisfazione ricorrenti per segmento, così posso preparare note di reporting più chiare.",
-      "Come CX manager, voglio vedere quali gruppi cliente richiedono attenzione, così posso prioritizzare azioni di miglioramento.",
-      "Come stakeholder CRM, voglio insight a livello segmento, così le campagne di follow-up sono più coerenti con il contesto cliente.",
-      "Come stakeholder service o dealer, voglio segnali specifici del journey, così i team operativi possono agire sui giusti punti di frizione.",
-      "Come valutatore data o privacy, voglio guardrail chiari, così le informazioni cliente sono gestite responsabilmente."
+      "Come CX analyst, voglio identificare driver di soddisfazione ricorrenti per segmento, cosÃ¬ posso preparare note di reporting piÃ¹ chiare.",
+      "Come CX manager, voglio vedere quali gruppi cliente richiedono attenzione, cosÃ¬ posso prioritizzare azioni di miglioramento.",
+      "Come stakeholder CRM, voglio insight a livello segmento, cosÃ¬ le campagne di follow-up sono piÃ¹ coerenti con il contesto cliente.",
+      "Come stakeholder service o dealer, voglio segnali specifici del journey, cosÃ¬ i team operativi possono agire sui giusti punti di frizione.",
+      "Come valutatore data o privacy, voglio guardrail chiari, cosÃ¬ le informazioni cliente sono gestite responsabilmente."
     ],
     "mvpScope": {
       "inScope": [
@@ -523,7 +523,7 @@
         "Prototipo frontend statico per revisione portfolio."
       ],
       "outOfScope": [
-        "Integrazione live con sistemi Ducati, CRM, dealer o survey.",
+        "Integrazione live con sistemi premium mobility brand, CRM, dealer o survey.",
         "Profilazione individuale dei clienti o decisioni cliente automatizzate.",
         "Autenticazione, controlli accesso o pipeline dati di produzione.",
         "Deploy Power BI reale.",
@@ -547,7 +547,7 @@
       },
       {
         "priority": "Alto",
-        "feature": "Pannello qualità dati",
+        "feature": "Pannello qualitÃ  dati",
         "reason": "Mostra valori mancanti, campione, freschezza fonte e note di confidenza prima di trarre conclusioni."
       },
       {
@@ -563,7 +563,7 @@
       {
         "priority": "Basso",
         "feature": "Mock integration CRM o survey",
-        "reason": "Renderebbe il flusso dati più realistico senza richiedere dati riservati."
+        "reason": "Renderebbe il flusso dati piÃ¹ realistico senza richiedere dati riservati."
       }
     ],
     "researchNotes": [
@@ -574,7 +574,7 @@
       },
       {
         "method": "Framing Customer Journey",
-        "evidenza": "Una brand experience premium dipende da più touchpoint: discovery, acquisto, consegna, service, supporto digitale e loyalty.",
+        "evidenza": "Una brand experience premium dipende da piÃ¹ touchpoint: discovery, acquisto, consegna, service, supporto digitale e loyalty.",
         "impact": "Ha portato a una logica per stage del journey e categorie di segmenti cliente, non a una pipeline solo sales."
       },
       {
@@ -586,11 +586,11 @@
     "businessMetrics": [
       {
         "productMetric": "Tempo preparazione dashboard",
-        "businessImpact": "Reporting CX ricorrente più rapido"
+        "businessImpact": "Reporting CX ricorrente piÃ¹ rapido"
       },
       {
         "productMetric": "Completamento handoff insight-azione",
-        "businessImpact": "Responsabilità più coerente delle azioni di miglioramento"
+        "businessImpact": "ResponsabilitÃ  piÃ¹ coerente delle azioni di miglioramento"
       },
       {
         "productMetric": "Rilevazione trend segmento",
@@ -598,7 +598,7 @@
       },
       {
         "productMetric": "Misurazione post-azione",
-        "businessImpact": "Collegamento più chiaro tra analytics e miglioramento customer experience"
+        "businessImpact": "Collegamento piÃ¹ chiaro tra analytics e miglioramento customer experience"
       }
     ],
     "decisionLog": [
@@ -608,21 +608,21 @@
       },
       {
         "decision": "Usare segmenti cliente invece di clienti individuali",
-        "reason": "L'analisi a livello segmento è più adatta a un portfolio e supporta un framing attento alla privacy."
+        "reason": "L'analisi a livello segmento Ã¨ piÃ¹ adatta a un portfolio e supporta un framing attento alla privacy."
       },
       {
         "decision": "Mantenere un workbook statico e facilmente revisionabile",
-        "reason": "L'obiettivo è dimostrare ragionamento analitico e struttura dashboard, non costruire un backend sovradimensionato."
+        "reason": "L'obiettivo Ã¨ dimostrare ragionamento analitico e struttura dashboard, non costruire un backend sovradimensionato."
       },
       {
-        "decision": "Prioritizzare Power BI e miglioramenti qualità dati nel backlog",
-        "reason": "Queste aggiunte renderebbero il prototipo ancora più vicino a un tirocinio Data Analyst Customer Experience."
+        "decision": "Prioritizzare Power BI e miglioramenti qualitÃ  dati nel backlog",
+        "reason": "Queste aggiunte renderebbero il prototipo ancora piÃ¹ vicino a un tirocinio Data Analyst Customer Experience."
       }
     ]
   },
   "scoringMethodology": {
-    "formula": "CX Fit Score = Impatto soddisfazione x 30% + Priorità cliente x 20% + Complessità dati x 15% + Chiarezza responsabile x 15% + Fit reporting x 10% + Actionability x 10%",
-    "scale": "Ogni variabile è valutata da 1 a 5.\nIl punteggio finale è una media ponderata sulla stessa scala 1-5.",
+    "formula": "CX Fit Score = Impatto soddisfazione x 30% + PrioritÃ  cliente x 20% + ComplessitÃ  dati x 15% + Chiarezza responsabile x 15% + Fit reporting x 10% + Actionability x 10%",
+    "scale": "Ogni variabile Ã¨ valutata da 1 a 5.\nIl punteggio finale Ã¨ una media ponderata sulla stessa scala 1-5.",
     "dimensions": [
       {
         "key": "useCaseValue",
@@ -632,13 +632,13 @@
       },
       {
         "key": "regulatoryUrgency",
-        "label": "Priorità Cliente",
+        "label": "PrioritÃ  Cliente",
         "weight": 20,
         "definition": "1 = bassa urgenza o segmento piccolo. 5 = segmento ad alto valore, momento del journey visibile o rischio di insoddisfazione ricorrente."
       },
       {
         "key": "dataComplexity",
-        "label": "Complessità Dati",
+        "label": "ComplessitÃ  Dati",
         "weight": 15,
         "definition": "1 = fonte semplice e campi puliti. 5 = feedback multi-fonte, CRM, service, dealer e contesto digitale."
       },
@@ -703,7 +703,7 @@
   "accounts": [
     {
       "id": 1,
-      "company": "Onboarding nuovi proprietari Ducati",
+      "company": "Onboarding nuovi proprietari premium mobility brand",
       "type": "Segmento cliente simulato",
       "sector": "Onboarding proprietari",
       "useCasePotential": "Analisi soddisfazione primi 30 giorni, feedback consegna e rilevazione frizioni onboarding",
@@ -767,7 +767,7 @@
       "regulatorySensitivity": "Basso",
       "dataComplexityLabel": "Medio",
       "decisionMakers": "CRM, CX, training, dealer operations",
-      "reason": "I rider più nuovi possono aver bisogno di onboarding più chiaro, contenuti di supporto e comunicazione personalizzata post-acquisto.",
+      "reason": "I rider piÃ¹ nuovi possono aver bisogno di onboarding piÃ¹ chiaro, contenuti di supporto e comunicazione personalizzata post-acquisto.",
       "scoreComponents": {
         "useCaseValue": 4,
         "regulatoryUrgency": 4,
@@ -805,7 +805,7 @@
       "regulatorySensitivity": "Medio",
       "dataComplexityLabel": "Alto",
       "decisionMakers": "After-sales, legal/privacy, dealer operations",
-      "reason": "Le esperienze di garanzia possono creare insoddisfazione se comunicazione, timing o responsabilità non sono chiari.",
+      "reason": "Le esperienze di garanzia possono creare insoddisfazione se comunicazione, timing o responsabilitÃ  non sono chiari.",
       "scoreComponents": {
         "useCaseValue": 5,
         "regulatoryUrgency": 5,
@@ -820,11 +820,11 @@
       "company": "Lead Configuratore Digitale",
       "type": "Segmento cliente simulato",
       "sector": "Digital",
-      "useCasePotential": "Collegare comportamento nel configuratore a richieste test ride, qualità lead, drop-off e timing follow-up",
+      "useCasePotential": "Collegare comportamento nel configuratore a richieste test ride, qualitÃ  lead, drop-off e timing follow-up",
       "regulatorySensitivity": "Medio",
       "dataComplexityLabel": "Alto",
       "decisionMakers": "Digital, CRM, sales operations",
-      "reason": "Il comportamento digitale può indicare intenzione, ma richiede organizzazione accurata prima di diventare utile per team CX e CRM.",
+      "reason": "Il comportamento digitale puÃ² indicare intenzione, ma richiede organizzazione accurata prima di diventare utile per team CX e CRM.",
       "scoreComponents": {
         "useCaseValue": 4,
         "regulatoryUrgency": 4,
@@ -839,11 +839,11 @@
       "company": "Partecipanti Test Ride",
       "type": "Segmento cliente simulato",
       "sector": "Events",
-      "useCasePotential": "Misurare soddisfazione post-evento, qualità follow-up, blocchi alla conversione e percezione brand",
+      "useCasePotential": "Misurare soddisfazione post-evento, qualitÃ  follow-up, blocchi alla conversione e percezione brand",
       "regulatorySensitivity": "Basso",
       "dataComplexityLabel": "Medio",
       "decisionMakers": "Events, CRM, dealer network",
-      "reason": "I test ride sono un momento chiaro per raccogliere aspettative, obiezioni e qualità del follow-up.",
+      "reason": "I test ride sono un momento chiaro per raccogliere aspettative, obiezioni e qualitÃ  del follow-up.",
       "scoreComponents": {
         "useCaseValue": 4,
         "regulatoryUrgency": 4,
@@ -877,11 +877,11 @@
       "company": "Esperienza Follow-up Dealer",
       "type": "Customer journey simulato",
       "sector": "Dealer Network",
-      "useCasePotential": "Confrontare timing del follow-up, qualità risposta e soddisfazione cliente dopo richiesta o consegna",
+      "useCasePotential": "Confrontare timing del follow-up, qualitÃ  risposta e soddisfazione cliente dopo richiesta o consegna",
       "regulatorySensitivity": "Basso",
       "dataComplexityLabel": "Medio",
       "decisionMakers": "Dealer operations, CRM, CX",
-      "reason": "La qualità del follow-up è altamente azionabile e può essere rivista senza un sistema tecnico complesso.",
+      "reason": "La qualitÃ  del follow-up Ã¨ altamente azionabile e puÃ² essere rivista senza un sistema tecnico complesso.",
       "scoreComponents": {
         "useCaseValue": 4,
         "regulatoryUrgency": 5,
@@ -896,7 +896,7 @@
       "company": "Clienti Accessori e Apparel",
       "type": "Segmento cliente simulato",
       "sector": "Retail",
-      "useCasePotential": "Analizzare pattern di acquisto accessori, soddisfazione sulla disponibilità e supporto post-acquisto",
+      "useCasePotential": "Analizzare pattern di acquisto accessori, soddisfazione sulla disponibilitÃ  e supporto post-acquisto",
       "regulatorySensitivity": "Basso",
       "dataComplexityLabel": "Medio",
       "decisionMakers": "Retail, e-commerce, CRM",
@@ -915,11 +915,11 @@
       "company": "Clienti Service Inattivi",
       "type": "Segmento cliente simulato",
       "sector": "Retention",
-      "useCasePotential": "Profilare clienti che smettono di usare canali service ufficiali e identificare opportunità di retention",
+      "useCasePotential": "Profilare clienti che smettono di usare canali service ufficiali e identificare opportunitÃ  di retention",
       "regulatorySensitivity": "Medio",
       "dataComplexityLabel": "Alto",
       "decisionMakers": "After-sales, CRM, dealer network",
-      "reason": "Il comportamento service inattivo può segnalare gap di soddisfazione, dubbi sul prezzo, problemi di comodita o follow-up debole.",
+      "reason": "Il comportamento service inattivo puÃ² segnalare gap di soddisfazione, dubbi sul prezzo, problemi di comodita o follow-up debole.",
       "scoreComponents": {
         "useCaseValue": 5,
         "regulatoryUrgency": 4,
@@ -938,7 +938,7 @@
       "regulatorySensitivity": "Medio",
       "dataComplexityLabel": "Medio",
       "decisionMakers": "Retail, CRM, dealer network",
-      "reason": "Percorsi trade-in e usato includono molteplici punti decisionali e possono beneficiare di profilazione più chiara.",
+      "reason": "Percorsi trade-in e usato includono molteplici punti decisionali e possono beneficiare di profilazione piÃ¹ chiara.",
       "scoreComponents": {
         "useCaseValue": 4,
         "regulatoryUrgency": 3,
@@ -976,7 +976,7 @@
       "regulatorySensitivity": "Basso",
       "dataComplexityLabel": "Medio",
       "decisionMakers": "Events, customer care, brand experience",
-      "reason": "I visitatori internazionali possono rivelare opportunità di miglioramento su servizio, lingua e brand experience.",
+      "reason": "I visitatori internazionali possono rivelare opportunitÃ  di miglioramento su servizio, lingua e brand experience.",
       "scoreComponents": {
         "useCaseValue": 3,
         "regulatoryUrgency": 3,
@@ -1044,7 +1044,7 @@
       "value": 28000,
       "daysInStage": 5,
       "pocReadiness": 71,
-      "risk": "Responsabilità contenuti",
+      "risk": "ResponsabilitÃ  contenuti",
       "nextStep": "Assegnare responsabile contenuti onboarding e definire metrica di follow-up."
     },
     {
@@ -1094,7 +1094,7 @@
       "value": 31000,
       "daysInStage": 10,
       "pocReadiness": 69,
-      "risk": "Qualità fonte digitale",
+      "risk": "QualitÃ  fonte digitale",
       "nextStep": "Separare ticket di supporto da feedback funzionalita."
     },
     {
@@ -1164,31 +1164,31 @@
       "value": 26000,
       "daysInStage": 13,
       "pocReadiness": 84,
-      "risk": "Responsabilità recovery",
+      "risk": "ResponsabilitÃ  recovery",
       "nextStep": "Creare regola di contatto recovery e controllo soddisfazione post-azione."
     }
   ],
   "executiveInsights": [
     {
-      "title": "Il feedback sul journey service ha il percorso d'azione più chiaro",
-      "signal": "I segmenti appuntamento service e garanzia combinano alto impatto sulla soddisfazione, alta complessità dati e responsabili after-sales nominati.",
+      "title": "Il feedback sul journey service ha il percorso d'azione piÃ¹ chiaro",
+      "signal": "I segmenti appuntamento service e garanzia combinano alto impatto sulla soddisfazione, alta complessitÃ  dati e responsabili after-sales nominati.",
       "risk": "Se il feedback service resta frammentato, problemi ricorrenti possono essere visibili nei commenti ma non convertiti in azioni di miglioramento.",
       "action": "Creare una vista service journey con campi booking, reminder, tempo di attesa, spiegazione e soddisfazione post-service.",
-      "impact": "Impatto atteso: prioritizzazione più chiara dei miglioramenti after-sales e assegnazione del responsabile più rapida."
+      "impact": "Impatto atteso: prioritizzazione piÃ¹ chiara dei miglioramenti after-sales e assegnazione del responsabile piÃ¹ rapida."
     },
     {
-      "title": "Il comportamento digitale richiede una mappatura fonti più solida",
+      "title": "Il comportamento digitale richiede una mappatura fonti piÃ¹ solida",
       "signal": "I segmenti configuratore, app e connected services hanno alto valore di reporting ma dipendono da linkage dati e chiarezza delle fonti.",
       "risk": "I team possono confondere segnali di interesse, bisogni di supporto e feedback di soddisfazione se la tassonomia fonti e debole.",
       "action": "Separare comportamento lead, ticket supporto, feedback funzionalita e campi survey di soddisfazione prima del trend reporting.",
-      "impact": "Impatto atteso: segmentazione più affidabile e logica di follow-up CRM più chiara."
+      "impact": "Impatto atteso: segmentazione piÃ¹ affidabile e logica di follow-up CRM piÃ¹ chiara."
     },
     {
-      "title": "La fase iniziale da proprietario è una finestra feedback ad alta priorità",
+      "title": "La fase iniziale da proprietario Ã¨ una finestra feedback ad alta prioritÃ ",
       "signal": "I segmenti onboarding nuovi proprietari e detractor post-consegna mostrano alto impatto sulla soddisfazione e forte actionability.",
       "risk": "Se l insoddisfazione iniziale viene rilevata tardi, le azioni di recovery possono perdere il momento in cui la percezione cliente si sta ancora formando.",
       "action": "Aggiungere una vista proprietari primi 30 giorni con feedback consegna, domande onboarding, follow-up dealer e stato recovery.",
-      "impact": "Impatto atteso: segnali retention più forti e azioni di customer recovery più tempestive."
+      "impact": "Impatto atteso: segnali retention piÃ¹ forti e azioni di customer recovery piÃ¹ tempestive."
     }
   ],
   "bottlenecks": [
@@ -1196,19 +1196,19 @@
       "stage": "Mappatura Fonti Dati",
       "signal": "Il feedback esiste su survey, CRM, note service, follow-up dealer e touchpoint digitali.",
       "cause": "I segnali cliente sono raccolti in sistemi diversi e possono usare etichette o timing incoerenti.",
-      "action": "Creare una mappa fonti con responsabile fonte, cadenza refresh, qualità campo e stage del customer journey.",
-      "impact": "Migliorare l'affidabilità del reporting prima di trarre conclusioni sui segmenti."
+      "action": "Creare una mappa fonti con responsabile fonte, cadenza refresh, qualitÃ  campo e stage del customer journey.",
+      "impact": "Migliorare l'affidabilitÃ  del reporting prima di trarre conclusioni sui segmenti."
     },
     {
       "stage": "Diagnosi Journey",
       "signal": "I segmenti prioritari spesso richiedono sia segnali quantitativi da survey sia temi qualitativi dai commenti.",
       "cause": "Gli score da soli non spiegano se il problema riguarda timing, comunicazione, product support o processo dealer.",
       "action": "Affiancare alle metriche dashboard note insight strutturate e una sintesi temi revisionata da una persona.",
-      "impact": "Rendere le evidenze più facili da comunicare e trasformare in azioni."
+      "impact": "Rendere le evidenze piÃ¹ facili da comunicare e trasformare in azioni."
     },
     {
       "stage": "Follow-up Azioni",
-      "signal": "La qualità degli insight conta solo se responsabilità e misurazione post-azione sono chiare.",
+      "signal": "La qualitÃ  degli insight conta solo se responsabilitÃ  e misurazione post-azione sono chiare.",
       "cause": "I report possono essere rivisti senza un responsabile azione o una metrica target nominati.",
       "action": "Usare una checklist di handoff azione con responsabile, scadenza, cambiamento metrica atteso e prossima data di revisione.",
       "impact": "Chiudere il ciclo tra analytics e miglioramento customer experience."
@@ -1277,7 +1277,7 @@
     },
     {
       "title": "Ipotesi driver primario scritta",
-      "desc": "La causa probabile è dichiarata chiaramente e separata dai fatti confermati."
+      "desc": "La causa probabile Ã¨ dichiarata chiaramente e separata dai fatti confermati."
     },
     {
       "title": "Responsabile business nominato",
@@ -1289,7 +1289,7 @@
     },
     {
       "title": "Confine uso dati controllato",
-      "desc": "Dati personali, aggregazione e responsabilità di accesso sono chiari."
+      "desc": "Dati personali, aggregazione e responsabilitÃ  di accesso sono chiari."
     },
     {
       "title": "Cadenza follow-up pianificata",
@@ -1302,30 +1302,30 @@
   ],
   "complianceChecklist": [
     "L'analisi coinvolge dati personali cliente o note dealer/cliente identificabili?",
-    "L'evidenza può essere riportata a livello aggregato o segmento invece che individuale?",
-    "Il campione è abbastanza ampio per supportare una conclusione dashboard?",
+    "L'evidenza puÃ² essere riportata a livello aggregato o segmento invece che individuale?",
+    "Il campione Ã¨ abbastanza ampio per supportare una conclusione dashboard?",
     "Bias survey, valori mancanti, duplicati o campi non aggiornati sono documentati?",
     "Un responsabile umano sta revisionando ogni bozza di sintesi insight cliente prima dell'uso?",
     "Chi possiede l approvazione tra CX, CRM, Data/IT, Privacy e business stakeholder?"
   ],
-  "complianceEscalationRule": "Regola di escalation: se emergono uso di dati personali, aggregazione poco chiara o responsabilità fonte sconosciuta, segnalare per revisione Data/IT o Privacy prima di usare la fonte nel reporting.",
+  "complianceEscalationRule": "Regola di escalation: se emergono uso di dati personali, aggregazione poco chiara o responsabilitÃ  fonte sconosciuta, segnalare per revisione Data/IT o Privacy prima di usare la fonte nel reporting.",
   "sectorBuyingDrivers": {
     "Onboarding proprietari": "soddisfazione primi 30 giorni, chiarezza consegna, follow-up dealer, contenuti onboarding e azioni early recovery",
     "Loyalty": "relazione ricorrente, esperienza service, engagement community, accessori e soddisfazione lungo periodo",
-    "Premium Owners": "aspettative alte, credibilita tecnica, reattività, esperienza esclusiva e fiducia nel brand",
-    "Service": "facilità booking, chiarezza comunicativa, tempo di attesa, spiegazione riparazione e soddisfazione post-service",
-    "Digital": "usabilita app, comportamento configuratore, supporto digitale, qualità lead e feedback funzionalita",
-    "Events": "soddisfazione test ride, visitor experience, qualità follow-up, supporto lingua e percezione brand",
-    "Dealer Network": "tempo risposta, coerenza follow-up, qualità consegna e miglioramento processo frontline",
-    "Retail": "disponibilità, supporto post-acquisto, segnali cross-sell e soddisfazione per tipo acquisto",
-    "Retention": "motivi di abbandono service, comodita, percezione prezzo, qualità relazione e opportunità di riattivazione"
+    "Premium Owners": "aspettative alte, credibilita tecnica, reattivitÃ , esperienza esclusiva e fiducia nel brand",
+    "Service": "facilitÃ  booking, chiarezza comunicativa, tempo di attesa, spiegazione riparazione e soddisfazione post-service",
+    "Digital": "usabilita app, comportamento configuratore, supporto digitale, qualitÃ  lead e feedback funzionalita",
+    "Events": "soddisfazione test ride, visitor experience, qualitÃ  follow-up, supporto lingua e percezione brand",
+    "Dealer Network": "tempo risposta, coerenza follow-up, qualitÃ  consegna e miglioramento processo frontline",
+    "Retail": "disponibilitÃ , supporto post-acquisto, segnali cross-sell e soddisfazione per tipo acquisto",
+    "Retention": "motivi di abbandono service, comodita, percezione prezzo, qualitÃ  relazione e opportunitÃ  di riattivazione"
   },
   "briefPromptStructure": [
     "Contesto segmento cliente",
     "Touchpoint journey rilevanti",
     "Segnale primario di soddisfazione o comportamento",
     "Fonti dati probabili",
-    "Domande su qualità dati e privacy",
+    "Domande su qualitÃ  dati e privacy",
     "Ipotesi trend o frizione",
     "Prossima azione CX raccomandata",
     "Note handoff azione"
@@ -1335,7 +1335,7 @@
       "title": "Cosa e simulato",
       "items": [
         "Segmenti cliente, volumi feedback, stage del journey, segnali trend, action readiness e componenti score.",
-        "Gli score sono illustrativi e progettati per mostrare logica di prioritizzazione, non giudizi fattuali su clienti, dealer o prodotti Ducati.",
+        "Gli score sono illustrativi e progettati per mostrare logica di prioritizzazione, non giudizi fattuali su clienti, dealer o prodotti premium mobility brand.",
         "I brief insight sono generati da dati strutturati predefiniti e assunzioni simulate di Customer Experience."
       ]
     },
@@ -1344,7 +1344,7 @@
       "items": [
         "Il tirocinio richiede raccolta, organizzazione, analisi, reporting, segmentazione e comunicazione chiara.",
         "I team Customer Experience lavorano comunemente con survey, CRM, service, dealer, digital e feedback di campagna.",
-        "La customer analytics responsabile richiede attenzione a privacy, aggregazione, qualità delle fonti e interpretazione accurata."
+        "La customer analytics responsabile richiede attenzione a privacy, aggregazione, qualitÃ  delle fonti e interpretazione accurata."
       ]
     },
     {
@@ -1358,11 +1358,11 @@
       ]
     },
     {
-      "title": "Cosa non è il progetto",
+      "title": "Cosa non Ã¨ il progetto",
       "items": [
         "Un sistema CX analytics di produzione, un'integrazione CRM o un deployment Power BI.",
-        "Una rappresentazione di dati cliente Ducati riservati, survey interne o informazioni dealer.",
-        "Un affermazione che Ducati usi o valuti questa soluzione specifica."
+        "Una rappresentazione di dati cliente premium mobility brand riservati, survey interne o informazioni dealer.",
+        "Un affermazione che premium mobility brand usi o valuti questa soluzione specifica."
       ]
     }
   ]

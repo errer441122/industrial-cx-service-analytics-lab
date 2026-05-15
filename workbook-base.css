@@ -1,7 +1,7 @@
-/* ── Ducati CX Workbook — Base Styles v2.0 ── Dark Premium SaaS Edition ── */
+/* â”€â”€ premium mobility brand CX Workbook â€” Base Styles v2.0 â”€â”€ Dark Premium SaaS Edition â”€â”€ */
 
 :root {
-  /* ── Palette: Dark Premium ── */
+  /* â”€â”€ Palette: Dark Premium â”€â”€ */
   --bg:              #0a0b0e;
   --bg-elevated:     #0e1014;
   --panel:           rgba(14, 16, 20, 0.92);
@@ -78,25 +78,25 @@ body::before {
 
 button, select { font: inherit; }
 
-/* ── Selection ── */
+/* â”€â”€ Selection â”€â”€ */
 ::selection {
   background: rgba(212, 168, 83, 0.25);
   color: var(--text);
 }
 
-/* ── Scrollbars ── */
+/* â”€â”€ Scrollbars â”€â”€ */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.07); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.14); }
 
-/* ── App Shell ── */
+/* â”€â”€ App Shell â”€â”€ */
 .app-shell {
   display: flex;
   min-height: 100vh;
 }
 
-/* ── Sidebar ── */
+/* â”€â”€ Sidebar â”€â”€ */
 .sidebar {
   width: 280px;
   position: fixed;
@@ -214,7 +214,7 @@ button, select { font: inherit; }
   font-size: 0.72rem;
 }
 
-/* ── Main Content ── */
+/* â”€â”€ Main Content â”€â”€ */
 .main-content {
   flex: 1;
   margin-left: 280px;
@@ -303,7 +303,7 @@ button, select { font: inherit; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Glass Panel ── */
+/* â”€â”€ Glass Panel â”€â”€ */
 .glass-panel,
 .kpi-card,
 .metric-card,
@@ -321,7 +321,7 @@ button, select { font: inherit; }
   border-radius: var(--radius-lg);
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .hero-section {
   padding: clamp(28px, 4vw, 52px);
   overflow: hidden;
@@ -415,7 +415,7 @@ h3 {
   max-width: 600px;
 }
 
-/* ── Grids ── */
+/* â”€â”€ Grids â”€â”€ */
 .kpi-grid,
 .metric-strip,
 .review-paths-grid,
@@ -468,7 +468,7 @@ h3 {
   box-shadow: var(--shadow-accent);
 }
 
-/* ── Role Fit ── */
+/* â”€â”€ Role Fit â”€â”€ */
 .role-fit-block {
   max-width: 960px;
   margin-top: 28px;
@@ -516,7 +516,7 @@ h3 {
   background: var(--accent);
 }
 
-/* ── KPI & Metric Cards ── */
+/* â”€â”€ KPI & Metric Cards â”€â”€ */
 .kpi-grid {
   grid-template-columns: repeat(5, minmax(140px, 1fr));
   margin-top: 28px;
@@ -567,7 +567,7 @@ h3 {
   color: var(--accent);
 }
 
-/* ── Disclaimer ── */
+/* â”€â”€ Disclaimer â”€â”€ */
 .disclaimer-box {
   margin-top: 24px;
   display: flex;
@@ -595,7 +595,7 @@ h3 {
   max-width: none;
 }
 
-/* ── Section Headings ── */
+/* â”€â”€ Section Headings â”€â”€ */
 .section-heading {
   margin: 0 0 24px;
   max-width: 880px;
@@ -611,7 +611,7 @@ h3 {
   color: var(--text-secondary);
 }
 
-/* ── Content Grids ── */
+/* â”€â”€ Content Grids â”€â”€ */
 .insights-grid       { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .review-paths-grid   { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 40px; }
 .reviewer-guide-panel{ margin-bottom: 40px; }
@@ -624,7 +624,7 @@ h3 {
   grid-column: span 2;
 }
 
-/* ── Cards ── */
+/* â”€â”€ Cards â”€â”€ */
 .summary-card,
 .output-card,
 .story-card {
@@ -745,7 +745,7 @@ h3 {
   font-weight: 500;
 }
 
-/* ── Priority Pills ── */
+/* â”€â”€ Priority Pills â”€â”€ */
 .priority-pill {
   display: inline-flex;
   padding: 5px 12px;
@@ -774,7 +774,7 @@ h3 {
   border-color: rgba(100, 120, 160, 0.18);
 }
 
-/* ── Cards Detail ── */
+/* â”€â”€ Cards Detail â”€â”€ */
 .insight-card,
 .criteria-card,
 .methodology-card,
@@ -880,7 +880,7 @@ section[id],
   color: var(--muted);
 }
 
-/* ── Probability Panel ── */
+/* â”€â”€ Probability Panel â”€â”€ */
 .probability-panel { margin-bottom: 24px; }
 .probability-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .probability-pill {
@@ -906,7 +906,7 @@ section[id],
   font-weight: 600;
 }
 
-/* ── Kanban ── */
+/* â”€â”€ Kanban â”€â”€ */
 .kanban-board {
   display: grid;
   grid-template-columns: repeat(9, minmax(250px, 1fr));
@@ -1016,7 +1016,7 @@ section[id],
   text-align: center;
 }
 
-/* ── Criteria & Methodology ── */
+/* â”€â”€ Criteria & Methodology â”€â”€ */
 .criteria-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .criteria-card h3,
 .methodology-card h3,
@@ -1114,7 +1114,7 @@ section[id],
   margin-bottom: 0;
 }
 
-/* ── Tables ── */
+/* â”€â”€ Tables â”€â”€ */
 .table-container {
   overflow-x: auto;
   max-width: 100%;
@@ -1193,7 +1193,7 @@ td small { color: var(--muted); }
   border: 1px solid rgba(107, 158, 117, 0.18);
 }
 
-/* ── Brief Layout ── */
+/* â”€â”€ Brief Layout â”€â”€ */
 .brief-layout {
   display: grid;
   grid-template-columns: 360px 1fr;
@@ -1326,7 +1326,7 @@ select option {
   font-size: 0.88rem;
 }
 
-/* ── Playbook & Checklists ── */
+/* â”€â”€ Playbook & Checklists â”€â”€ */
 .playbook-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .checklist {
@@ -1364,7 +1364,7 @@ select option {
 }
 
 .checklist-item.checked .check-indicator::after {
-  content: "✓";
+  content: "âœ“";
   position: absolute;
   inset: -2px 0 0 0;
   text-align: center;
@@ -1425,7 +1425,7 @@ select option {
 
 .reference-list .checklist-item p { margin: 0; }
 
-/* ── Methodology ── */
+/* â”€â”€ Methodology â”€â”€ */
 .methodology-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .methodology-card {
@@ -1448,7 +1448,7 @@ select option {
   font-weight: 500;
 }
 
-/* ── Automations ── */
+/* â”€â”€ Automations â”€â”€ */
 .automation-intro {
   padding: 24px;
   margin-bottom: 20px;
@@ -1566,7 +1566,7 @@ select option {
   line-height: 1.55;
 }
 
-/* ── PDF Export ── */
+/* â”€â”€ PDF Export â”€â”€ */
 .pdf-export-panel { padding: 24px; background: var(--panel); }
 
 .pdf-export-info {
@@ -1596,7 +1596,7 @@ select option {
   padding: 12px 20px;
 }
 
-/* ── Research ── */
+/* â”€â”€ Research â”€â”€ */
 .research-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1655,7 +1655,7 @@ select option {
   font-weight: 600;
 }
 
-/* ── Staggered Entry Animation ── */
+/* â”€â”€ Staggered Entry Animation â”€â”€ */
 @keyframes cardReveal {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1686,7 +1686,7 @@ select option {
 .view-section.active .review-path-card:nth-child(2) { animation-delay: 0.2s; }
 .view-section.active .review-path-card:nth-child(3) { animation-delay: 0.3s; }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1480px) {
   .kpi-grid        { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .role-fit-list   { grid-template-columns: repeat(2, minmax(0, 1fr)); }
