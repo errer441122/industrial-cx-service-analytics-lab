@@ -1,108 +1,119 @@
+"""Stakeholder CX summary on the real Olist reviews dataset.
+
+A compact, decision-oriented readout (headline KPIs, NPS proxy, the
+delivery-SLA signal, and a monthly trend) built from
+`data/olist_reviews.csv`. Pure standard library.
+"""
+
 from __future__ import annotations
 
 import json
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
-from validate_cx_data import DATA_PATH, load_rows, validate_rows
+from cx_driver_analysis import load_reviews
+
+ROOT = Path(__file__).resolve().parents[1]
+REPORTS_DIR = ROOT / "reports"
+BRIEF_PATH = REPORTS_DIR / "customer_satisfaction_brief.md"
+
+MIN_GROUP = 400
 
 
-def _int(row: dict[str, str], field: str) -> int:
-    return int(row[field])
+def build_summary(rows: list[dict[str, object]] | None = None) -> dict[str, object]:
+    rows = rows if rows is not None else load_reviews()
+    n = len(rows)
+    sat = sum(r["satisfied"] for r in rows)
+    prom = sum(1 for r in rows if r["nps_band"] == "promoter")
+    det = sum(1 for r in rows if r["nps_band"] == "detractor")
+    late = sum(r["late"] for r in rows)
+    dd = sorted(r["delivery_days"] for r in rows)
 
+    def grp(field: str) -> dict[str, dict[str, object]]:
+        g: dict[str, list[dict[str, object]]] = defaultdict(list)
+        for r in rows:
+            g[r[field]].append(r)
+        out = {}
+        for k, rs in g.items():
+            if len(rs) >= MIN_GROUP:
+                out[k] = {
+                    "reviews": len(rs),
+                    "satisfied_rate": round(sum(x["satisfied"] for x in rs) / len(rs), 4),
+                    "avg_review_score": round(sum(x["score"] for x in rs) / len(rs), 2),
+                    "late_rate": round(sum(x["late"] for x in rs) / len(rs), 4),
+                }
+        return dict(sorted(out.items(), key=lambda kv: kv[1]["satisfied_rate"]))
 
-def _weighted_average(rows: list[dict[str, str]], value_field: str) -> float:
-    total_volume = sum(_int(row, "feedback_volume") for row in rows)
-    if total_volume == 0:
-        return 0.0
-    weighted_sum = sum(_int(row, value_field) * _int(row, "feedback_volume") for row in rows)
-    return round(weighted_sum / total_volume, 2)
-
-
-def group_by(rows: list[dict[str, str]], field: str) -> dict[str, list[dict[str, str]]]:
-    grouped: dict[str, list[dict[str, str]]] = defaultdict(list)
-    for row in rows:
-        grouped[row[field]].append(row)
-    return dict(grouped)
-
-
-def build_summary(rows: list[dict[str, str]]) -> dict[str, object]:
-    errors = validate_rows(rows)
-    if errors:
-        raise ValueError("; ".join(errors))
-
-    total_volume = sum(_int(row, "feedback_volume") for row in rows)
-    satisfied_volume = sum(
-        _int(row, "feedback_volume") for row in rows if _int(row, "satisfaction_score") >= 4
-    )
-    follow_up_required = [row for row in rows if row["follow_up_required"].lower() == "yes"]
-    follow_up_completed = [row for row in follow_up_required if row["follow_up_completed"].lower() == "yes"]
-    completed_delta_rows = [
-        {
-            **row,
-            "delta": _int(row, "post_action_score") - _int(row, "satisfaction_score"),
-        }
-        for row in follow_up_completed
-    ]
-
-    segment_summary = {}
-    for segment, segment_rows in group_by(rows, "segment").items():
-        segment_summary[segment] = {
-            "feedback_volume": sum(_int(row, "feedback_volume") for row in segment_rows),
-            "avg_satisfaction": _weighted_average(segment_rows, "satisfaction_score"),
-            "avg_friction": _weighted_average(segment_rows, "friction_score"),
-        }
-
-    at_risk_segments = [
-        segment
-        for segment, metrics in segment_summary.items()
-        if metrics["avg_satisfaction"] < 3.5 or metrics["avg_friction"] >= 3.5
-    ]
-
-    month_summary = {}
-    for month, month_rows in group_by(rows, "date").items():
-        month_key = month[:7]
-        month_summary.setdefault(month_key, {"feedback_volume": 0, "rows": []})
-        month_summary[month_key]["feedback_volume"] += sum(_int(row, "feedback_volume") for row in month_rows)
-        month_summary[month_key]["rows"].extend(month_rows)
-
+    months = defaultdict(list)
+    for r in rows:
+        months[r["month"]].append(r)
     monthly_trend = {
-        month: {
-            "feedback_volume": data["feedback_volume"],
-            "avg_satisfaction": _weighted_average(data["rows"], "satisfaction_score"),
-            "avg_friction": _weighted_average(data["rows"], "friction_score"),
+        m: {
+            "reviews": len(rs),
+            "satisfied_rate": round(sum(x["satisfied"] for x in rs) / len(rs), 4),
+            "avg_review_score": round(sum(x["score"] for x in rs) / len(rs), 2),
+            "late_rate": round(sum(x["late"] for x in rs) / len(rs), 4),
         }
-        for month, data in sorted(month_summary.items())
+        for m, rs in sorted(months.items())
     }
 
-    improvement_delta = 0.0
-    if completed_delta_rows:
-        total_completed_volume = sum(_int(row, "feedback_volume") for row in completed_delta_rows)
-        improvement_delta = round(
-            sum(row["delta"] * _int(row, "feedback_volume") for row in completed_delta_rows)
-            / total_completed_volume,
-            2,
-        )
-
     return {
-        "records": len(rows),
-        "weighted_feedback_volume": total_volume,
-        "customer_satisfaction_rate": round(satisfied_volume / total_volume, 3),
-        "customer_satisfaction_rate_pct": round((satisfied_volume / total_volume) * 100, 1),
-        "journey_friction_index": _weighted_average(rows, "friction_score"),
-        "follow_up_completion_rate": round(len(follow_up_completed) / len(follow_up_required), 3),
-        "follow_up_completion_rate_pct": round((len(follow_up_completed) / len(follow_up_required)) * 100, 1),
-        "post_action_improvement_delta": improvement_delta,
-        "at_risk_segment_count": len(at_risk_segments),
-        "at_risk_segments": at_risk_segments,
-        "segment_summary": segment_summary,
+        "dataset": "Olist Brazilian E-Commerce (real, CC BY-NC-SA 4.0)",
+        "records": n,
+        "customer_satisfaction_rate": round(sat / n, 4),
+        "customer_satisfaction_rate_pct": round(sat / n * 100, 1),
+        "avg_review_score": round(sum(r["score"] for r in rows) / n, 3),
+        "nps_proxy": round((prom - det) / n * 100, 1),
+        "late_delivery_rate": round(late / n, 4),
+        "median_delivery_days": dd[len(dd) // 2],
+        "by_state": grp("state"),
+        "by_category": grp("category"),
         "monthly_trend": monthly_trend,
     }
 
 
+def _md(s: dict[str, object]) -> str:
+    L = ["# Customer Satisfaction Brief (real Olist data)\n"]
+    L.append(
+        f"{s['records']:,} real reviews — satisfied **{s['customer_satisfaction_rate_pct']}%**, "
+        f"avg score **{s['avg_review_score']}**, NPS proxy **{s['nps_proxy']:+.0f}**, "
+        f"late-delivery rate **{s['late_delivery_rate']*100:.1f}%**, median delivery "
+        f"**{s['median_delivery_days']} days**.\n"
+    )
+    L.append("## Lowest-satisfaction states (≥ %d reviews)\n" % MIN_GROUP)
+    L.append("| State | Reviews | Satisfied | Avg score | Late rate |")
+    L.append("| --- | ---: | ---: | ---: | ---: |")
+    for st, m in list(s["by_state"].items())[:8]:
+        L.append(f"| {st} | {m['reviews']:,} | {m['satisfied_rate']*100:.1f}% | "
+                 f"{m['avg_review_score']} | {m['late_rate']*100:.1f}% |")
+    L.append("")
+    L.append("## Lowest-satisfaction categories (≥ %d reviews)\n" % MIN_GROUP)
+    L.append("| Category | Reviews | Satisfied | Avg score | Late rate |")
+    L.append("| --- | ---: | ---: | ---: | ---: |")
+    for c, m in list(s["by_category"].items())[:8]:
+        L.append(f"| {c} | {m['reviews']:,} | {m['satisfied_rate']*100:.1f}% | "
+                 f"{m['avg_review_score']} | {m['late_rate']*100:.1f}% |")
+    L.append("")
+    L.append(
+        "Takeaway: satisfaction tracks delivery reliability. The priority is "
+        "cutting late deliveries in the weakest states/categories, not broad "
+        "review solicitation — see `cx_driver_analysis.md`.\n"
+    )
+    L.append("## Boundary\n")
+    L.append(
+        "Real public data (Olist, Kaggle, CC BY-NC-SA 4.0, non-commercial, "
+        "attributed). Observational, not causal; Brazil 2016-2018.\n"
+    )
+    return "\n".join(L)
+
+
 def main() -> None:
-    summary = build_summary(load_rows(DATA_PATH))
-    print(json.dumps(summary, indent=2, sort_keys=True))
+    summary = build_summary()
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    BRIEF_PATH.write_text(_md(summary), encoding="utf-8")
+    print(json.dumps({k: v for k, v in summary.items()
+                      if k not in ("by_state", "by_category", "monthly_trend")},
+                     indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":

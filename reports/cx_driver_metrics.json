@@ -1,714 +1,935 @@
 {
   "comment_themes": [
     {
-      "avg_satisfaction": 3.55,
-      "mentions": 110,
-      "share": 0.244,
-      "theme": "Service & parts"
+      "avg_review_score": 3.59,
+      "mentions": 17822,
+      "share_of_comments": 0.4592,
+      "theme": "Produto & qualidade"
     },
     {
-      "avg_satisfaction": 3.3,
-      "mentions": 88,
-      "share": 0.196,
-      "theme": "Documentation & warranty"
+      "avg_review_score": 4.03,
+      "mentions": 15536,
+      "share_of_comments": 0.4003,
+      "theme": "Entrega & prazo"
     },
     {
-      "avg_satisfaction": 3.52,
-      "mentions": 81,
-      "share": 0.18,
-      "theme": "Digital onboarding"
+      "avg_review_score": 4.52,
+      "mentions": 10762,
+      "share_of_comments": 0.2773,
+      "theme": "Recomenda\u00e7\u00e3o / satisfa\u00e7\u00e3o"
     },
     {
-      "avg_satisfaction": 3.09,
-      "mentions": 74,
-      "share": 0.164,
-      "theme": "Financing & pricing"
+      "avg_review_score": 1.62,
+      "mentions": 2598,
+      "share_of_comments": 0.0669,
+      "theme": "N\u00e3o recebido / faltou"
     },
     {
-      "avg_satisfaction": 3.48,
-      "mentions": 71,
-      "share": 0.158,
-      "theme": "Delivery & handover"
+      "avg_review_score": 2.69,
+      "mentions": 2011,
+      "share_of_comments": 0.0518,
+      "theme": "Atendimento"
     }
   ],
+  "dataset": "Olist Brazilian E-Commerce (Kaggle, CC BY-NC-SA 4.0) \u2014 real",
+  "delivery_sla_cohort": {
+    "cohens_h": 1.197,
+    "effect": "large",
+    "late_mean_score": 2.27,
+    "late_n": 6362,
+    "late_satisfied_rate": 0.2671,
+    "on_time_mean_score": 4.292,
+    "on_time_n": 89277,
+    "on_time_satisfied_rate": 0.827,
+    "p_value": 0.0,
+    "rate_gap": 0.5599,
+    "rate_gap_ci": [
+      0.5488,
+      0.5711
+    ],
+    "significant": true,
+    "z": 105.889
+  },
   "drivers": [
     {
-      "cohens_h": -1.022,
+      "cohens_h": -1.197,
       "diff_ci": [
-        -0.5336,
-        -0.3611
+        -0.5711,
+        -0.5488
       ],
-      "diff_vs_rest": -0.4474,
-      "dimension": "friction_score",
+      "diff_vs_rest": -0.5599,
+      "dimension": "late_delivery",
       "effect": "large",
-      "level": "high (>=4)",
-      "n": 70,
+      "level": "late (delivered after estimate)",
+      "n": 6362,
       "p_value": 0.0,
-      "rest_rate": 0.5474,
+      "rest_rate": 0.827,
       "satisfied_ci": [
-        0.0493,
-        0.1923
+        0.2563,
+        0.2781
       ],
-      "satisfied_rate": 0.1,
+      "satisfied_rate": 0.2671,
       "significant": true,
-      "z": -6.886
+      "z": -105.889
     },
     {
-      "cohens_h": -0.971,
+      "cohens_h": -0.46,
       "diff_ci": [
-        -0.5299,
-        -0.364
+        -0.2033,
+        -0.1905
       ],
-      "diff_vs_rest": -0.447,
-      "dimension": "segment",
-      "effect": "large",
-      "level": "First-Time Owners",
-      "n": 120,
-      "p_value": 0.0,
-      "rest_rate": 0.597,
-      "satisfied_ci": [
-        0.097,
-        0.2247
-      ],
-      "satisfied_rate": 0.15,
-      "significant": true,
-      "z": -8.394
-    },
-    {
-      "cohens_h": 0.59,
-      "diff_ci": [
-        0.1833,
-        0.3934
-      ],
-      "diff_vs_rest": 0.2884,
-      "dimension": "segment",
-      "effect": "medium",
-      "level": "Touring Owners",
-      "n": 95,
-      "p_value": 0.0,
-      "rest_rate": 0.4169,
-      "satisfied_ci": [
-        0.6071,
-        0.7875
-      ],
-      "satisfied_rate": 0.7053,
-      "significant": true,
-      "z": 4.998
-    },
-    {
-      "cohens_h": 0.247,
-      "diff_ci": [
-        0.0054,
-        0.2411
-      ],
-      "diff_vs_rest": 0.1233,
-      "dimension": "segment",
+      "diff_vs_rest": -0.1969,
+      "dimension": "delivery_speed",
       "effect": "small",
-      "level": "Performance Enthusiasts",
-      "n": 83,
-      "p_value": 0.04231,
-      "rest_rate": 0.455,
+      "level": "slow (15d+)",
+      "n": 26024,
+      "p_value": 0.0,
+      "rest_rate": 0.8433,
       "satisfied_ci": [
-        0.4709,
-        0.6788
+        0.6406,
+        0.6522
       ],
-      "satisfied_rate": 0.5783,
+      "satisfied_rate": 0.6464,
       "significant": true,
-      "z": 2.03
+      "z": -66.505
     },
     {
-      "cohens_h": 0.243,
+      "cohens_h": 0.274,
       "diff_ci": [
-        0.0092,
-        0.2326
+        0.1025,
+        0.1125
       ],
-      "diff_vs_rest": 0.1209,
-      "dimension": "journey_stage",
+      "diff_vs_rest": 0.1075,
+      "dimension": "delivery_speed",
       "effect": "small",
-      "level": "Digital",
-      "n": 96,
-      "p_value": 0.03537,
-      "rest_rate": 0.452,
+      "level": "fast (\u22647d)",
+      "n": 33500,
+      "p_value": 0.0,
+      "rest_rate": 0.7521,
       "satisfied_ci": [
-        0.473,
-        0.6672
+        0.8558,
+        0.8633
       ],
-      "satisfied_rate": 0.5729,
+      "satisfied_rate": 0.8596,
       "significant": true,
-      "z": 2.104
+      "z": 38.923
     },
     {
-      "cohens_h": -0.198,
+      "cohens_h": 0.154,
       "diff_ci": [
-        -0.1992,
-        0.0021
+        0.0567,
+        0.067
       ],
-      "diff_vs_rest": -0.0986,
-      "dimension": "journey_stage",
+      "diff_vs_rest": 0.0618,
+      "dimension": "delivery_speed",
       "effect": "negligible",
-      "level": "Purchase",
-      "n": 130,
-      "p_value": 0.05781,
-      "rest_rate": 0.5062,
+      "level": "normal (8-14d)",
+      "n": 36115,
+      "p_value": 0.0,
+      "rest_rate": 0.7664,
       "satisfied_ci": [
-        0.327,
-        0.4936
+        0.8243,
+        0.8321
       ],
-      "satisfied_rate": 0.4077,
-      "significant": false,
-      "z": -1.897
+      "satisfied_rate": 0.8282,
+      "significant": true,
+      "z": 22.75
     },
     {
-      "cohens_h": 0.187,
+      "cohens_h": -0.149,
       "diff_ci": [
-        -0.0041,
-        0.1904
+        -0.0714,
+        -0.0548
       ],
-      "diff_vs_rest": 0.0932,
-      "dimension": "segment",
+      "diff_vs_rest": -0.0631,
+      "dimension": "customer_state",
       "effect": "negligible",
-      "level": "Urban Commuters",
-      "n": 152,
-      "p_value": 0.06131,
-      "rest_rate": 0.4463,
+      "level": "RJ",
+      "n": 12180,
+      "p_value": 0.0,
+      "rest_rate": 0.7978,
       "satisfied_ci": [
-        0.4602,
-        0.6168
+        0.7267,
+        0.7424
       ],
-      "satisfied_rate": 0.5395,
-      "significant": false,
-      "z": 1.871
+      "satisfied_rate": 0.7346,
+      "significant": true,
+      "z": -15.97
     },
     {
-      "cohens_h": -0.164,
+      "cohens_h": -0.119,
       "diff_ci": [
-        -0.1918,
-        0.0286
+        -0.0595,
+        -0.0407
       ],
-      "diff_vs_rest": -0.0816,
-      "dimension": "region",
+      "diff_vs_rest": -0.0501,
+      "dimension": "product_category",
       "effect": "negligible",
-      "level": "South",
-      "n": 99,
-      "p_value": 0.15121,
-      "rest_rate": 0.4957,
+      "level": "bed_bath_table",
+      "n": 9040,
+      "p_value": 0.0,
+      "rest_rate": 0.7945,
       "satisfied_ci": [
-        0.3221,
-        0.5126
+        0.7353,
+        0.7532
       ],
-      "satisfied_rate": 0.4141,
-      "significant": false,
-      "z": -1.435
+      "satisfied_rate": 0.7444,
+      "significant": true,
+      "z": -11.125
     },
     {
-      "cohens_h": 0.163,
+      "cohens_h": 0.105,
       "diff_ci": [
-        -0.0113,
-        0.1736
+        0.0375,
+        0.0478
       ],
-      "diff_vs_rest": 0.0811,
-      "dimension": "region",
+      "diff_vs_rest": 0.0426,
+      "dimension": "customer_state",
       "effect": "negligible",
-      "level": "North",
-      "n": 205,
-      "p_value": 0.08616,
-      "rest_rate": 0.4408,
+      "level": "SP",
+      "n": 40190,
+      "p_value": 0.0,
+      "rest_rate": 0.7718,
       "satisfied_ci": [
-        0.4538,
-        0.5893
+        0.8106,
+        0.8182
       ],
-      "satisfied_rate": 0.522,
-      "significant": false,
-      "z": 1.716
+      "satisfied_rate": 0.8145,
+      "significant": true,
+      "z": 15.976
     },
     {
-      "cohens_h": -0.112,
+      "cohens_h": -0.075,
       "diff_ci": [
-        -0.1664,
-        0.0551
+        -0.0446,
+        -0.0177
       ],
-      "diff_vs_rest": -0.0557,
-      "dimension": "journey_stage",
+      "diff_vs_rest": -0.0312,
+      "dimension": "product_category",
       "effect": "negligible",
-      "level": "Ownership",
-      "n": 99,
-      "p_value": 0.32727,
-      "rest_rate": 0.49,
+      "level": "telephony",
+      "n": 4048,
+      "p_value": 2e-06,
+      "rest_rate": 0.791,
       "satisfied_ci": [
-        0.341,
-        0.5326
+        0.7465,
+        0.7728
       ],
-      "satisfied_rate": 0.4343,
-      "significant": false,
-      "z": -0.98
+      "satisfied_rate": 0.7599,
+      "significant": true,
+      "z": -4.762
     },
     {
-      "cohens_h": -0.112,
+      "cohens_h": 0.07,
       "diff_ci": [
-        -0.1664,
-        0.0551
+        0.0168,
+        0.0391
       ],
-      "diff_vs_rest": -0.0557,
-      "dimension": "channel",
+      "diff_vs_rest": 0.0279,
+      "dimension": "customer_state",
       "effect": "negligible",
-      "level": "App",
-      "n": 99,
-      "p_value": 0.32727,
-      "rest_rate": 0.49,
+      "level": "PR",
+      "n": 4887,
+      "p_value": 3e-06,
+      "rest_rate": 0.7883,
       "satisfied_ci": [
-        0.341,
-        0.5326
+        0.8051,
+        0.8269
       ],
-      "satisfied_rate": 0.4343,
-      "significant": false,
-      "z": -0.98
+      "satisfied_rate": 0.8162,
+      "significant": true,
+      "z": 4.67
     },
     {
-      "cohens_h": 0.108,
+      "cohens_h": 0.069,
       "diff_ci": [
-        -0.0556,
-        0.1634
+        0.0184,
+        0.0369
       ],
-      "diff_vs_rest": 0.0539,
-      "dimension": "channel",
+      "diff_vs_rest": 0.0277,
+      "dimension": "product_category",
       "effect": "negligible",
-      "level": "Dealer",
-      "n": 104,
-      "p_value": 0.33446,
-      "rest_rate": 0.4653,
+      "level": "sports_leisure",
+      "n": 7426,
+      "p_value": 0.0,
+      "rest_rate": 0.7876,
       "satisfied_ci": [
-        0.4242,
-        0.6128
+        0.8063,
+        0.8239
       ],
-      "satisfied_rate": 0.5192,
-      "significant": false,
-      "z": 0.965
+      "satisfied_rate": 0.8152,
+      "significant": true,
+      "z": 5.618
     },
     {
-      "cohens_h": 0.095,
+      "cohens_h": -0.067,
       "diff_ci": [
-        -0.0557,
-        0.1504
+        -0.0387,
+        -0.0168
       ],
-      "diff_vs_rest": 0.0474,
-      "dimension": "journey_stage",
+      "diff_vs_rest": -0.0277,
+      "dimension": "product_category",
       "effect": "negligible",
-      "level": "Service",
-      "n": 125,
-      "p_value": 0.36741,
-      "rest_rate": 0.4646,
+      "level": "furniture_decor",
+      "n": 6143,
+      "p_value": 0.0,
+      "rest_rate": 0.7915,
       "satisfied_ci": [
-        0.4253,
-        0.598
+        0.753,
+        0.7743
       ],
-      "satisfied_rate": 0.512,
-      "significant": false,
-      "z": 0.901
+      "satisfied_rate": 0.7638,
+      "significant": true,
+      "z": -5.156
     },
     {
-      "cohens_h": 0.083,
+      "cohens_h": 0.057,
       "diff_ci": [
-        -0.0704,
-        0.1533
+        0.014,
+        0.0315
       ],
-      "diff_vs_rest": 0.0415,
-      "dimension": "channel",
+      "diff_vs_rest": 0.0228,
+      "dimension": "product_category",
       "effect": "negligible",
-      "level": "Email",
-      "n": 98,
-      "p_value": 0.46746,
-      "rest_rate": 0.4688,
+      "level": "health_beauty",
+      "n": 8548,
+      "p_value": 1e-06,
+      "rest_rate": 0.7877,
       "satisfied_ci": [
-        0.4127,
-        0.6069
+        0.802,
+        0.8187
       ],
-      "satisfied_rate": 0.5102,
-      "significant": false,
-      "z": 0.727
+      "satisfied_rate": 0.8105,
+      "significant": true,
+      "z": 4.934
     },
     {
-      "cohens_h": -0.074,
+      "cohens_h": -0.052,
       "diff_ci": [
-        -0.1677,
-        0.0938
+        -0.0265,
+        -0.0158
       ],
-      "diff_vs_rest": -0.037,
-      "dimension": "channel",
+      "diff_vs_rest": -0.0211,
+      "dimension": "freight_level",
       "effect": "negligible",
-      "level": "Social",
-      "n": 65,
-      "p_value": 0.58106,
-      "rest_rate": 0.4831,
+      "level": "high freight",
+      "n": 36871,
+      "p_value": 0.0,
+      "rest_rate": 0.7979,
       "satisfied_ci": [
-        0.3317,
-        0.5666
+        0.7725,
+        0.781
       ],
-      "satisfied_rate": 0.4462,
-      "significant": false,
-      "z": -0.552
+      "satisfied_rate": 0.7767,
+      "significant": true,
+      "z": -7.812
     },
     {
-      "cohens_h": -0.056,
+      "cohens_h": 0.046,
       "diff_ci": [
-        -0.1264,
-        0.0705
+        0.013,
+        0.0246
       ],
-      "diff_vs_rest": -0.0279,
-      "dimension": "region",
+      "diff_vs_rest": 0.0188,
+      "dimension": "freight_level",
       "effect": "negligible",
-      "level": "Central",
-      "n": 146,
-      "p_value": 0.57857,
-      "rest_rate": 0.4868,
+      "level": "low freight",
+      "n": 25139,
+      "p_value": 0.0,
+      "rest_rate": 0.7848,
       "satisfied_ci": [
-        0.3802,
-        0.5398
+        0.7986,
+        0.8084
       ],
-      "satisfied_rate": 0.4589,
-      "significant": false,
-      "z": -0.555
+      "satisfied_rate": 0.8036,
+      "significant": true,
+      "z": 6.273
     },
     {
-      "cohens_h": -0.033,
+      "cohens_h": -0.039,
       "diff_ci": [
-        -0.1349,
-        0.1017
+        -0.0267,
+        -0.0056
       ],
-      "diff_vs_rest": -0.0166,
-      "dimension": "channel",
+      "diff_vs_rest": -0.0161,
+      "dimension": "product_category",
       "effect": "negligible",
-      "level": "Survey",
-      "n": 84,
-      "p_value": 0.7837,
-      "rest_rate": 0.4809,
+      "level": "computers_accessories",
+      "n": 6449,
+      "p_value": 0.002152,
+      "rest_rate": 0.7908,
       "satisfied_ci": [
-        0.3615,
-        0.5702
+        0.7643,
+        0.7847
       ],
-      "satisfied_rate": 0.4643,
+      "satisfied_rate": 0.7747,
+      "significant": true,
+      "z": -3.068
+    },
+    {
+      "cohens_h": -0.029,
+      "diff_ci": [
+        -0.0232,
+        -0.0004
+      ],
+      "diff_vs_rest": -0.0118,
+      "dimension": "product_category",
+      "effect": "negligible",
+      "level": "watches_gifts",
+      "n": 5429,
+      "p_value": 0.038189,
+      "rest_rate": 0.7904,
+      "satisfied_ci": [
+        0.7674,
+        0.7894
+      ],
+      "satisfied_rate": 0.7786,
+      "significant": true,
+      "z": -2.073
+    },
+    {
+      "cohens_h": 0.028,
+      "diff_ci": [
+        0.0033,
+        0.0191
+      ],
+      "diff_vs_rest": 0.0112,
+      "dimension": "customer_state",
+      "effect": "negligible",
+      "level": "MG",
+      "n": 11265,
+      "p_value": 0.005971,
+      "rest_rate": 0.7884,
+      "satisfied_ci": [
+        0.7922,
+        0.8069
+      ],
+      "satisfied_rate": 0.7996,
+      "significant": true,
+      "z": 2.749
+    },
+    {
+      "cohens_h": 0.027,
+      "diff_ci": [
+        0.0002,
+        0.0218
+      ],
+      "diff_vs_rest": 0.011,
+      "dimension": "product_category",
+      "effect": "negligible",
+      "level": "housewares",
+      "n": 5652,
+      "p_value": 0.049213,
+      "rest_rate": 0.7891,
+      "satisfied_ci": [
+        0.7894,
+        0.8103
+      ],
+      "satisfied_rate": 0.8001,
+      "significant": true,
+      "z": 1.967
+    },
+    {
+      "cohens_h": 0.023,
+      "diff_ci": [
+        -0.0017,
+        0.0205
+      ],
+      "diff_vs_rest": 0.0094,
+      "dimension": "customer_state",
+      "effect": "negligible",
+      "level": "RS",
+      "n": 5319,
+      "p_value": 0.100574,
+      "rest_rate": 0.7892,
+      "satisfied_ci": [
+        0.7877,
+        0.8092
+      ],
+      "satisfied_rate": 0.7986,
       "significant": false,
-      "z": -0.275
+      "z": 1.642
+    },
+    {
+      "cohens_h": -0.021,
+      "diff_ci": [
+        -0.0223,
+        0.0055
+      ],
+      "diff_vs_rest": -0.0084,
+      "dimension": "customer_state",
+      "effect": "negligible",
+      "level": "SC",
+      "n": 3512,
+      "p_value": 0.228667,
+      "rest_rate": 0.79,
+      "satisfied_ci": [
+        0.7676,
+        0.795
+      ],
+      "satisfied_rate": 0.7816,
+      "significant": false,
+      "z": -1.204
+    },
+    {
+      "cohens_h": 0.015,
+      "diff_ci": [
+        0.0006,
+        0.0114
+      ],
+      "diff_vs_rest": 0.006,
+      "dimension": "freight_level",
+      "effect": "negligible",
+      "level": "mid freight",
+      "n": 33629,
+      "p_value": 0.029271,
+      "rest_rate": 0.7876,
+      "satisfied_ci": [
+        0.7893,
+        0.7979
+      ],
+      "satisfied_rate": 0.7936,
+      "significant": true,
+      "z": 2.18
     }
   ],
-  "follow_up_cohort": {
-    "cohens_h": 1.046,
-    "completed_mean_delta": 1.249,
-    "completed_n": 189,
-    "completed_post_satisfied_rate": 0.7884,
-    "effect": "large",
-    "open_mean_delta": -0.055,
-    "open_n": 55,
-    "open_post_satisfied_rate": 0.2909,
-    "p_value": 0.0,
-    "rate_gap": 0.4975,
-    "rate_gap_ci": [
-      0.364,
-      0.6309
-    ],
-    "required_n": 244,
-    "significant": true,
-    "z": 6.939
-  },
   "multivariate_drivers": {
     "coefficients": [
       {
-        "coef": -1.0724,
         "feature": "intercept",
-        "odds_ratio": 0.3422,
+        "odds_ratio": 5.6535,
         "or_ci_95": [
-          0.1548,
-          0.7563
-        ],
-        "p_value": 0.00805,
-        "significant": true,
-        "z": -2.65
-      },
-      {
-        "coef": 0.9459,
-        "feature": "segment=Performance Enthusiasts",
-        "odds_ratio": 2.575,
-        "or_ci_95": [
-          1.3002,
-          5.0997
-        ],
-        "p_value": 0.00667,
-        "significant": true,
-        "z": 2.713
-      },
-      {
-        "coef": 1.5727,
-        "feature": "segment=Touring Owners",
-        "odds_ratio": 4.8198,
-        "or_ci_95": [
-          2.4357,
-          9.5377
-        ],
-        "p_value": 1e-05,
-        "significant": true,
-        "z": 4.516
-      },
-      {
-        "coef": 1.0639,
-        "feature": "segment=Urban Commuters",
-        "odds_ratio": 2.8977,
-        "or_ci_95": [
-          1.5911,
-          5.277
-        ],
-        "p_value": 0.0005,
-        "significant": true,
-        "z": 3.479
-      },
-      {
-        "coef": -0.506,
-        "feature": "journey_stage=Ownership",
-        "odds_ratio": 0.6029,
-        "or_ci_95": [
-          0.3164,
-          1.1489
-        ],
-        "p_value": 0.12402,
-        "significant": false,
-        "z": -1.538
-      },
-      {
-        "coef": -0.6758,
-        "feature": "journey_stage=Purchase",
-        "odds_ratio": 0.5088,
-        "or_ci_95": [
-          0.2774,
-          0.933
-        ],
-        "p_value": 0.02896,
-        "significant": true,
-        "z": -2.184
-      },
-      {
-        "coef": -0.5135,
-        "feature": "journey_stage=Service",
-        "odds_ratio": 0.5984,
-        "or_ci_95": [
-          0.3259,
-          1.0987
-        ],
-        "p_value": 0.09763,
-        "significant": false,
-        "z": -1.656
-      },
-      {
-        "coef": 0.2397,
-        "feature": "region=North",
-        "odds_ratio": 1.2708,
-        "or_ci_95": [
-          0.7668,
-          2.1061
-        ],
-        "p_value": 0.35241,
-        "significant": false,
-        "z": 0.93
-      },
-      {
-        "coef": -0.0563,
-        "feature": "region=South",
-        "odds_ratio": 0.9452,
-        "or_ci_95": [
-          0.5184,
-          1.7234
-        ],
-        "p_value": 0.85418,
-        "significant": false,
-        "z": -0.184
-      },
-      {
-        "coef": 0.5563,
-        "feature": "channel=Dealer",
-        "odds_ratio": 1.7442,
-        "or_ci_95": [
-          0.9481,
-          3.2086
-        ],
-        "p_value": 0.07366,
-        "significant": false,
-        "z": 1.789
-      },
-      {
-        "coef": 0.6589,
-        "feature": "channel=Email",
-        "odds_ratio": 1.9326,
-        "or_ci_95": [
-          1.0009,
-          3.7316
-        ],
-        "p_value": 0.04968,
-        "significant": true,
-        "z": 1.963
-      },
-      {
-        "coef": 0.5386,
-        "feature": "channel=Social",
-        "odds_ratio": 1.7137,
-        "or_ci_95": [
-          0.8334,
-          3.5239
-        ],
-        "p_value": 0.14308,
-        "significant": false,
-        "z": 1.464
-      },
-      {
-        "coef": 0.0295,
-        "feature": "channel=Survey",
-        "odds_ratio": 1.0299,
-        "or_ci_95": [
-          0.5365,
-          1.9772
-        ],
-        "p_value": 0.92933,
-        "significant": false,
-        "z": 0.089
-      },
-      {
-        "coef": -1.3863,
-        "feature": "friction_score_z",
-        "odds_ratio": 0.25,
-        "or_ci_95": [
-          0.1822,
-          0.3431
+          5.4063,
+          5.9121
         ],
         "p_value": 0.0,
-        "significant": true,
-        "z": -8.583
+        "significant": true
+      },
+      {
+        "feature": "late_delivery",
+        "odds_ratio": 0.1841,
+        "or_ci_95": [
+          0.1709,
+          0.1982
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "delivery_days_z",
+        "odds_ratio": 0.6507,
+        "or_ci_95": [
+          0.6349,
+          0.667
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "freight_ratio_z",
+        "odds_ratio": 0.9547,
+        "or_ci_95": [
+          0.9383,
+          0.9714
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "state=MG",
+        "odds_ratio": 0.8465,
+        "or_ci_95": [
+          0.7947,
+          0.9016
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "state=PR",
+        "odds_ratio": 0.9385,
+        "or_ci_95": [
+          0.8614,
+          1.0224
+        ],
+        "p_value": 0.146372,
+        "significant": false
+      },
+      {
+        "feature": "state=RJ",
+        "odds_ratio": 0.7904,
+        "or_ci_95": [
+          0.7447,
+          0.839
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "state=RS",
+        "odds_ratio": 1.0387,
+        "or_ci_95": [
+          0.9575,
+          1.1268
+        ],
+        "p_value": 0.360867,
+        "significant": false
+      },
+      {
+        "feature": "state=SC",
+        "odds_ratio": 0.9501,
+        "or_ci_95": [
+          0.8642,
+          1.0445
+        ],
+        "p_value": 0.289267,
+        "significant": false
+      },
+      {
+        "feature": "state=SP",
+        "odds_ratio": 0.7941,
+        "or_ci_95": [
+          0.7537,
+          0.8366
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "category=bed_bath_table",
+        "odds_ratio": 0.7379,
+        "or_ci_95": [
+          0.6972,
+          0.781
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "category=computers_accessories",
+        "odds_ratio": 0.8643,
+        "or_ci_95": [
+          0.8081,
+          0.9245
+        ],
+        "p_value": 2.2e-05,
+        "significant": true
+      },
+      {
+        "feature": "category=furniture_decor",
+        "odds_ratio": 0.8228,
+        "or_ci_95": [
+          0.7687,
+          0.8807
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "category=health_beauty",
+        "odds_ratio": 1.0842,
+        "or_ci_95": [
+          1.0171,
+          1.1557
+        ],
+        "p_value": 0.013171,
+        "significant": true
+      },
+      {
+        "feature": "category=housewares",
+        "odds_ratio": 0.9299,
+        "or_ci_95": [
+          0.8638,
+          1.0011
+        ],
+        "p_value": 0.053669,
+        "significant": false
+      },
+      {
+        "feature": "category=sports_leisure",
+        "odds_ratio": 1.1092,
+        "or_ci_95": [
+          1.0362,
+          1.1873
+        ],
+        "p_value": 0.00283,
+        "significant": true
+      },
+      {
+        "feature": "category=telephony",
+        "odds_ratio": 0.8064,
+        "or_ci_95": [
+          0.7428,
+          0.8754
+        ],
+        "p_value": 0.0,
+        "significant": true
+      },
+      {
+        "feature": "category=watches_gifts",
+        "odds_ratio": 0.8642,
+        "or_ci_95": [
+          0.8022,
+          0.9311
+        ],
+        "p_value": 0.000123,
+        "significant": true
       }
     ],
     "model": "logistic regression, ridge-penalised Newton-Raphson",
-    "n": 450,
-    "outcome": "satisfied (satisfaction_score >= 4)",
-    "reference_levels": {
-      "channel": "App",
-      "journey_stage": "Digital",
-      "region": "Central",
-      "segment": "First-Time Owners"
-    }
+    "n": 95639,
+    "outcome": "satisfied (review score >= 4)",
+    "reference": "non-top states/categories pooled as baseline"
   },
   "nps": {
-    "by_segment": [
+    "by_state": [
       {
-        "detractor_rate": 0.8167,
-        "detractors": 98,
-        "n": 120,
-        "nps": -78.3,
+        "detractors": 212,
+        "n": 709,
+        "nps": 18.8,
         "nps_ci_95": [
-          -87.0,
-          -69.6
+          12.4,
+          25.1
         ],
-        "passives": 18,
-        "promoter_rate": 0.0333,
-        "promoters": 4,
-        "segment": "First-Time Owners"
+        "promoters": 345,
+        "state": "MA"
       },
       {
-        "detractor_rate": 0.5301,
-        "detractors": 44,
-        "n": 83,
-        "nps": -34.9,
+        "detractors": 873,
+        "n": 3222,
+        "nps": 23.3,
         "nps_ci_95": [
-          -51.4,
-          -18.4
+          20.4,
+          26.3
         ],
-        "passives": 24,
-        "promoter_rate": 0.1807,
-        "promoters": 15,
-        "segment": "Performance Enthusiasts"
+        "promoters": 1625,
+        "state": "BA"
       },
       {
-        "detractor_rate": 0.4737,
-        "detractors": 72,
-        "n": 152,
-        "nps": -26.3,
+        "detractors": 256,
+        "n": 928,
+        "nps": 23.9,
         "nps_ci_95": [
-          -38.8,
-          -13.8
+          18.4,
+          29.4
         ],
-        "passives": 48,
-        "promoter_rate": 0.2105,
-        "promoters": 32,
-        "segment": "Urban Commuters"
+        "promoters": 478,
+        "state": "PA"
       },
       {
-        "detractor_rate": 0.3263,
-        "detractors": 31,
-        "n": 95,
-        "nps": -1.1,
+        "detractors": 347,
+        "n": 1273,
+        "nps": 25.0,
         "nps_ci_95": [
-          -17.2,
-          15.1
+          20.3,
+          29.7
         ],
-        "passives": 34,
-        "promoter_rate": 0.3158,
-        "promoters": 30,
-        "segment": "Touring Owners"
+        "promoters": 665,
+        "state": "CE"
+      },
+      {
+        "detractors": 117,
+        "n": 470,
+        "nps": 28.3,
+        "nps_ci_95": [
+          20.7,
+          35.9
+        ],
+        "promoters": 250,
+        "state": "PI"
+      },
+      {
+        "detractors": 3232,
+        "n": 12180,
+        "nps": 29.7,
+        "nps_ci_95": [
+          28.2,
+          31.2
+        ],
+        "promoters": 6850,
+        "state": "RJ"
+      },
+      {
+        "detractors": 450,
+        "n": 1970,
+        "nps": 32.8,
+        "nps_ci_95": [
+          29.2,
+          36.5
+        ],
+        "promoters": 1097,
+        "state": "ES"
+      },
+      {
+        "detractors": 123,
+        "n": 511,
+        "nps": 33.3,
+        "nps_ci_95": [
+          26.0,
+          40.5
+        ],
+        "promoters": 293,
+        "state": "PB"
+      },
+      {
+        "detractors": 443,
+        "n": 1944,
+        "nps": 33.4,
+        "nps_ci_95": [
+          29.7,
+          37.0
+        ],
+        "promoters": 1092,
+        "state": "GO"
+      },
+      {
+        "detractors": 359,
+        "n": 1580,
+        "nps": 34.7,
+        "nps_ci_95": [
+          30.6,
+          38.8
+        ],
+        "promoters": 907,
+        "state": "PE"
+      },
+      {
+        "detractors": 767,
+        "n": 3512,
+        "nps": 36.2,
+        "nps_ci_95": [
+          33.5,
+          38.9
+        ],
+        "promoters": 2039,
+        "state": "SC"
+      },
+      {
+        "detractors": 186,
+        "n": 877,
+        "nps": 36.6,
+        "nps_ci_95": [
+          31.2,
+          42.0
+        ],
+        "promoters": 507,
+        "state": "MT"
+      },
+      {
+        "detractors": 435,
+        "n": 2065,
+        "nps": 36.9,
+        "nps_ci_95": [
+          33.4,
+          40.3
+        ],
+        "promoters": 1196,
+        "state": "DF"
+      },
+      {
+        "detractors": 99,
+        "n": 470,
+        "nps": 37.9,
+        "nps_ci_95": [
+          30.5,
+          45.2
+        ],
+        "promoters": 277,
+        "state": "RN"
+      },
+      {
+        "detractors": 145,
+        "n": 699,
+        "nps": 39.3,
+        "nps_ci_95": [
+          33.3,
+          45.3
+        ],
+        "promoters": 420,
+        "state": "MS"
+      },
+      {
+        "detractors": 1071,
+        "n": 5319,
+        "nps": 39.5,
+        "nps_ci_95": [
+          37.3,
+          41.7
+        ],
+        "promoters": 3172,
+        "state": "RS"
+      },
+      {
+        "detractors": 2257,
+        "n": 11265,
+        "nps": 40.0,
+        "nps_ci_95": [
+          38.6,
+          41.5
+        ],
+        "promoters": 6768,
+        "state": "MG"
+      },
+      {
+        "detractors": 898,
+        "n": 4887,
+        "nps": 43.0,
+        "nps_ci_95": [
+          40.8,
+          45.1
+        ],
+        "promoters": 2997,
+        "state": "PR"
+      },
+      {
+        "detractors": 7457,
+        "n": 40190,
+        "nps": 43.2,
+        "nps_ci_95": [
+          42.5,
+          44.0
+        ],
+        "promoters": 24839,
+        "state": "SP"
       }
     ],
     "overall": {
-      "detractor_rate": 0.5444,
-      "detractors": 245,
-      "n": 450,
-      "nps": -36.4,
+      "detractors": 20110,
+      "n": 95639,
+      "nps": 38.2,
       "nps_ci_95": [
-        -43.6,
-        -29.3
+        37.7,
+        38.7
       ],
-      "passives": 124,
-      "promoter_rate": 0.18,
-      "promoters": 81
-    }
+      "promoters": 56667
+    },
+    "proxy": "score 5=promoter, 4=passive, \u22643=detractor"
   },
   "overall_satisfied_ci_95": [
-    0.432,
-    0.5239
+    0.7871,
+    0.7923
   ],
-  "overall_satisfied_rate": 0.4778,
-  "records": 450,
-  "strongest_mechanism": {
-    "cohens_h": -1.022,
-    "diff_ci": [
-      -0.5336,
-      -0.3611
-    ],
-    "diff_vs_rest": -0.4474,
-    "dimension": "friction_score",
-    "effect": "large",
-    "level": "high (>=4)",
-    "n": 70,
-    "p_value": 0.0,
-    "rest_rate": 0.5474,
-    "satisfied_ci": [
-      0.0493,
-      0.1923
-    ],
-    "satisfied_rate": 0.1,
-    "significant": true,
-    "z": -6.886
-  },
+  "overall_satisfied_rate": 0.7897,
+  "records": 95639,
   "top_negative_driver": {
-    "cohens_h": -0.971,
+    "cohens_h": -1.197,
     "diff_ci": [
-      -0.5299,
-      -0.364
+      -0.5711,
+      -0.5488
     ],
-    "diff_vs_rest": -0.447,
-    "dimension": "segment",
+    "diff_vs_rest": -0.5599,
+    "dimension": "late_delivery",
     "effect": "large",
-    "level": "First-Time Owners",
-    "n": 120,
+    "level": "late (delivered after estimate)",
+    "n": 6362,
     "p_value": 0.0,
-    "rest_rate": 0.597,
+    "rest_rate": 0.827,
     "satisfied_ci": [
-      0.097,
-      0.2247
+      0.2563,
+      0.2781
     ],
-    "satisfied_rate": 0.15,
+    "satisfied_rate": 0.2671,
     "significant": true,
-    "z": -8.394
+    "z": -105.889
   }
 }

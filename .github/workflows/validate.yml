@@ -20,10 +20,14 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Regenerate the sample (must be byte-stable)
+      - name: Verify the committed REAL dataset matches its provenance
         run: |
-          python src/generate_cx_dataset.py
-          git diff --exit-code -- data/
+          for f in olist_reviews olist_review_comments; do
+            expected=$(grep "$f.csv:" data/REAL_DATA_PROVENANCE.md | grep -oE '[0-9a-f]{64}')
+            actual=$(sha256sum data/$f.csv | cut -d' ' -f1)
+            echo "$f expected=$expected actual=$actual"
+            test "$expected" = "$actual"
+          done
 
       - name: Validate data
         run: python src/validate_cx_data.py
