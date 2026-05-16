@@ -1,5 +1,0 @@
-asset_id,telemetry_rows,anomaly_count,service_escalation_count,max_service_delay_days,avg_customer_satisfaction_score,simulation_note
-line-01-compressor-02,96,21,0,3,8.124,Synthetic service summary; no real company data.
-line-01-pump-01,96,14,8,15,8.33,Synthetic service summary; no real company data.
-line-02-pump-01,96,15,0,4,7.856,Synthetic service summary; no real company data.
-line-02-testbench-01,96,28,20,10,7.376,Synthetic service summary; no real company data.

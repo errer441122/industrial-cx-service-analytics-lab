@@ -1,0 +1,714 @@
+{
+  "comment_themes": [
+    {
+      "avg_satisfaction": 3.55,
+      "mentions": 110,
+      "share": 0.244,
+      "theme": "Service & parts"
+    },
+    {
+      "avg_satisfaction": 3.3,
+      "mentions": 88,
+      "share": 0.196,
+      "theme": "Documentation & warranty"
+    },
+    {
+      "avg_satisfaction": 3.52,
+      "mentions": 81,
+      "share": 0.18,
+      "theme": "Digital onboarding"
+    },
+    {
+      "avg_satisfaction": 3.09,
+      "mentions": 74,
+      "share": 0.164,
+      "theme": "Financing & pricing"
+    },
+    {
+      "avg_satisfaction": 3.48,
+      "mentions": 71,
+      "share": 0.158,
+      "theme": "Delivery & handover"
+    }
+  ],
+  "drivers": [
+    {
+      "cohens_h": -1.022,
+      "diff_ci": [
+        -0.5336,
+        -0.3611
+      ],
+      "diff_vs_rest": -0.4474,
+      "dimension": "friction_score",
+      "effect": "large",
+      "level": "high (>=4)",
+      "n": 70,
+      "p_value": 0.0,
+      "rest_rate": 0.5474,
+      "satisfied_ci": [
+        0.0493,
+        0.1923
+      ],
+      "satisfied_rate": 0.1,
+      "significant": true,
+      "z": -6.886
+    },
+    {
+      "cohens_h": -0.971,
+      "diff_ci": [
+        -0.5299,
+        -0.364
+      ],
+      "diff_vs_rest": -0.447,
+      "dimension": "segment",
+      "effect": "large",
+      "level": "First-Time Owners",
+      "n": 120,
+      "p_value": 0.0,
+      "rest_rate": 0.597,
+      "satisfied_ci": [
+        0.097,
+        0.2247
+      ],
+      "satisfied_rate": 0.15,
+      "significant": true,
+      "z": -8.394
+    },
+    {
+      "cohens_h": 0.59,
+      "diff_ci": [
+        0.1833,
+        0.3934
+      ],
+      "diff_vs_rest": 0.2884,
+      "dimension": "segment",
+      "effect": "medium",
+      "level": "Touring Owners",
+      "n": 95,
+      "p_value": 0.0,
+      "rest_rate": 0.4169,
+      "satisfied_ci": [
+        0.6071,
+        0.7875
+      ],
+      "satisfied_rate": 0.7053,
+      "significant": true,
+      "z": 4.998
+    },
+    {
+      "cohens_h": 0.247,
+      "diff_ci": [
+        0.0054,
+        0.2411
+      ],
+      "diff_vs_rest": 0.1233,
+      "dimension": "segment",
+      "effect": "small",
+      "level": "Performance Enthusiasts",
+      "n": 83,
+      "p_value": 0.04231,
+      "rest_rate": 0.455,
+      "satisfied_ci": [
+        0.4709,
+        0.6788
+      ],
+      "satisfied_rate": 0.5783,
+      "significant": true,
+      "z": 2.03
+    },
+    {
+      "cohens_h": 0.243,
+      "diff_ci": [
+        0.0092,
+        0.2326
+      ],
+      "diff_vs_rest": 0.1209,
+      "dimension": "journey_stage",
+      "effect": "small",
+      "level": "Digital",
+      "n": 96,
+      "p_value": 0.03537,
+      "rest_rate": 0.452,
+      "satisfied_ci": [
+        0.473,
+        0.6672
+      ],
+      "satisfied_rate": 0.5729,
+      "significant": true,
+      "z": 2.104
+    },
+    {
+      "cohens_h": -0.198,
+      "diff_ci": [
+        -0.1992,
+        0.0021
+      ],
+      "diff_vs_rest": -0.0986,
+      "dimension": "journey_stage",
+      "effect": "negligible",
+      "level": "Purchase",
+      "n": 130,
+      "p_value": 0.05781,
+      "rest_rate": 0.5062,
+      "satisfied_ci": [
+        0.327,
+        0.4936
+      ],
+      "satisfied_rate": 0.4077,
+      "significant": false,
+      "z": -1.897
+    },
+    {
+      "cohens_h": 0.187,
+      "diff_ci": [
+        -0.0041,
+        0.1904
+      ],
+      "diff_vs_rest": 0.0932,
+      "dimension": "segment",
+      "effect": "negligible",
+      "level": "Urban Commuters",
+      "n": 152,
+      "p_value": 0.06131,
+      "rest_rate": 0.4463,
+      "satisfied_ci": [
+        0.4602,
+        0.6168
+      ],
+      "satisfied_rate": 0.5395,
+      "significant": false,
+      "z": 1.871
+    },
+    {
+      "cohens_h": -0.164,
+      "diff_ci": [
+        -0.1918,
+        0.0286
+      ],
+      "diff_vs_rest": -0.0816,
+      "dimension": "region",
+      "effect": "negligible",
+      "level": "South",
+      "n": 99,
+      "p_value": 0.15121,
+      "rest_rate": 0.4957,
+      "satisfied_ci": [
+        0.3221,
+        0.5126
+      ],
+      "satisfied_rate": 0.4141,
+      "significant": false,
+      "z": -1.435
+    },
+    {
+      "cohens_h": 0.163,
+      "diff_ci": [
+        -0.0113,
+        0.1736
+      ],
+      "diff_vs_rest": 0.0811,
+      "dimension": "region",
+      "effect": "negligible",
+      "level": "North",
+      "n": 205,
+      "p_value": 0.08616,
+      "rest_rate": 0.4408,
+      "satisfied_ci": [
+        0.4538,
+        0.5893
+      ],
+      "satisfied_rate": 0.522,
+      "significant": false,
+      "z": 1.716
+    },
+    {
+      "cohens_h": -0.112,
+      "diff_ci": [
+        -0.1664,
+        0.0551
+      ],
+      "diff_vs_rest": -0.0557,
+      "dimension": "journey_stage",
+      "effect": "negligible",
+      "level": "Ownership",
+      "n": 99,
+      "p_value": 0.32727,
+      "rest_rate": 0.49,
+      "satisfied_ci": [
+        0.341,
+        0.5326
+      ],
+      "satisfied_rate": 0.4343,
+      "significant": false,
+      "z": -0.98
+    },
+    {
+      "cohens_h": -0.112,
+      "diff_ci": [
+        -0.1664,
+        0.0551
+      ],
+      "diff_vs_rest": -0.0557,
+      "dimension": "channel",
+      "effect": "negligible",
+      "level": "App",
+      "n": 99,
+      "p_value": 0.32727,
+      "rest_rate": 0.49,
+      "satisfied_ci": [
+        0.341,
+        0.5326
+      ],
+      "satisfied_rate": 0.4343,
+      "significant": false,
+      "z": -0.98
+    },
+    {
+      "cohens_h": 0.108,
+      "diff_ci": [
+        -0.0556,
+        0.1634
+      ],
+      "diff_vs_rest": 0.0539,
+      "dimension": "channel",
+      "effect": "negligible",
+      "level": "Dealer",
+      "n": 104,
+      "p_value": 0.33446,
+      "rest_rate": 0.4653,
+      "satisfied_ci": [
+        0.4242,
+        0.6128
+      ],
+      "satisfied_rate": 0.5192,
+      "significant": false,
+      "z": 0.965
+    },
+    {
+      "cohens_h": 0.095,
+      "diff_ci": [
+        -0.0557,
+        0.1504
+      ],
+      "diff_vs_rest": 0.0474,
+      "dimension": "journey_stage",
+      "effect": "negligible",
+      "level": "Service",
+      "n": 125,
+      "p_value": 0.36741,
+      "rest_rate": 0.4646,
+      "satisfied_ci": [
+        0.4253,
+        0.598
+      ],
+      "satisfied_rate": 0.512,
+      "significant": false,
+      "z": 0.901
+    },
+    {
+      "cohens_h": 0.083,
+      "diff_ci": [
+        -0.0704,
+        0.1533
+      ],
+      "diff_vs_rest": 0.0415,
+      "dimension": "channel",
+      "effect": "negligible",
+      "level": "Email",
+      "n": 98,
+      "p_value": 0.46746,
+      "rest_rate": 0.4688,
+      "satisfied_ci": [
+        0.4127,
+        0.6069
+      ],
+      "satisfied_rate": 0.5102,
+      "significant": false,
+      "z": 0.727
+    },
+    {
+      "cohens_h": -0.074,
+      "diff_ci": [
+        -0.1677,
+        0.0938
+      ],
+      "diff_vs_rest": -0.037,
+      "dimension": "channel",
+      "effect": "negligible",
+      "level": "Social",
+      "n": 65,
+      "p_value": 0.58106,
+      "rest_rate": 0.4831,
+      "satisfied_ci": [
+        0.3317,
+        0.5666
+      ],
+      "satisfied_rate": 0.4462,
+      "significant": false,
+      "z": -0.552
+    },
+    {
+      "cohens_h": -0.056,
+      "diff_ci": [
+        -0.1264,
+        0.0705
+      ],
+      "diff_vs_rest": -0.0279,
+      "dimension": "region",
+      "effect": "negligible",
+      "level": "Central",
+      "n": 146,
+      "p_value": 0.57857,
+      "rest_rate": 0.4868,
+      "satisfied_ci": [
+        0.3802,
+        0.5398
+      ],
+      "satisfied_rate": 0.4589,
+      "significant": false,
+      "z": -0.555
+    },
+    {
+      "cohens_h": -0.033,
+      "diff_ci": [
+        -0.1349,
+        0.1017
+      ],
+      "diff_vs_rest": -0.0166,
+      "dimension": "channel",
+      "effect": "negligible",
+      "level": "Survey",
+      "n": 84,
+      "p_value": 0.7837,
+      "rest_rate": 0.4809,
+      "satisfied_ci": [
+        0.3615,
+        0.5702
+      ],
+      "satisfied_rate": 0.4643,
+      "significant": false,
+      "z": -0.275
+    }
+  ],
+  "follow_up_cohort": {
+    "cohens_h": 1.046,
+    "completed_mean_delta": 1.249,
+    "completed_n": 189,
+    "completed_post_satisfied_rate": 0.7884,
+    "effect": "large",
+    "open_mean_delta": -0.055,
+    "open_n": 55,
+    "open_post_satisfied_rate": 0.2909,
+    "p_value": 0.0,
+    "rate_gap": 0.4975,
+    "rate_gap_ci": [
+      0.364,
+      0.6309
+    ],
+    "required_n": 244,
+    "significant": true,
+    "z": 6.939
+  },
+  "multivariate_drivers": {
+    "coefficients": [
+      {
+        "coef": -1.0724,
+        "feature": "intercept",
+        "odds_ratio": 0.3422,
+        "or_ci_95": [
+          0.1548,
+          0.7563
+        ],
+        "p_value": 0.00805,
+        "significant": true,
+        "z": -2.65
+      },
+      {
+        "coef": 0.9459,
+        "feature": "segment=Performance Enthusiasts",
+        "odds_ratio": 2.575,
+        "or_ci_95": [
+          1.3002,
+          5.0997
+        ],
+        "p_value": 0.00667,
+        "significant": true,
+        "z": 2.713
+      },
+      {
+        "coef": 1.5727,
+        "feature": "segment=Touring Owners",
+        "odds_ratio": 4.8198,
+        "or_ci_95": [
+          2.4357,
+          9.5377
+        ],
+        "p_value": 1e-05,
+        "significant": true,
+        "z": 4.516
+      },
+      {
+        "coef": 1.0639,
+        "feature": "segment=Urban Commuters",
+        "odds_ratio": 2.8977,
+        "or_ci_95": [
+          1.5911,
+          5.277
+        ],
+        "p_value": 0.0005,
+        "significant": true,
+        "z": 3.479
+      },
+      {
+        "coef": -0.506,
+        "feature": "journey_stage=Ownership",
+        "odds_ratio": 0.6029,
+        "or_ci_95": [
+          0.3164,
+          1.1489
+        ],
+        "p_value": 0.12402,
+        "significant": false,
+        "z": -1.538
+      },
+      {
+        "coef": -0.6758,
+        "feature": "journey_stage=Purchase",
+        "odds_ratio": 0.5088,
+        "or_ci_95": [
+          0.2774,
+          0.933
+        ],
+        "p_value": 0.02896,
+        "significant": true,
+        "z": -2.184
+      },
+      {
+        "coef": -0.5135,
+        "feature": "journey_stage=Service",
+        "odds_ratio": 0.5984,
+        "or_ci_95": [
+          0.3259,
+          1.0987
+        ],
+        "p_value": 0.09763,
+        "significant": false,
+        "z": -1.656
+      },
+      {
+        "coef": 0.2397,
+        "feature": "region=North",
+        "odds_ratio": 1.2708,
+        "or_ci_95": [
+          0.7668,
+          2.1061
+        ],
+        "p_value": 0.35241,
+        "significant": false,
+        "z": 0.93
+      },
+      {
+        "coef": -0.0563,
+        "feature": "region=South",
+        "odds_ratio": 0.9452,
+        "or_ci_95": [
+          0.5184,
+          1.7234
+        ],
+        "p_value": 0.85418,
+        "significant": false,
+        "z": -0.184
+      },
+      {
+        "coef": 0.5563,
+        "feature": "channel=Dealer",
+        "odds_ratio": 1.7442,
+        "or_ci_95": [
+          0.9481,
+          3.2086
+        ],
+        "p_value": 0.07366,
+        "significant": false,
+        "z": 1.789
+      },
+      {
+        "coef": 0.6589,
+        "feature": "channel=Email",
+        "odds_ratio": 1.9326,
+        "or_ci_95": [
+          1.0009,
+          3.7316
+        ],
+        "p_value": 0.04968,
+        "significant": true,
+        "z": 1.963
+      },
+      {
+        "coef": 0.5386,
+        "feature": "channel=Social",
+        "odds_ratio": 1.7137,
+        "or_ci_95": [
+          0.8334,
+          3.5239
+        ],
+        "p_value": 0.14308,
+        "significant": false,
+        "z": 1.464
+      },
+      {
+        "coef": 0.0295,
+        "feature": "channel=Survey",
+        "odds_ratio": 1.0299,
+        "or_ci_95": [
+          0.5365,
+          1.9772
+        ],
+        "p_value": 0.92933,
+        "significant": false,
+        "z": 0.089
+      },
+      {
+        "coef": -1.3863,
+        "feature": "friction_score_z",
+        "odds_ratio": 0.25,
+        "or_ci_95": [
+          0.1822,
+          0.3431
+        ],
+        "p_value": 0.0,
+        "significant": true,
+        "z": -8.583
+      }
+    ],
+    "model": "logistic regression, ridge-penalised Newton-Raphson",
+    "n": 450,
+    "outcome": "satisfied (satisfaction_score >= 4)",
+    "reference_levels": {
+      "channel": "App",
+      "journey_stage": "Digital",
+      "region": "Central",
+      "segment": "First-Time Owners"
+    }
+  },
+  "nps": {
+    "by_segment": [
+      {
+        "detractor_rate": 0.8167,
+        "detractors": 98,
+        "n": 120,
+        "nps": -78.3,
+        "nps_ci_95": [
+          -87.0,
+          -69.6
+        ],
+        "passives": 18,
+        "promoter_rate": 0.0333,
+        "promoters": 4,
+        "segment": "First-Time Owners"
+      },
+      {
+        "detractor_rate": 0.5301,
+        "detractors": 44,
+        "n": 83,
+        "nps": -34.9,
+        "nps_ci_95": [
+          -51.4,
+          -18.4
+        ],
+        "passives": 24,
+        "promoter_rate": 0.1807,
+        "promoters": 15,
+        "segment": "Performance Enthusiasts"
+      },
+      {
+        "detractor_rate": 0.4737,
+        "detractors": 72,
+        "n": 152,
+        "nps": -26.3,
+        "nps_ci_95": [
+          -38.8,
+          -13.8
+        ],
+        "passives": 48,
+        "promoter_rate": 0.2105,
+        "promoters": 32,
+        "segment": "Urban Commuters"
+      },
+      {
+        "detractor_rate": 0.3263,
+        "detractors": 31,
+        "n": 95,
+        "nps": -1.1,
+        "nps_ci_95": [
+          -17.2,
+          15.1
+        ],
+        "passives": 34,
+        "promoter_rate": 0.3158,
+        "promoters": 30,
+        "segment": "Touring Owners"
+      }
+    ],
+    "overall": {
+      "detractor_rate": 0.5444,
+      "detractors": 245,
+      "n": 450,
+      "nps": -36.4,
+      "nps_ci_95": [
+        -43.6,
+        -29.3
+      ],
+      "passives": 124,
+      "promoter_rate": 0.18,
+      "promoters": 81
+    }
+  },
+  "overall_satisfied_ci_95": [
+    0.432,
+    0.5239
+  ],
+  "overall_satisfied_rate": 0.4778,
+  "records": 450,
+  "strongest_mechanism": {
+    "cohens_h": -1.022,
+    "diff_ci": [
+      -0.5336,
+      -0.3611
+    ],
+    "diff_vs_rest": -0.4474,
+    "dimension": "friction_score",
+    "effect": "large",
+    "level": "high (>=4)",
+    "n": 70,
+    "p_value": 0.0,
+    "rest_rate": 0.5474,
+    "satisfied_ci": [
+      0.0493,
+      0.1923
+    ],
+    "satisfied_rate": 0.1,
+    "significant": true,
+    "z": -6.886
+  },
+  "top_negative_driver": {
+    "cohens_h": -0.971,
+    "diff_ci": [
+      -0.5299,
+      -0.364
+    ],
+    "diff_vs_rest": -0.447,
+    "dimension": "segment",
+    "effect": "large",
+    "level": "First-Time Owners",
+    "n": 120,
+    "p_value": 0.0,
+    "rest_rate": 0.597,
+    "satisfied_ci": [
+      0.097,
+      0.2247
+    ],
+    "satisfied_rate": 0.15,
+    "significant": true,
+    "z": -8.394
+  }
+}

@@ -1,2 +1,0 @@
--r ml-baseline/requirements.txt
-pytest>=7.0

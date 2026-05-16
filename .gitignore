@@ -1,36 +1,23 @@
-_local-check*.png
-live-check*.png
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local scratch / logs
 *.log
 *.err.log
 *.bak
 *.zip
-__pycache__/
-.pytest_cache/
+_local-check*.png
+live-check*.png
+
+# Tooling
 .codex*
-docs/superpowers/
 .obsidian/
 **/.obsidian/
-docs/reviewer/CODEX_CHANGELOG.md
-docs/reviewer/COMPANY_FIT_MATRIX.md
-docs/application-specific/
+
+# Personal application materials must never be committed to the portfolio
 CV_Riccardo Capanna*
 CV_Riccardo_Capanna_*
 Cover_Letter_*
-industrial-cx-ai-lab/artifacts/*
-!industrial-cx-ai-lab/artifacts/.gitkeep
-!industrial-cx-ai-lab/artifacts/metrics.example.json
-!industrial-cx-ai-lab/artifacts/model_card.example.json
-!industrial-cx-ai-lab/artifacts/anomaly_metrics.json
-!industrial-cx-ai-lab/artifacts/service_risk_metrics.json
-!industrial-cx-ai-lab/artifacts/feature_importance.csv
-!industrial-cx-ai-lab/artifacts/maintenance_policy_note.md
-!industrial-cx-ai-lab/artifacts/influx_line_protocol.txt
-!industrial-cx-ai-lab/artifacts/run_manifest.json
-production-sim-stack/artifacts/*
-!production-sim-stack/artifacts/.gitkeep
-!production-sim-stack/artifacts/model_card.example.json
-production-sim-stack/.env
-ml-baseline/reports/*
-!ml-baseline/reports/.gitkeep
-!ml-baseline/reports/metrics.example.json
-!ml-baseline/reports/predictions_sample.csv
+docs/application-specific/

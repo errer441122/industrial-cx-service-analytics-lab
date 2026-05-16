@@ -1,14 +1,4 @@
-# Static workbook/demo layer, not the core Python industrial analytics implementation.
-index.html linguist-documentation
-cx-data.js linguist-documentation
-cx-workbook.js linguist-documentation
-cx-theme.css linguist-documentation
-workbook-base.css linguist-documentation
-social-preview.png linguist-generated
-
-# Generated reviewer evidence.
-evidence-lock/results/** linguist-generated
-industrial-evidence-lock/** linguist-generated
-benchmarks/artifacts/** linguist-generated
-industrial-cx-ai-lab/artifacts/** linguist-generated
-production-sim-stack/artifacts/** linguist-generated
+# Normalise line endings so WSL/Windows checkouts don't create CRLF noise.
+* text=auto eol=lf
+*.png binary
+*.xlsx binary
