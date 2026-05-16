@@ -1,13 +1,451 @@
 feedback_id,date,channel,segment,journey_stage,region,satisfaction_score,feedback_volume,issue_category,friction_score,follow_up_required,follow_up_completed,post_action_score,comment
-FB-001,2026-01-08,Email,Urban Commuters,Purchase,North,5,120,Delivery handover,1,no,no,5,Smooth handover and clear delivery timing.
-FB-002,2026-01-12,Dealer,Touring Owners,Service,North,3,80,Appointment wait,4,yes,yes,4,Service booking took longer than expected.
-FB-003,2026-01-17,App,Performance Enthusiasts,Digital,Central,4,95,Connectivity,2,no,no,4,Digital owner area worked but pairing could be clearer.
-FB-004,2026-02-04,Survey,Urban Commuters,Ownership,North,4,110,Documentation,2,yes,yes,5,Ownership documents were complete after follow-up.
-FB-005,2026-02-10,Dealer,First-Time Owners,Purchase,South,2,70,Financing clarity,5,yes,no,2,Financing options were difficult to compare.
-FB-006,2026-02-18,Social,Performance Enthusiasts,Service,Central,3,60,Parts availability,4,yes,yes,4,Parts delay required proactive communication.
-FB-007,2026-03-02,Email,Touring Owners,Ownership,North,5,100,Accessories,1,no,no,5,Accessory recommendation matched riding profile.
-FB-008,2026-03-08,App,First-Time Owners,Digital,South,3,85,Onboarding,3,yes,yes,4,App onboarding improved after guided support.
-FB-009,2026-03-14,Survey,Urban Commuters,Service,North,4,105,Maintenance clarity,2,yes,yes,5,Maintenance explanation was clear after dealer callback.
-FB-010,2026-04-03,Dealer,Touring Owners,Purchase,Central,4,75,Test ride,2,no,no,4,Test ride handoff was effective.
-FB-011,2026-04-11,Email,First-Time Owners,Ownership,South,2,65,Insurance documentation,5,yes,no,2,Insurance and warranty documents caused confusion.
-FB-012,2026-04-20,App,Performance Enthusiasts,Digital,Central,5,90,App personalization,1,no,no,5,App personalization matched service needs.
+FB-0126,2026-01-06,Dealer,Urban Commuters,Purchase,Central,5,91,Order tracking,2,no,no,5,Order tracking was handled smoothly across the purchase journey.
+FB-0256,2026-01-06,Email,Urban Commuters,Digital,Central,5,116,Connectivity pairing,2,no,no,5,Connectivity pairing matched expectations and the digital step felt effortless.
+FB-0358,2026-01-06,Email,Performance Enthusiasts,Service,North,2,143,Repair turnaround,4,yes,no,2,Frustrated with repair turnaround during service; needed several contacts to resolve.
+FB-0274,2026-01-07,App,Urban Commuters,Purchase,South,5,94,Order tracking,1,no,no,5,Clear and proactive handling of order tracking; very satisfied.
+FB-0170,2026-01-08,Email,Performance Enthusiasts,Service,Central,4,82,Service cost transparency,2,no,no,4,Clear and proactive handling of service cost transparency; very satisfied.
+FB-0273,2026-01-08,Survey,Performance Enthusiasts,Purchase,North,4,121,Delivery handover,2,no,no,4,Delivery handover was handled smoothly across the purchase journey.
+FB-0275,2026-01-08,Email,Touring Owners,Digital,South,4,103,Feature discovery,2,no,no,4,Clear and proactive handling of feature discovery; very satisfied.
+FB-0375,2026-01-08,Social,Performance Enthusiasts,Service,South,3,77,Service cost transparency,3,no,no,3,Service cost transparency took longer than expected but the team communicated.
+FB-0033,2026-01-09,App,Performance Enthusiasts,Service,South,3,55,Repair turnaround,4,no,no,3,Mixed experience with repair turnaround; resolved eventually after follow-up.
+FB-0139,2026-01-09,Dealer,First-Time Owners,Digital,North,3,97,App onboarding,4,yes,yes,4,Mixed experience with app onboarding; resolved eventually after follow-up.
+FB-0215,2026-01-10,Dealer,First-Time Owners,Purchase,Central,3,74,Test ride,3,no,no,3,Test ride was acceptable but purchase could be smoother.
+FB-0305,2026-01-10,Email,Urban Commuters,Ownership,Central,4,80,Documentation,1,no,no,4,Documentation was handled smoothly across the ownership journey.
+FB-0330,2026-01-10,Dealer,Touring Owners,Digital,North,4,95,Feature discovery,2,yes,yes,5,Clear and proactive handling of feature discovery; very satisfied.
+FB-0355,2026-01-10,App,Urban Commuters,Service,North,3,112,Repair turnaround,4,yes,yes,4,Repair turnaround was acceptable but service could be smoother.
+FB-0384,2026-01-10,Email,Touring Owners,Purchase,South,4,121,Financing clarity,2,no,no,4,Financing clarity was handled smoothly across the purchase journey.
+FB-0067,2026-01-11,Social,First-Time Owners,Service,North,3,65,Repair turnaround,4,yes,yes,4,Repair turnaround was acceptable but service could be smoother.
+FB-0300,2026-01-12,App,First-Time Owners,Digital,North,2,56,Connectivity pairing,3,yes,yes,2,Frustrated with connectivity pairing during digital; needed several contacts to resolve.
+FB-0380,2026-01-12,Social,Urban Commuters,Purchase,Central,4,88,Delivery handover,2,no,no,4,Clear and proactive handling of delivery handover; very satisfied.
+FB-0383,2026-01-12,Dealer,First-Time Owners,Service,North,4,82,Appointment wait,3,no,no,4,Appointment wait matched expectations and the service step felt effortless.
+FB-0441,2026-01-14,Email,Touring Owners,Ownership,Central,4,142,Warranty registration,2,no,no,4,Warranty registration matched expectations and the ownership step felt effortless.
+FB-0286,2026-01-15,App,Urban Commuters,Purchase,North,4,82,Delivery handover,3,no,no,4,Delivery handover matched expectations and the purchase step felt effortless.
+FB-0185,2026-01-16,Social,Urban Commuters,Digital,Central,5,69,Feature discovery,2,no,no,5,Feature discovery matched expectations and the digital step felt effortless.
+FB-0379,2026-01-16,Social,First-Time Owners,Service,North,4,48,Repair turnaround,1,no,no,4,Repair turnaround matched expectations and the service step felt effortless.
+FB-0189,2026-01-17,Dealer,Touring Owners,Digital,North,5,93,Connectivity pairing,1,no,no,5,Connectivity pairing matched expectations and the digital step felt effortless.
+FB-0323,2026-01-17,Social,Performance Enthusiasts,Ownership,North,2,53,Insurance documentation,5,yes,no,2,Insurance documentation created friction and I expected clearer guidance.
+FB-0439,2026-01-17,Email,Urban Commuters,Purchase,North,5,83,Test ride,1,no,no,5,Test ride was handled smoothly across the purchase journey.
+FB-0073,2026-01-18,Survey,First-Time Owners,Ownership,Central,3,117,Insurance documentation,3,yes,no,3,Insurance documentation was acceptable but ownership could be smoother.
+FB-0398,2026-01-18,Social,First-Time Owners,Ownership,North,3,81,Insurance documentation,4,yes,yes,4,Mixed experience with insurance documentation; resolved eventually after follow-up.
+FB-0173,2026-01-19,App,Urban Commuters,Purchase,South,4,115,Test ride,2,no,no,4,Test ride was handled smoothly across the purchase journey.
+FB-0418,2026-01-20,Survey,First-Time Owners,Service,North,4,120,Repair turnaround,3,yes,yes,4,Repair turnaround matched expectations and the service step felt effortless.
+FB-0004,2026-01-22,Dealer,First-Time Owners,Service,North,3,101,Repair turnaround,4,yes,no,3,Repair turnaround was acceptable but service could be smoother.
+FB-0204,2026-01-22,Survey,Urban Commuters,Service,South,5,122,Appointment wait,3,no,no,5,Clear and proactive handling of appointment wait; very satisfied.
+FB-0205,2026-01-22,Email,First-Time Owners,Purchase,Central,2,165,Financing clarity,4,yes,yes,4,Financing clarity was confusing and slowed the whole purchase experience.
+FB-0064,2026-01-23,Dealer,Urban Commuters,Digital,Central,3,112,Account access,3,yes,no,3,Mixed experience with account access; resolved eventually after follow-up.
+FB-0168,2026-01-24,Survey,Touring Owners,Service,Central,4,154,Appointment wait,2,no,no,4,Clear and proactive handling of appointment wait; very satisfied.
+FB-0245,2026-01-24,Dealer,Performance Enthusiasts,Digital,North,5,95,Connectivity pairing,1,no,no,5,Connectivity pairing was handled smoothly across the digital journey.
+FB-0327,2026-01-24,App,First-Time Owners,Digital,North,4,60,App onboarding,2,yes,yes,5,App onboarding matched expectations and the digital step felt effortless.
+FB-0005,2026-01-25,Dealer,First-Time Owners,Purchase,North,3,116,Financing clarity,4,yes,no,3,Mixed experience with financing clarity; resolved eventually after follow-up.
+FB-0125,2026-01-25,Email,Touring Owners,Ownership,Central,4,112,Documentation,1,no,no,4,Clear and proactive handling of documentation; very satisfied.
+FB-0272,2026-01-25,Email,First-Time Owners,Purchase,South,1,70,Financing clarity,5,yes,yes,2,Financing clarity created friction and I expected clearer guidance.
+FB-0438,2026-01-25,Social,First-Time Owners,Ownership,North,4,82,Documentation,3,no,no,4,Clear and proactive handling of documentation; very satisfied.
+FB-0238,2026-01-26,Survey,Touring Owners,Service,South,3,134,Service cost transparency,2,no,no,3,Service cost transparency was acceptable but service could be smoother.
+FB-0014,2026-01-27,Survey,First-Time Owners,Digital,Central,3,152,Connectivity pairing,2,no,no,3,Mixed experience with connectivity pairing; resolved eventually after follow-up.
+FB-0121,2026-01-27,Email,Touring Owners,Digital,Central,3,164,App onboarding,4,yes,yes,3,Mixed experience with app onboarding; resolved eventually after follow-up.
+FB-0388,2026-01-27,Survey,Performance Enthusiasts,Service,South,2,133,Repair turnaround,3,yes,no,2,Repair turnaround created friction and I expected clearer guidance.
+FB-0243,2026-01-28,Email,Performance Enthusiasts,Purchase,Central,5,119,Test ride,2,no,no,5,Test ride was handled smoothly across the purchase journey.
+FB-0016,2026-01-29,Email,Performance Enthusiasts,Ownership,Central,4,102,Recall communication,2,yes,yes,5,Recall communication was handled smoothly across the ownership journey.
+FB-0097,2026-01-29,Dealer,Urban Commuters,Purchase,North,4,90,Order tracking,2,yes,yes,5,Order tracking was handled smoothly across the purchase journey.
+FB-0178,2026-01-29,Dealer,Urban Commuters,Purchase,North,4,41,Trade-in valuation,2,yes,yes,5,Clear and proactive handling of trade-in valuation; very satisfied.
+FB-0348,2026-01-29,Email,Urban Commuters,Digital,South,3,159,Feature discovery,2,no,no,3,Feature discovery took longer than expected but the team communicated.
+FB-0201,2026-01-30,Dealer,Touring Owners,Ownership,South,4,74,Documentation,3,no,no,4,Clear and proactive handling of documentation; very satisfied.
+FB-0354,2026-01-31,Survey,First-Time Owners,Service,North,3,77,Repair turnaround,4,yes,no,3,Repair turnaround took longer than expected but the team communicated.
+FB-0415,2026-02-01,Social,Touring Owners,Purchase,North,4,90,Test ride,2,no,no,4,Test ride was handled smoothly across the purchase journey.
+FB-0146,2026-02-02,App,Urban Commuters,Ownership,South,5,96,Documentation,2,yes,yes,5,Documentation matched expectations and the ownership step felt effortless.
+FB-0152,2026-02-02,Email,Urban Commuters,Ownership,Central,4,69,Documentation,3,no,no,4,Documentation matched expectations and the ownership step felt effortless.
+FB-0149,2026-02-03,Email,Touring Owners,Digital,Central,4,119,Account access,2,no,no,4,Clear and proactive handling of account access; very satisfied.
+FB-0294,2026-02-04,Survey,First-Time Owners,Digital,Central,3,136,App onboarding,4,no,no,3,App onboarding took longer than expected but the team communicated.
+FB-0039,2026-02-06,Social,Touring Owners,Service,South,3,55,Maintenance clarity,3,yes,yes,5,Maintenance clarity was acceptable but service could be smoother.
+FB-0070,2026-02-06,App,Performance Enthusiasts,Digital,Central,4,52,Digital service booking,3,no,no,4,Digital service booking was handled smoothly across the digital journey.
+FB-0110,2026-02-06,Social,Urban Commuters,Digital,North,3,30,Connectivity pairing,3,no,no,3,Mixed experience with connectivity pairing; resolved eventually after follow-up.
+FB-0167,2026-02-06,Email,Touring Owners,Ownership,Central,4,118,Documentation,2,no,no,4,Documentation matched expectations and the ownership step felt effortless.
+FB-0313,2026-02-06,Dealer,Performance Enthusiasts,Digital,Central,4,80,App onboarding,1,yes,no,4,Clear and proactive handling of app onboarding; very satisfied.
+FB-0337,2026-02-06,Email,Urban Commuters,Service,South,4,90,Parts availability,3,yes,no,4,Clear and proactive handling of parts availability; very satisfied.
+FB-0433,2026-02-06,Social,Performance Enthusiasts,Digital,South,4,58,App onboarding,2,no,no,4,App onboarding was handled smoothly across the digital journey.
+FB-0266,2026-02-07,App,Touring Owners,Ownership,South,3,120,Warranty registration,3,yes,no,4,Mixed experience with warranty registration; resolved eventually after follow-up.
+FB-0399,2026-02-07,App,First-Time Owners,Ownership,North,4,116,Warranty registration,2,no,no,4,Warranty registration was handled smoothly across the ownership journey.
+FB-0408,2026-02-08,Email,Touring Owners,Ownership,North,4,149,Recall communication,1,no,no,4,Clear and proactive handling of recall communication; very satisfied.
+FB-0028,2026-02-09,Email,Urban Commuters,Service,North,4,158,Parts availability,1,no,no,4,Parts availability was handled smoothly across the service journey.
+FB-0082,2026-02-09,Email,Urban Commuters,Digital,South,5,65,Connectivity pairing,2,no,no,5,Clear and proactive handling of connectivity pairing; very satisfied.
+FB-0281,2026-02-09,App,Touring Owners,Service,Central,4,35,Service cost transparency,2,no,no,4,Service cost transparency matched expectations and the service step felt effortless.
+FB-0390,2026-02-09,Survey,First-Time Owners,Purchase,Central,2,124,Test ride,3,yes,yes,3,Test ride was confusing and slowed the whole purchase experience.
+FB-0069,2026-02-10,Email,Touring Owners,Service,South,4,60,Maintenance clarity,2,yes,yes,5,Maintenance clarity was handled smoothly across the service journey.
+FB-0291,2026-02-10,Email,Performance Enthusiasts,Purchase,North,3,83,Trade-in valuation,3,yes,yes,3,Mixed experience with trade-in valuation; resolved eventually after follow-up.
+FB-0440,2026-02-12,Email,First-Time Owners,Digital,South,3,79,Account access,3,yes,yes,4,Mixed experience with account access; resolved eventually after follow-up.
+FB-0041,2026-02-13,Email,Performance Enthusiasts,Purchase,South,4,77,Financing clarity,2,no,no,4,Clear and proactive handling of financing clarity; very satisfied.
+FB-0361,2026-02-13,App,Touring Owners,Digital,South,4,66,Account access,2,yes,yes,5,Account access matched expectations and the digital step felt effortless.
+FB-0011,2026-02-14,App,Performance Enthusiasts,Service,North,4,76,Maintenance clarity,2,yes,no,4,Clear and proactive handling of maintenance clarity; very satisfied.
+FB-0052,2026-02-14,Email,Performance Enthusiasts,Digital,Central,5,142,Digital service booking,2,no,no,5,Clear and proactive handling of digital service booking; very satisfied.
+FB-0280,2026-02-14,Survey,Touring Owners,Purchase,Central,4,76,Test ride,1,no,no,4,Test ride matched expectations and the purchase step felt effortless.
+FB-0385,2026-02-15,Dealer,Touring Owners,Purchase,South,3,106,Financing clarity,4,yes,yes,4,Mixed experience with financing clarity; resolved eventually after follow-up.
+FB-0123,2026-02-18,Social,Urban Commuters,Service,Central,4,81,Maintenance clarity,3,no,no,4,Maintenance clarity was handled smoothly across the service journey.
+FB-0225,2026-02-18,Social,Touring Owners,Purchase,North,3,80,Test ride,2,yes,no,3,Test ride took longer than expected but the team communicated.
+FB-0395,2026-02-19,Survey,Touring Owners,Digital,Central,4,99,Connectivity pairing,2,no,no,4,Connectivity pairing was handled smoothly across the digital journey.
+FB-0431,2026-02-19,Social,Touring Owners,Service,North,3,56,Repair turnaround,4,yes,no,3,Repair turnaround was acceptable but service could be smoother.
+FB-0424,2026-02-20,App,Urban Commuters,Service,Central,3,76,Appointment wait,3,yes,no,3,Appointment wait was acceptable but service could be smoother.
+FB-0071,2026-02-21,Email,Touring Owners,Purchase,Central,5,61,Financing clarity,2,no,no,5,Financing clarity matched expectations and the purchase step felt effortless.
+FB-0244,2026-02-22,App,Performance Enthusiasts,Purchase,Central,3,121,Financing clarity,4,yes,yes,4,Financing clarity was acceptable but purchase could be smoother.
+FB-0416,2026-02-22,App,Performance Enthusiasts,Digital,South,5,108,Connectivity pairing,2,no,no,5,Connectivity pairing matched expectations and the digital step felt effortless.
+FB-0012,2026-02-23,Dealer,Performance Enthusiasts,Digital,North,4,72,App onboarding,3,no,no,4,App onboarding was handled smoothly across the digital journey.
+FB-0193,2026-02-24,Survey,Urban Commuters,Digital,South,4,155,Feature discovery,2,no,no,4,Feature discovery matched expectations and the digital step felt effortless.
+FB-0226,2026-02-24,Survey,Touring Owners,Digital,North,5,102,Account access,2,no,no,5,Account access was handled smoothly across the digital journey.
+FB-0284,2026-02-24,App,Urban Commuters,Service,Central,3,124,Maintenance clarity,3,no,no,3,Mixed experience with maintenance clarity; resolved eventually after follow-up.
+FB-0386,2026-02-24,Dealer,First-Time Owners,Purchase,North,2,42,Financing clarity,4,yes,yes,4,Frustrated with financing clarity during purchase; needed several contacts to resolve.
+FB-0006,2026-02-25,Dealer,Performance Enthusiasts,Service,Central,2,63,Parts availability,3,no,no,2,Parts availability created friction and I expected clearer guidance.
+FB-0111,2026-02-25,Dealer,Touring Owners,Service,Central,4,103,Service cost transparency,2,no,no,4,Clear and proactive handling of service cost transparency; very satisfied.
+FB-0141,2026-02-25,Email,Touring Owners,Digital,North,5,159,Connectivity pairing,1,no,no,5,Connectivity pairing matched expectations and the digital step felt effortless.
+FB-0400,2026-02-25,Survey,Touring Owners,Digital,North,3,122,Connectivity pairing,2,yes,no,3,Connectivity pairing was acceptable but digital could be smoother.
+FB-0432,2026-02-25,Dealer,Touring Owners,Ownership,North,4,71,Insurance documentation,2,yes,yes,5,Insurance documentation was handled smoothly across the ownership journey.
+FB-0258,2026-02-26,Email,Touring Owners,Purchase,Central,4,61,Financing clarity,1,no,no,4,Clear and proactive handling of financing clarity; very satisfied.
+FB-0084,2026-02-27,Social,Touring Owners,Service,North,5,37,Maintenance clarity,2,no,no,5,Maintenance clarity matched expectations and the service step felt effortless.
+FB-0403,2026-02-27,Social,Urban Commuters,Ownership,Central,3,69,Warranty registration,2,no,no,3,Warranty registration was acceptable but ownership could be smoother.
+FB-0043,2026-02-28,App,Urban Commuters,Service,South,5,64,Parts availability,2,yes,no,5,Parts availability matched expectations and the service step felt effortless.
+FB-0377,2026-02-28,Social,Urban Commuters,Digital,Central,4,59,Digital service booking,1,no,no,4,Digital service booking matched expectations and the digital step felt effortless.
+FB-0099,2026-03-01,Email,Touring Owners,Purchase,Central,3,143,Order tracking,2,yes,yes,5,Mixed experience with order tracking; resolved eventually after follow-up.
+FB-0335,2026-03-01,Dealer,Performance Enthusiasts,Purchase,Central,5,62,Financing clarity,1,no,no,5,Financing clarity was handled smoothly across the purchase journey.
+FB-0078,2026-03-03,Email,Performance Enthusiasts,Digital,Central,5,121,Connectivity pairing,2,no,no,5,Connectivity pairing matched expectations and the digital step felt effortless.
+FB-0334,2026-03-03,App,Urban Commuters,Service,Central,4,68,Repair turnaround,3,yes,no,4,Clear and proactive handling of repair turnaround; very satisfied.
+FB-0374,2026-03-03,Email,Touring Owners,Service,North,4,79,Repair turnaround,2,no,no,4,Repair turnaround matched expectations and the service step felt effortless.
+FB-0166,2026-03-04,Social,Urban Commuters,Purchase,North,4,50,Order tracking,2,yes,yes,4,Order tracking matched expectations and the purchase step felt effortless.
+FB-0175,2026-03-06,App,Performance Enthusiasts,Service,Central,4,91,Repair turnaround,2,yes,yes,5,Repair turnaround was handled smoothly across the service journey.
+FB-0434,2026-03-07,Dealer,Performance Enthusiasts,Service,South,2,96,Service cost transparency,3,yes,yes,3,Service cost transparency was confusing and slowed the whole service experience.
+FB-0074,2026-03-08,Survey,Touring Owners,Digital,North,5,140,App onboarding,2,no,no,5,App onboarding matched expectations and the digital step felt effortless.
+FB-0277,2026-03-08,Social,Urban Commuters,Purchase,North,3,79,Financing clarity,2,no,no,3,Financing clarity took longer than expected but the team communicated.
+FB-0417,2026-03-09,Email,Urban Commuters,Service,North,3,165,Appointment wait,3,yes,no,3,Appointment wait took longer than expected but the team communicated.
+FB-0444,2026-03-10,Email,Urban Commuters,Purchase,Central,4,125,Test ride,2,yes,yes,5,Test ride matched expectations and the purchase step felt effortless.
+FB-0118,2026-03-12,App,Performance Enthusiasts,Service,North,4,54,Repair turnaround,2,no,no,4,Clear and proactive handling of repair turnaround; very satisfied.
+FB-0062,2026-03-13,Dealer,Touring Owners,Purchase,North,5,55,Order tracking,2,yes,no,5,Order tracking was handled smoothly across the purchase journey.
+FB-0208,2026-03-13,Email,Touring Owners,Digital,Central,5,134,App onboarding,2,no,no,5,App onboarding matched expectations and the digital step felt effortless.
+FB-0010,2026-03-14,Survey,First-Time Owners,Digital,North,2,80,Connectivity pairing,3,yes,yes,3,Connectivity pairing was confusing and slowed the whole digital experience.
+FB-0049,2026-03-14,Survey,Performance Enthusiasts,Service,Central,3,151,Appointment wait,2,yes,yes,4,Appointment wait took longer than expected but the team communicated.
+FB-0105,2026-03-14,Dealer,Touring Owners,Service,Central,3,60,Parts availability,3,yes,yes,5,Parts availability took longer than expected but the team communicated.
+FB-0351,2026-03-14,App,Touring Owners,Ownership,South,3,76,Recall communication,3,yes,yes,5,Recall communication was acceptable but ownership could be smoother.
+FB-0372,2026-03-14,Social,Urban Commuters,Ownership,Central,3,52,Documentation,2,no,no,3,Documentation was acceptable but ownership could be smoother.
+FB-0116,2026-03-15,Dealer,Urban Commuters,Digital,Central,4,79,App onboarding,2,yes,yes,5,App onboarding matched expectations and the digital step felt effortless.
+FB-0353,2026-03-15,Email,Urban Commuters,Service,South,5,77,Appointment wait,3,no,no,5,Appointment wait matched expectations and the service step felt effortless.
+FB-0369,2026-03-16,Social,First-Time Owners,Service,North,2,73,Parts availability,4,yes,yes,3,Parts availability was confusing and slowed the whole service experience.
+FB-0344,2026-03-17,Email,Urban Commuters,Digital,North,5,75,Connectivity pairing,1,no,no,5,Clear and proactive handling of connectivity pairing; very satisfied.
+FB-0142,2026-03-18,App,Urban Commuters,Service,Central,4,97,Appointment wait,3,yes,no,3,Clear and proactive handling of appointment wait; very satisfied.
+FB-0103,2026-03-21,App,First-Time Owners,Service,Central,2,35,Appointment wait,3,yes,yes,3,Frustrated with appointment wait during service; needed several contacts to resolve.
+FB-0437,2026-03-21,Dealer,Performance Enthusiasts,Digital,North,5,84,Feature discovery,1,no,no,5,Clear and proactive handling of feature discovery; very satisfied.
+FB-0423,2026-03-22,Email,Performance Enthusiasts,Ownership,Central,4,106,Insurance documentation,2,no,no,4,Insurance documentation was handled smoothly across the ownership journey.
+FB-0436,2026-03-22,App,Urban Commuters,Service,Central,5,53,Appointment wait,2,no,no,5,Clear and proactive handling of appointment wait; very satisfied.
+FB-0401,2026-03-23,Survey,Performance Enthusiasts,Digital,North,4,145,Feature discovery,1,no,no,4,Feature discovery matched expectations and the digital step felt effortless.
+FB-0133,2026-03-24,Dealer,First-Time Owners,Service,North,2,74,Repair turnaround,4,yes,yes,4,Repair turnaround created friction and I expected clearer guidance.
+FB-0442,2026-03-24,App,Performance Enthusiasts,Service,South,3,87,Parts availability,4,yes,yes,5,Parts availability was acceptable but service could be smoother.
+FB-0271,2026-03-25,Social,First-Time Owners,Ownership,Central,2,81,Insurance documentation,4,yes,yes,4,Insurance documentation was confusing and slowed the whole ownership experience.
+FB-0154,2026-03-27,Dealer,Urban Commuters,Service,North,5,42,Maintenance clarity,1,no,no,5,Maintenance clarity matched expectations and the service step felt effortless.
+FB-0209,2026-03-27,Survey,Urban Commuters,Purchase,South,4,131,Financing clarity,2,yes,yes,5,Financing clarity was handled smoothly across the purchase journey.
+FB-0293,2026-03-27,Dealer,Performance Enthusiasts,Ownership,South,4,116,Accessories,1,yes,yes,5,Accessories matched expectations and the ownership step felt effortless.
+FB-0007,2026-03-28,App,First-Time Owners,Purchase,North,1,40,Financing clarity,4,yes,yes,3,Frustrated with financing clarity during purchase; needed several contacts to resolve.
+FB-0050,2026-03-28,Dealer,First-Time Owners,Digital,North,3,115,Feature discovery,2,yes,no,3,Feature discovery was acceptable but digital could be smoother.
+FB-0184,2026-03-28,Dealer,Urban Commuters,Purchase,South,4,65,Trade-in valuation,2,yes,no,4,Trade-in valuation was handled smoothly across the purchase journey.
+FB-0089,2026-03-29,Survey,Touring Owners,Service,South,4,114,Repair turnaround,3,yes,yes,5,Repair turnaround matched expectations and the service step felt effortless.
+FB-0040,2026-03-30,App,Urban Commuters,Digital,South,5,109,Account access,3,no,no,5,Clear and proactive handling of account access; very satisfied.
+FB-0183,2026-03-30,App,Performance Enthusiasts,Digital,North,4,105,Feature discovery,2,yes,yes,5,Clear and proactive handling of feature discovery; very satisfied.
+FB-0144,2026-03-31,Survey,Urban Commuters,Digital,North,4,136,Feature discovery,2,yes,yes,5,Feature discovery was handled smoothly across the digital journey.
+FB-0147,2026-03-31,App,Touring Owners,Service,South,3,67,Repair turnaround,2,no,no,3,Repair turnaround took longer than expected but the team communicated.
+FB-0298,2026-03-31,Dealer,Urban Commuters,Service,Central,4,120,Appointment wait,2,no,no,4,Appointment wait matched expectations and the service step felt effortless.
+FB-0034,2026-04-01,Email,Touring Owners,Service,North,4,145,Repair turnaround,3,no,no,4,Repair turnaround was handled smoothly across the service journey.
+FB-0251,2026-04-01,Dealer,First-Time Owners,Service,South,2,89,Repair turnaround,4,yes,yes,4,Frustrated with repair turnaround during service; needed several contacts to resolve.
+FB-0037,2026-04-03,Email,Touring Owners,Digital,Central,4,92,App onboarding,1,no,no,4,Clear and proactive handling of app onboarding; very satisfied.
+FB-0080,2026-04-03,Survey,Urban Commuters,Purchase,North,4,153,Trade-in valuation,2,yes,yes,5,Trade-in valuation was handled smoothly across the purchase journey.
+FB-0350,2026-04-04,App,Urban Commuters,Service,Central,4,91,Parts availability,1,no,no,4,Parts availability matched expectations and the service step felt effortless.
+FB-0181,2026-04-05,Email,Performance Enthusiasts,Service,North,3,115,Parts availability,2,yes,yes,4,Mixed experience with parts availability; resolved eventually after follow-up.
+FB-0109,2026-04-06,Email,Urban Commuters,Purchase,North,3,151,Financing clarity,3,yes,no,3,Financing clarity took longer than expected but the team communicated.
+FB-0129,2026-04-06,Dealer,Urban Commuters,Purchase,North,3,56,Test ride,2,yes,yes,5,Test ride took longer than expected but the team communicated.
+FB-0090,2026-04-07,Dealer,Performance Enthusiasts,Purchase,South,4,87,Test ride,2,no,no,4,Test ride matched expectations and the purchase step felt effortless.
+FB-0148,2026-04-07,App,Performance Enthusiasts,Service,North,5,126,Service cost transparency,1,no,no,5,Clear and proactive handling of service cost transparency; very satisfied.
+FB-0248,2026-04-07,Email,First-Time Owners,Service,Central,2,83,Repair turnaround,3,yes,yes,4,Repair turnaround created friction and I expected clearer guidance.
+FB-0285,2026-04-08,Social,First-Time Owners,Service,Central,3,62,Service cost transparency,3,yes,yes,4,Service cost transparency was acceptable but service could be smoother.
+FB-0311,2026-04-09,Dealer,First-Time Owners,Digital,Central,4,100,Connectivity pairing,1,yes,no,4,Connectivity pairing was handled smoothly across the digital journey.
+FB-0091,2026-04-10,Survey,Performance Enthusiasts,Ownership,North,5,117,Accessories,2,no,no,5,Accessories was handled smoothly across the ownership journey.
+FB-0219,2026-04-11,App,Touring Owners,Digital,North,4,63,Connectivity pairing,2,no,no,4,Connectivity pairing matched expectations and the digital step felt effortless.
+FB-0240,2026-04-11,Dealer,First-Time Owners,Ownership,Central,3,77,Documentation,3,yes,yes,4,Mixed experience with documentation; resolved eventually after follow-up.
+FB-0364,2026-04-11,Email,Touring Owners,Purchase,North,5,87,Delivery handover,1,no,no,5,Clear and proactive handling of delivery handover; very satisfied.
+FB-0019,2026-04-13,App,Urban Commuters,Purchase,North,3,112,Financing clarity,3,no,no,3,Financing clarity was acceptable but purchase could be smoother.
+FB-0027,2026-04-13,Social,Performance Enthusiasts,Ownership,North,5,46,Insurance documentation,1,yes,yes,5,Clear and proactive handling of insurance documentation; very satisfied.
+FB-0036,2026-04-13,Email,First-Time Owners,Digital,North,3,86,Account access,3,no,no,3,Mixed experience with account access; resolved eventually after follow-up.
+FB-0047,2026-04-13,App,Touring Owners,Service,Central,3,50,Service cost transparency,2,no,no,3,Service cost transparency took longer than expected but the team communicated.
+FB-0196,2026-04-13,App,Performance Enthusiasts,Purchase,Central,5,108,Trade-in valuation,1,no,no,5,Trade-in valuation matched expectations and the purchase step felt effortless.
+FB-0260,2026-04-13,Survey,Performance Enthusiasts,Digital,North,4,132,App onboarding,2,no,no,4,App onboarding was handled smoothly across the digital journey.
+FB-0339,2026-04-13,Email,First-Time Owners,Digital,North,3,87,App onboarding,4,no,no,3,App onboarding took longer than expected but the team communicated.
+FB-0449,2026-04-14,Email,Touring Owners,Service,North,4,98,Parts availability,1,yes,yes,5,Parts availability matched expectations and the service step felt effortless.
+FB-0338,2026-04-17,Dealer,Touring Owners,Purchase,Central,2,40,Financing clarity,4,yes,yes,2,Financing clarity created friction and I expected clearer guidance.
+FB-0018,2026-04-18,Survey,Urban Commuters,Digital,South,4,130,App onboarding,1,no,no,4,App onboarding matched expectations and the digital step felt effortless.
+FB-0051,2026-04-19,Social,First-Time Owners,Ownership,North,2,72,Insurance documentation,4,yes,yes,3,Insurance documentation was confusing and slowed the whole ownership experience.
+FB-0430,2026-04-19,Email,Urban Commuters,Service,North,5,147,Parts availability,2,no,no,5,Clear and proactive handling of parts availability; very satisfied.
+FB-0003,2026-04-20,Dealer,First-Time Owners,Digital,North,3,54,Account access,3,yes,yes,4,Account access was acceptable but digital could be smoother.
+FB-0065,2026-04-20,App,Performance Enthusiasts,Digital,South,3,118,App onboarding,4,yes,yes,5,App onboarding was acceptable but digital could be smoother.
+FB-0268,2026-04-20,Email,Touring Owners,Digital,Central,4,160,App onboarding,2,no,no,4,Clear and proactive handling of app onboarding; very satisfied.
+FB-0132,2026-04-21,Survey,Performance Enthusiasts,Purchase,South,2,128,Trade-in valuation,3,yes,yes,3,Frustrated with trade-in valuation during purchase; needed several contacts to resolve.
+FB-0231,2026-04-21,App,Performance Enthusiasts,Digital,North,5,88,App onboarding,2,no,no,5,Clear and proactive handling of app onboarding; very satisfied.
+FB-0320,2026-04-22,Survey,First-Time Owners,Ownership,North,3,125,Insurance documentation,4,yes,yes,4,Insurance documentation was acceptable but ownership could be smoother.
+FB-0194,2026-04-23,App,Urban Commuters,Purchase,North,3,60,Financing clarity,3,no,no,3,Financing clarity was acceptable but purchase could be smoother.
+FB-0056,2026-04-24,Survey,First-Time Owners,Digital,Central,4,121,Connectivity pairing,3,no,no,4,Connectivity pairing was handled smoothly across the digital journey.
+FB-0228,2026-04-24,Dealer,Urban Commuters,Digital,North,5,60,Connectivity pairing,1,no,no,5,Connectivity pairing matched expectations and the digital step felt effortless.
+FB-0429,2026-04-24,Survey,Touring Owners,Service,Central,5,114,Appointment wait,1,no,no,5,Clear and proactive handling of appointment wait; very satisfied.
+FB-0336,2026-04-25,Email,Performance Enthusiasts,Service,Central,3,136,Appointment wait,3,yes,no,2,Mixed experience with appointment wait; resolved eventually after follow-up.
+FB-0023,2026-04-26,Email,Urban Commuters,Purchase,North,3,111,Trade-in valuation,2,yes,no,3,Trade-in valuation was acceptable but purchase could be smoother.
+FB-0054,2026-04-26,Survey,Touring Owners,Ownership,North,5,115,Warranty registration,1,no,no,5,Warranty registration matched expectations and the ownership step felt effortless.
+FB-0024,2026-04-27,Email,Performance Enthusiasts,Service,North,3,162,Service cost transparency,2,no,no,3,Mixed experience with service cost transparency; resolved eventually after follow-up.
+FB-0190,2026-04-27,Survey,Urban Commuters,Digital,North,4,73,App onboarding,1,no,no,4,App onboarding matched expectations and the digital step felt effortless.
+FB-0221,2026-04-27,Social,Performance Enthusiasts,Ownership,Central,3,66,Recall communication,2,yes,yes,3,Recall communication was acceptable but ownership could be smoother.
+FB-0276,2026-04-27,Dealer,First-Time Owners,Purchase,Central,3,55,Financing clarity,4,yes,yes,4,Financing clarity took longer than expected but the team communicated.
+FB-0151,2026-04-28,Social,Performance Enthusiasts,Digital,North,3,33,Digital service booking,3,no,no,3,Mixed experience with digital service booking; resolved eventually after follow-up.
+FB-0373,2026-04-28,App,Urban Commuters,Ownership,North,4,123,Accessories,3,yes,yes,5,Accessories was handled smoothly across the ownership journey.
+FB-0015,2026-04-30,Email,Urban Commuters,Ownership,North,3,107,Warranty registration,1,yes,yes,5,Warranty registration took longer than expected but the team communicated.
+FB-0140,2026-04-30,Social,Urban Commuters,Ownership,North,4,82,Recall communication,3,no,no,4,Recall communication matched expectations and the ownership step felt effortless.
+FB-0191,2026-04-30,Dealer,Touring Owners,Ownership,Central,5,98,Insurance documentation,2,no,no,5,Insurance documentation was handled smoothly across the ownership journey.
+FB-0346,2026-05-02,Email,First-Time Owners,Digital,Central,2,82,Feature discovery,2,yes,yes,3,Feature discovery created friction and I expected clearer guidance.
+FB-0192,2026-05-03,Email,First-Time Owners,Purchase,Central,2,105,Order tracking,3,yes,yes,4,Order tracking created friction and I expected clearer guidance.
+FB-0409,2026-05-03,App,Urban Commuters,Service,North,3,39,Service cost transparency,2,yes,yes,4,Mixed experience with service cost transparency; resolved eventually after follow-up.
+FB-0053,2026-05-04,Email,Urban Commuters,Service,Central,4,119,Maintenance clarity,3,yes,no,4,Maintenance clarity matched expectations and the service step felt effortless.
+FB-0135,2026-05-04,Email,Touring Owners,Purchase,Central,5,117,Test ride,2,no,no,5,Clear and proactive handling of test ride; very satisfied.
+FB-0138,2026-05-04,Email,Touring Owners,Service,North,3,77,Parts availability,1,yes,yes,4,Mixed experience with parts availability; resolved eventually after follow-up.
+FB-0246,2026-05-04,Dealer,Urban Commuters,Digital,Central,3,96,Feature discovery,3,yes,yes,4,Feature discovery took longer than expected but the team communicated.
+FB-0017,2026-05-05,Survey,Performance Enthusiasts,Digital,Central,3,82,App onboarding,2,no,no,3,App onboarding was acceptable but digital could be smoother.
+FB-0119,2026-05-05,Dealer,Performance Enthusiasts,Service,Central,4,66,Service cost transparency,2,no,no,4,Service cost transparency matched expectations and the service step felt effortless.
+FB-0223,2026-05-05,App,Touring Owners,Service,North,3,38,Maintenance clarity,3,yes,yes,4,Maintenance clarity was acceptable but service could be smoother.
+FB-0048,2026-05-06,Email,Touring Owners,Ownership,Central,4,114,Accessories,2,yes,yes,5,Clear and proactive handling of accessories; very satisfied.
+FB-0083,2026-05-06,Social,Touring Owners,Purchase,South,2,76,Financing clarity,4,yes,yes,3,Financing clarity created friction and I expected clearer guidance.
+FB-0446,2026-05-06,Email,First-Time Owners,Digital,Central,2,151,Feature discovery,3,yes,yes,5,Feature discovery created friction and I expected clearer guidance.
+FB-0387,2026-05-07,Survey,Urban Commuters,Service,North,5,82,Repair turnaround,1,yes,yes,5,Repair turnaround matched expectations and the service step felt effortless.
+FB-0234,2026-05-08,Email,Urban Commuters,Digital,Central,4,118,Feature discovery,1,no,no,4,Clear and proactive handling of feature discovery; very satisfied.
+FB-0392,2026-05-08,Email,Touring Owners,Ownership,South,3,134,Recall communication,3,yes,no,3,Mixed experience with recall communication; resolved eventually after follow-up.
+FB-0098,2026-05-10,App,Performance Enthusiasts,Ownership,North,4,66,Accessories,2,no,no,4,Accessories was handled smoothly across the ownership journey.
+FB-0134,2026-05-10,Dealer,Urban Commuters,Purchase,South,5,42,Test ride,2,no,no,5,Test ride matched expectations and the purchase step felt effortless.
+FB-0426,2026-05-10,Survey,Urban Commuters,Purchase,South,4,74,Delivery handover,1,yes,yes,5,Delivery handover was handled smoothly across the purchase journey.
+FB-0101,2026-05-11,Email,Performance Enthusiasts,Service,North,5,131,Service cost transparency,2,no,no,5,Service cost transparency matched expectations and the service step felt effortless.
+FB-0096,2026-05-12,Survey,First-Time Owners,Service,Central,1,125,Parts availability,5,yes,no,1,Parts availability was confusing and slowed the whole service experience.
+FB-0255,2026-05-14,Email,Urban Commuters,Purchase,North,4,93,Order tracking,3,no,no,4,Order tracking was handled smoothly across the purchase journey.
+FB-0343,2026-05-14,Email,Touring Owners,Digital,North,4,125,App onboarding,2,no,no,4,App onboarding matched expectations and the digital step felt effortless.
+FB-0359,2026-05-15,Survey,Touring Owners,Ownership,South,4,84,Accessories,1,no,no,4,Accessories matched expectations and the ownership step felt effortless.
+FB-0075,2026-05-16,App,Urban Commuters,Ownership,South,3,37,Insurance documentation,4,yes,yes,5,Insurance documentation took longer than expected but the team communicated.
+FB-0262,2026-05-16,Email,First-Time Owners,Digital,Central,4,128,Account access,1,no,no,4,Account access was handled smoothly across the digital journey.
+FB-0058,2026-05-17,App,Urban Commuters,Ownership,South,3,127,Accessories,2,no,no,3,Accessories was acceptable but ownership could be smoother.
+FB-0042,2026-05-18,Dealer,Urban Commuters,Service,South,2,91,Maintenance clarity,2,yes,yes,4,Maintenance clarity was confusing and slowed the whole service experience.
+FB-0127,2026-05-18,Email,Performance Enthusiasts,Purchase,North,5,118,Test ride,1,no,no,5,Test ride was handled smoothly across the purchase journey.
+FB-0253,2026-05-18,Dealer,First-Time Owners,Digital,Central,4,110,Account access,2,no,no,4,Account access was handled smoothly across the digital journey.
+FB-0158,2026-05-19,App,Performance Enthusiasts,Ownership,North,3,68,Recall communication,3,yes,yes,5,Recall communication was acceptable but ownership could be smoother.
+FB-0317,2026-05-19,Social,Touring Owners,Service,Central,3,82,Service cost transparency,2,yes,yes,4,Mixed experience with service cost transparency; resolved eventually after follow-up.
+FB-0352,2026-05-19,Dealer,First-Time Owners,Purchase,Central,3,59,Order tracking,1,yes,yes,4,Order tracking was acceptable but purchase could be smoother.
+FB-0112,2026-05-20,Survey,Touring Owners,Purchase,North,3,71,Financing clarity,3,yes,yes,4,Mixed experience with financing clarity; resolved eventually after follow-up.
+FB-0265,2026-05-20,Dealer,Performance Enthusiasts,Purchase,Central,5,65,Order tracking,1,no,no,5,Order tracking was handled smoothly across the purchase journey.
+FB-0402,2026-05-20,App,Performance Enthusiasts,Digital,South,3,40,Connectivity pairing,2,yes,yes,4,Connectivity pairing was acceptable but digital could be smoother.
+FB-0045,2026-05-22,Survey,First-Time Owners,Purchase,South,1,117,Financing clarity,5,yes,yes,3,Financing clarity was confusing and slowed the whole purchase experience.
+FB-0077,2026-05-22,Dealer,First-Time Owners,Purchase,Central,3,71,Financing clarity,4,yes,no,3,Financing clarity took longer than expected but the team communicated.
+FB-0021,2026-05-23,Email,First-Time Owners,Digital,Central,3,117,App onboarding,4,yes,no,3,App onboarding took longer than expected but the team communicated.
+FB-0198,2026-05-23,Dealer,Performance Enthusiasts,Ownership,Central,4,101,Accessories,1,no,no,4,Clear and proactive handling of accessories; very satisfied.
+FB-0420,2026-05-23,Social,First-Time Owners,Service,North,3,37,Maintenance clarity,3,no,no,3,Maintenance clarity took longer than expected but the team communicated.
+FB-0029,2026-05-24,App,Urban Commuters,Digital,South,4,125,App onboarding,4,yes,yes,5,App onboarding matched expectations and the digital step felt effortless.
+FB-0009,2026-05-25,Dealer,First-Time Owners,Service,Central,3,52,Maintenance clarity,3,yes,yes,4,Maintenance clarity was acceptable but service could be smoother.
+FB-0030,2026-05-26,Survey,Performance Enthusiasts,Service,North,3,94,Service cost transparency,3,yes,yes,5,Service cost transparency took longer than expected but the team communicated.
+FB-0160,2026-05-26,Social,Urban Commuters,Purchase,Central,2,72,Test ride,3,yes,no,2,Frustrated with test ride during purchase; needed several contacts to resolve.
+FB-0287,2026-05-29,App,Performance Enthusiasts,Digital,South,4,93,Connectivity pairing,2,yes,no,4,Connectivity pairing was handled smoothly across the digital journey.
+FB-0357,2026-05-29,Dealer,Performance Enthusiasts,Service,Central,4,114,Service cost transparency,2,no,no,4,Clear and proactive handling of service cost transparency; very satisfied.
+FB-0171,2026-05-31,Email,Performance Enthusiasts,Purchase,North,4,154,Trade-in valuation,1,no,no,4,Trade-in valuation was handled smoothly across the purchase journey.
+FB-0263,2026-05-31,Social,Urban Commuters,Purchase,North,4,36,Order tracking,3,no,no,4,Clear and proactive handling of order tracking; very satisfied.
+FB-0331,2026-06-01,Social,First-Time Owners,Service,Central,2,29,Parts availability,5,yes,no,2,Parts availability was confusing and slowed the whole service experience.
+FB-0445,2026-06-01,App,First-Time Owners,Service,North,3,64,Appointment wait,3,yes,no,3,Appointment wait took longer than expected but the team communicated.
+FB-0179,2026-06-03,Dealer,Urban Commuters,Digital,Central,3,65,Account access,3,yes,yes,3,Account access was acceptable but digital could be smoother.
+FB-0310,2026-06-03,App,Touring Owners,Service,North,4,100,Parts availability,1,no,no,4,Clear and proactive handling of parts availability; very satisfied.
+FB-0322,2026-06-03,App,Performance Enthusiasts,Service,North,4,48,Service cost transparency,2,no,no,4,Clear and proactive handling of service cost transparency; very satisfied.
+FB-0412,2026-06-03,Dealer,Urban Commuters,Service,Central,3,83,Parts availability,4,yes,yes,4,Mixed experience with parts availability; resolved eventually after follow-up.
+FB-0032,2026-06-05,Dealer,Urban Commuters,Service,North,3,84,Maintenance clarity,2,yes,yes,5,Maintenance clarity was acceptable but service could be smoother.
+FB-0289,2026-06-05,App,Urban Commuters,Digital,South,5,130,Digital service booking,3,no,no,5,Digital service booking was handled smoothly across the digital journey.
+FB-0264,2026-06-06,Email,Urban Commuters,Purchase,North,5,80,Delivery handover,2,no,no,5,Delivery handover was handled smoothly across the purchase journey.
+FB-0269,2026-06-06,Survey,Performance Enthusiasts,Ownership,North,3,141,Warranty registration,2,yes,yes,4,Mixed experience with warranty registration; resolved eventually after follow-up.
+FB-0303,2026-06-06,Dealer,Performance Enthusiasts,Service,Central,3,116,Maintenance clarity,3,yes,yes,4,Mixed experience with maintenance clarity; resolved eventually after follow-up.
+FB-0100,2026-06-07,Survey,Urban Commuters,Purchase,North,4,137,Delivery handover,1,no,no,4,Clear and proactive handling of delivery handover; very satisfied.
+FB-0249,2026-06-07,App,First-Time Owners,Ownership,North,4,52,Recall communication,3,no,no,4,Recall communication was handled smoothly across the ownership journey.
+FB-0393,2026-06-07,Dealer,Urban Commuters,Purchase,South,5,65,Order tracking,2,no,no,5,Clear and proactive handling of order tracking; very satisfied.
+FB-0229,2026-06-08,Email,Urban Commuters,Digital,Central,4,158,Feature discovery,3,no,no,4,Feature discovery was handled smoothly across the digital journey.
+FB-0259,2026-06-08,Email,Touring Owners,Ownership,South,2,82,Insurance documentation,3,yes,yes,3,Insurance documentation was confusing and slowed the whole ownership experience.
+FB-0307,2026-06-08,Survey,Urban Commuters,Service,North,4,146,Maintenance clarity,3,yes,yes,5,Clear and proactive handling of maintenance clarity; very satisfied.
+FB-0396,2026-06-08,Survey,Urban Commuters,Digital,North,5,81,Account access,1,yes,yes,5,Account access matched expectations and the digital step felt effortless.
+FB-0137,2026-06-09,Email,Urban Commuters,Ownership,North,4,143,Insurance documentation,2,no,no,4,Clear and proactive handling of insurance documentation; very satisfied.
+FB-0405,2026-06-09,Email,Touring Owners,Ownership,North,4,66,Insurance documentation,3,no,no,4,Insurance documentation was handled smoothly across the ownership journey.
+FB-0241,2026-06-10,App,First-Time Owners,Service,Central,3,43,Repair turnaround,3,no,no,3,Repair turnaround was acceptable but service could be smoother.
+FB-0308,2026-06-10,App,Urban Commuters,Service,North,3,103,Repair turnaround,4,yes,no,3,Repair turnaround was acceptable but service could be smoother.
+FB-0232,2026-06-11,Dealer,Urban Commuters,Service,Central,4,56,Repair turnaround,1,no,no,4,Repair turnaround matched expectations and the service step felt effortless.
+FB-0145,2026-06-12,Survey,Touring Owners,Digital,Central,5,160,Feature discovery,1,no,no,5,Feature discovery was handled smoothly across the digital journey.
+FB-0349,2026-06-12,Dealer,First-Time Owners,Purchase,North,2,56,Financing clarity,4,yes,yes,3,Frustrated with financing clarity during purchase; needed several contacts to resolve.
+FB-0448,2026-06-12,App,First-Time Owners,Purchase,South,3,109,Order tracking,3,yes,yes,4,Mixed experience with order tracking; resolved eventually after follow-up.
+FB-0104,2026-06-13,Survey,Urban Commuters,Purchase,North,3,118,Financing clarity,2,no,no,3,Financing clarity took longer than expected but the team communicated.
+FB-0410,2026-06-14,Social,Touring Owners,Purchase,North,3,31,Test ride,3,yes,yes,4,Test ride took longer than expected but the team communicated.
+FB-0267,2026-06-15,Email,Touring Owners,Ownership,Central,5,136,Insurance documentation,2,no,no,5,Insurance documentation was handled smoothly across the ownership journey.
+FB-0157,2026-06-16,Social,Performance Enthusiasts,Service,South,3,88,Repair turnaround,4,yes,yes,4,Mixed experience with repair turnaround; resolved eventually after follow-up.
+FB-0345,2026-06-17,Survey,Performance Enthusiasts,Purchase,Central,4,123,Test ride,2,yes,yes,5,Clear and proactive handling of test ride; very satisfied.
+FB-0428,2026-06-17,Email,Touring Owners,Service,North,3,67,Maintenance clarity,3,no,no,3,Maintenance clarity was acceptable but service could be smoother.
+FB-0106,2026-06-18,Survey,Urban Commuters,Service,Central,3,111,Appointment wait,3,yes,yes,5,Mixed experience with appointment wait; resolved eventually after follow-up.
+FB-0200,2026-06-18,Social,First-Time Owners,Purchase,Central,2,49,Financing clarity,5,yes,no,2,Financing clarity was confusing and slowed the whole purchase experience.
+FB-0222,2026-06-18,Email,Touring Owners,Purchase,North,4,144,Order tracking,2,yes,yes,5,Order tracking was handled smoothly across the purchase journey.
+FB-0150,2026-06-19,Dealer,Performance Enthusiasts,Ownership,North,5,55,Documentation,1,no,no,5,Documentation matched expectations and the ownership step felt effortless.
+FB-0230,2026-06-19,Email,First-Time Owners,Purchase,Central,4,87,Test ride,3,no,no,4,Test ride matched expectations and the purchase step felt effortless.
+FB-0301,2026-06-19,Survey,Performance Enthusiasts,Service,Central,3,109,Service cost transparency,2,yes,yes,5,Mixed experience with service cost transparency; resolved eventually after follow-up.
+FB-0425,2026-06-19,Survey,First-Time Owners,Purchase,South,1,112,Financing clarity,4,yes,yes,3,Financing clarity created friction and I expected clearer guidance.
+FB-0218,2026-06-20,Dealer,Urban Commuters,Service,North,3,66,Appointment wait,1,yes,yes,4,Appointment wait took longer than expected but the team communicated.
+FB-0239,2026-06-21,Survey,Touring Owners,Ownership,Central,4,127,Recall communication,2,no,no,4,Recall communication matched expectations and the ownership step felt effortless.
+FB-0114,2026-06-22,Email,Touring Owners,Purchase,Central,4,163,Delivery handover,2,yes,yes,5,Delivery handover matched expectations and the purchase step felt effortless.
+FB-0156,2026-06-22,App,Urban Commuters,Service,Central,5,77,Appointment wait,2,yes,no,4,Appointment wait was handled smoothly across the service journey.
+FB-0237,2026-06-23,Dealer,First-Time Owners,Purchase,Central,3,106,Financing clarity,3,yes,yes,5,Mixed experience with financing clarity; resolved eventually after follow-up.
+FB-0164,2026-06-24,Dealer,Urban Commuters,Purchase,Central,3,68,Financing clarity,3,yes,no,2,Financing clarity took longer than expected but the team communicated.
+FB-0174,2026-06-24,Dealer,First-Time Owners,Ownership,Central,3,47,Warranty registration,3,no,no,3,Mixed experience with warranty registration; resolved eventually after follow-up.
+FB-0210,2026-06-24,Social,Urban Commuters,Purchase,North,3,43,Financing clarity,3,yes,yes,5,Financing clarity took longer than expected but the team communicated.
+FB-0404,2026-06-25,Email,First-Time Owners,Service,Central,2,91,Appointment wait,3,yes,yes,3,Appointment wait created friction and I expected clearer guidance.
+FB-0031,2026-06-27,Social,Touring Owners,Ownership,South,4,43,Warranty registration,2,yes,yes,5,Clear and proactive handling of warranty registration; very satisfied.
+FB-0217,2026-06-27,Survey,Urban Commuters,Service,North,4,115,Repair turnaround,2,no,no,4,Repair turnaround was handled smoothly across the service journey.
+FB-0312,2026-06-27,App,Urban Commuters,Purchase,Central,3,72,Financing clarity,3,no,no,3,Mixed experience with financing clarity; resolved eventually after follow-up.
+FB-0115,2026-06-28,Dealer,Urban Commuters,Service,South,5,76,Appointment wait,1,no,no,5,Appointment wait was handled smoothly across the service journey.
+FB-0235,2026-06-28,Email,Touring Owners,Purchase,North,4,85,Test ride,3,yes,yes,5,Test ride was handled smoothly across the purchase journey.
+FB-0366,2026-06-29,Social,Urban Commuters,Ownership,North,5,78,Insurance documentation,1,no,no,5,Insurance documentation matched expectations and the ownership step felt effortless.
+FB-0046,2026-06-30,Social,Performance Enthusiasts,Purchase,North,4,84,Test ride,3,no,no,4,Test ride matched expectations and the purchase step felt effortless.
+FB-0088,2026-07-01,Dealer,First-Time Owners,Digital,North,3,112,Digital service booking,3,yes,no,3,Digital service booking took longer than expected but the team communicated.
+FB-0130,2026-07-01,App,First-Time Owners,Ownership,Central,3,63,Accessories,3,no,no,3,Mixed experience with accessories; resolved eventually after follow-up.
+FB-0086,2026-07-03,Dealer,First-Time Owners,Purchase,Central,3,82,Trade-in valuation,2,yes,yes,3,Trade-in valuation took longer than expected but the team communicated.
+FB-0087,2026-07-03,Email,Urban Commuters,Service,South,4,143,Repair turnaround,1,no,no,4,Repair turnaround matched expectations and the service step felt effortless.
+FB-0176,2026-07-03,Survey,Touring Owners,Digital,South,3,140,App onboarding,2,yes,yes,5,Mixed experience with app onboarding; resolved eventually after follow-up.
+FB-0224,2026-07-04,Social,Performance Enthusiasts,Service,Central,4,77,Service cost transparency,2,no,no,4,Clear and proactive handling of service cost transparency; very satisfied.
+FB-0093,2026-07-05,Dealer,Urban Commuters,Service,Central,4,73,Parts availability,3,no,no,4,Clear and proactive handling of parts availability; very satisfied.
+FB-0414,2026-07-05,Social,Urban Commuters,Digital,Central,2,73,App onboarding,4,yes,yes,3,App onboarding was confusing and slowed the whole digital experience.
+FB-0332,2026-07-06,Survey,Touring Owners,Digital,South,4,91,Account access,3,no,no,4,Account access was handled smoothly across the digital journey.
+FB-0002,2026-07-07,Social,Performance Enthusiasts,Purchase,North,5,71,Order tracking,2,no,no,5,Order tracking matched expectations and the purchase step felt effortless.
+FB-0169,2026-07-07,Dealer,Urban Commuters,Service,Central,2,111,Parts availability,4,yes,yes,3,Parts availability created friction and I expected clearer guidance.
+FB-0394,2026-07-07,App,First-Time Owners,Service,Central,3,68,Parts availability,3,no,no,3,Parts availability was acceptable but service could be smoother.
+FB-0207,2026-07-08,Dealer,Performance Enthusiasts,Digital,Central,4,88,Account access,3,no,no,4,Account access was handled smoothly across the digital journey.
+FB-0199,2026-07-09,Email,Touring Owners,Digital,North,4,60,Connectivity pairing,1,no,no,4,Clear and proactive handling of connectivity pairing; very satisfied.
+FB-0391,2026-07-09,Dealer,Urban Commuters,Ownership,North,4,113,Accessories,3,yes,yes,5,Accessories was handled smoothly across the ownership journey.
+FB-0363,2026-07-11,App,Urban Commuters,Service,North,3,82,Service cost transparency,2,yes,yes,4,Service cost transparency was acceptable but service could be smoother.
+FB-0197,2026-07-13,Email,Urban Commuters,Purchase,Central,1,109,Financing clarity,5,yes,yes,2,Frustrated with financing clarity during purchase; needed several contacts to resolve.
+FB-0236,2026-07-13,Dealer,First-Time Owners,Ownership,North,3,115,Insurance documentation,4,yes,no,3,Mixed experience with insurance documentation; resolved eventually after follow-up.
+FB-0297,2026-07-13,App,Performance Enthusiasts,Ownership,Central,2,45,Insurance documentation,4,yes,yes,3,Frustrated with insurance documentation during ownership; needed several contacts to resolve.
+FB-0435,2026-07-13,Social,Performance Enthusiasts,Purchase,North,4,67,Delivery handover,2,no,no,4,Delivery handover was handled smoothly across the purchase journey.
+FB-0214,2026-07-14,App,Touring Owners,Service,North,3,79,Service cost transparency,3,no,no,3,Service cost transparency took longer than expected but the team communicated.
+FB-0227,2026-07-14,Survey,Touring Owners,Purchase,South,4,120,Test ride,2,no,no,4,Test ride was handled smoothly across the purchase journey.
+FB-0328,2026-07-14,App,First-Time Owners,Service,North,3,116,Parts availability,3,yes,yes,4,Mixed experience with parts availability; resolved eventually after follow-up.
+FB-0001,2026-07-15,Dealer,Touring Owners,Digital,South,4,100,Feature discovery,1,no,no,4,Clear and proactive handling of feature discovery; very satisfied.
+FB-0419,2026-07-15,App,Touring Owners,Ownership,South,2,80,Warranty registration,3,yes,yes,3,Frustrated with warranty registration during ownership; needed several contacts to resolve.
+FB-0117,2026-07-16,Email,Urban Commuters,Digital,South,4,72,App onboarding,2,no,no,4,Clear and proactive handling of app onboarding; very satisfied.
+FB-0288,2026-07-16,App,First-Time Owners,Service,Central,2,109,Parts availability,4,yes,yes,3,Parts availability was confusing and slowed the whole service experience.
+FB-0347,2026-07-16,Social,Performance Enthusiasts,Service,North,5,61,Service cost transparency,1,no,no,5,Service cost transparency was handled smoothly across the service journey.
+FB-0131,2026-07-17,Survey,Urban Commuters,Digital,North,4,86,Connectivity pairing,2,yes,yes,5,Connectivity pairing matched expectations and the digital step felt effortless.
+FB-0370,2026-07-17,Social,Performance Enthusiasts,Service,Central,5,88,Parts availability,2,no,no,5,Clear and proactive handling of parts availability; very satisfied.
+FB-0316,2026-07-18,App,Urban Commuters,Digital,North,3,86,Account access,3,no,no,3,Account access took longer than expected but the team communicated.
+FB-0362,2026-07-18,Survey,Touring Owners,Ownership,South,4,89,Documentation,2,no,no,4,Documentation was handled smoothly across the ownership journey.
+FB-0422,2026-07-18,Survey,Touring Owners,Service,Central,3,144,Appointment wait,2,yes,yes,4,Mixed experience with appointment wait; resolved eventually after follow-up.
+FB-0136,2026-07-19,Email,First-Time Owners,Ownership,North,2,164,Insurance documentation,4,yes,no,2,Frustrated with insurance documentation during ownership; needed several contacts to resolve.
+FB-0180,2026-07-19,App,Touring Owners,Digital,Central,2,37,App onboarding,3,yes,yes,4,Frustrated with app onboarding during digital; needed several contacts to resolve.
+FB-0044,2026-07-20,Social,First-Time Owners,Digital,Central,3,34,Feature discovery,3,no,no,3,Mixed experience with feature discovery; resolved eventually after follow-up.
+FB-0397,2026-07-20,Social,Urban Commuters,Purchase,North,3,30,Trade-in valuation,3,yes,no,3,Mixed experience with trade-in valuation; resolved eventually after follow-up.
+FB-0447,2026-07-20,App,Performance Enthusiasts,Digital,North,3,53,Digital service booking,2,yes,yes,5,Mixed experience with digital service booking; resolved eventually after follow-up.
+FB-0203,2026-07-21,Dealer,Performance Enthusiasts,Service,South,4,41,Appointment wait,1,no,no,4,Appointment wait was handled smoothly across the service journey.
+FB-0314,2026-07-21,Dealer,Performance Enthusiasts,Service,North,5,115,Maintenance clarity,1,no,no,5,Maintenance clarity matched expectations and the service step felt effortless.
+FB-0411,2026-07-21,Survey,Urban Commuters,Purchase,Central,4,137,Delivery handover,1,no,no,4,Clear and proactive handling of delivery handover; very satisfied.
+FB-0094,2026-07-22,App,Performance Enthusiasts,Service,Central,3,76,Service cost transparency,2,yes,yes,5,Service cost transparency took longer than expected but the team communicated.
+FB-0172,2026-07-22,Social,Touring Owners,Purchase,North,4,38,Trade-in valuation,2,no,no,4,Trade-in valuation was handled smoothly across the purchase journey.
+FB-0038,2026-07-23,Email,Touring Owners,Service,South,3,60,Parts availability,4,yes,yes,5,Parts availability took longer than expected but the team communicated.
+FB-0177,2026-07-23,Dealer,Touring Owners,Digital,North,4,83,Account access,1,yes,yes,5,Account access matched expectations and the digital step felt effortless.
+FB-0278,2026-07-23,App,Touring Owners,Service,North,4,62,Service cost transparency,3,yes,yes,5,Service cost transparency matched expectations and the service step felt effortless.
+FB-0326,2026-07-23,Social,Touring Owners,Service,South,5,43,Service cost transparency,2,no,no,5,Clear and proactive handling of service cost transparency; very satisfied.
+FB-0143,2026-07-27,App,Urban Commuters,Purchase,South,3,64,Delivery handover,3,yes,yes,5,Delivery handover took longer than expected but the team communicated.
+FB-0382,2026-07-27,Survey,Performance Enthusiasts,Digital,North,4,89,App onboarding,2,no,no,4,App onboarding matched expectations and the digital step felt effortless.
+FB-0406,2026-07-27,Survey,Performance Enthusiasts,Purchase,South,4,113,Trade-in valuation,2,no,no,4,Trade-in valuation matched expectations and the purchase step felt effortless.
+FB-0066,2026-07-28,Dealer,Urban Commuters,Service,Central,4,49,Maintenance clarity,2,no,no,4,Maintenance clarity matched expectations and the service step felt effortless.
+FB-0325,2026-07-28,Social,Urban Commuters,Service,North,3,84,Repair turnaround,2,yes,yes,5,Mixed experience with repair turnaround; resolved eventually after follow-up.
+FB-0206,2026-07-29,App,First-Time Owners,Purchase,South,2,117,Financing clarity,5,yes,yes,3,Financing clarity created friction and I expected clearer guidance.
+FB-0195,2026-07-30,Social,Urban Commuters,Service,South,5,28,Maintenance clarity,2,no,no,5,Maintenance clarity was handled smoothly across the service journey.
+FB-0296,2026-07-30,Survey,First-Time Owners,Service,North,3,80,Service cost transparency,3,no,no,3,Service cost transparency took longer than expected but the team communicated.
+FB-0252,2026-07-31,Email,First-Time Owners,Purchase,South,4,79,Test ride,3,no,no,4,Clear and proactive handling of test ride; very satisfied.
+FB-0356,2026-07-31,Social,Urban Commuters,Service,South,2,47,Repair turnaround,4,yes,no,2,Frustrated with repair turnaround during service; needed several contacts to resolve.
+FB-0367,2026-07-31,Email,First-Time Owners,Ownership,South,2,62,Insurance documentation,4,yes,yes,3,Frustrated with insurance documentation during ownership; needed several contacts to resolve.
+FB-0407,2026-07-31,Social,First-Time Owners,Ownership,South,2,85,Insurance documentation,4,yes,yes,4,Insurance documentation was confusing and slowed the whole ownership experience.
+FB-0020,2026-08-01,App,First-Time Owners,Service,South,2,98,Parts availability,4,yes,no,2,Frustrated with parts availability during service; needed several contacts to resolve.
+FB-0254,2026-08-01,App,Performance Enthusiasts,Service,South,3,74,Repair turnaround,2,yes,yes,5,Repair turnaround was acceptable but service could be smoother.
+FB-0079,2026-08-02,Social,Touring Owners,Ownership,Central,4,30,Documentation,2,no,no,4,Documentation was handled smoothly across the ownership journey.
+FB-0321,2026-08-02,Dealer,Performance Enthusiasts,Service,North,4,87,Repair turnaround,2,no,no,4,Clear and proactive handling of repair turnaround; very satisfied.
+FB-0025,2026-08-03,Survey,First-Time Owners,Digital,Central,3,121,Account access,3,yes,yes,5,Mixed experience with account access; resolved eventually after follow-up.
+FB-0159,2026-08-03,Survey,Touring Owners,Service,South,3,143,Maintenance clarity,2,yes,yes,5,Maintenance clarity took longer than expected but the team communicated.
+FB-0282,2026-08-04,Dealer,Urban Commuters,Digital,Central,4,71,Digital service booking,2,no,no,4,Clear and proactive handling of digital service booking; very satisfied.
+FB-0329,2026-08-04,Dealer,Performance Enthusiasts,Digital,Central,3,67,Account access,3,yes,no,3,Account access was acceptable but digital could be smoother.
+FB-0008,2026-08-05,Survey,Urban Commuters,Service,Central,5,112,Repair turnaround,2,no,no,5,Repair turnaround matched expectations and the service step felt effortless.
+FB-0063,2026-08-05,Survey,Urban Commuters,Ownership,North,5,127,Accessories,2,yes,yes,5,Accessories matched expectations and the ownership step felt effortless.
+FB-0035,2026-08-06,App,Performance Enthusiasts,Service,Central,3,90,Maintenance clarity,3,yes,yes,4,Mixed experience with maintenance clarity; resolved eventually after follow-up.
+FB-0124,2026-08-06,Dealer,Touring Owners,Purchase,North,5,104,Delivery handover,1,no,no,5,Delivery handover was handled smoothly across the purchase journey.
+FB-0299,2026-08-06,Dealer,Urban Commuters,Ownership,Central,4,105,Documentation,3,yes,yes,5,Clear and proactive handling of documentation; very satisfied.
+FB-0413,2026-08-06,Survey,Touring Owners,Purchase,North,1,106,Financing clarity,5,yes,yes,3,Financing clarity was confusing and slowed the whole purchase experience.
+FB-0450,2026-08-06,Dealer,First-Time Owners,Ownership,North,2,95,Insurance documentation,4,yes,yes,4,Insurance documentation was confusing and slowed the whole ownership experience.
+FB-0165,2026-08-07,Email,Touring Owners,Purchase,Central,5,77,Test ride,2,no,no,5,Test ride was handled smoothly across the purchase journey.
+FB-0153,2026-08-08,Survey,Performance Enthusiasts,Purchase,North,3,105,Financing clarity,3,yes,yes,4,Financing clarity was acceptable but purchase could be smoother.
+FB-0068,2026-08-09,Email,First-Time Owners,Ownership,Central,3,117,Insurance documentation,3,no,no,3,Insurance documentation was acceptable but ownership could be smoother.
+FB-0128,2026-08-09,Email,First-Time Owners,Ownership,Central,3,83,Recall communication,2,yes,yes,4,Recall communication took longer than expected but the team communicated.
+FB-0381,2026-08-09,Email,First-Time Owners,Purchase,North,3,72,Delivery handover,3,yes,yes,5,Mixed experience with delivery handover; resolved eventually after follow-up.
+FB-0120,2026-08-10,Dealer,Urban Commuters,Purchase,North,4,69,Financing clarity,2,no,no,4,Financing clarity matched expectations and the purchase step felt effortless.
+FB-0242,2026-08-10,Survey,Urban Commuters,Purchase,Central,3,102,Test ride,3,no,no,3,Test ride was acceptable but purchase could be smoother.
+FB-0108,2026-08-11,Email,Urban Commuters,Purchase,Central,5,90,Order tracking,1,no,no,5,Order tracking matched expectations and the purchase step felt effortless.
+FB-0389,2026-08-11,Email,Performance Enthusiasts,Purchase,Central,4,93,Financing clarity,3,no,no,4,Clear and proactive handling of financing clarity; very satisfied.
+FB-0427,2026-08-11,Email,Urban Commuters,Digital,South,3,98,Account access,2,yes,yes,5,Mixed experience with account access; resolved eventually after follow-up.
+FB-0059,2026-08-12,Email,Performance Enthusiasts,Purchase,South,2,96,Financing clarity,4,yes,yes,2,Financing clarity was confusing and slowed the whole purchase experience.
+FB-0421,2026-08-12,Dealer,Performance Enthusiasts,Digital,North,4,86,App onboarding,2,yes,yes,5,App onboarding was handled smoothly across the digital journey.
+FB-0187,2026-08-13,Dealer,Urban Commuters,Purchase,North,4,95,Financing clarity,2,yes,yes,5,Financing clarity matched expectations and the purchase step felt effortless.
+FB-0283,2026-08-14,Social,Urban Commuters,Service,Central,5,37,Maintenance clarity,2,no,no,5,Clear and proactive handling of maintenance clarity; very satisfied.
+FB-0061,2026-08-16,Email,Urban Commuters,Purchase,Central,3,122,Financing clarity,4,yes,no,3,Financing clarity was acceptable but purchase could be smoother.
+FB-0182,2026-08-17,Survey,First-Time Owners,Service,South,3,118,Service cost transparency,3,yes,yes,4,Service cost transparency was acceptable but service could be smoother.
+FB-0371,2026-08-18,Email,First-Time Owners,Purchase,North,2,65,Financing clarity,4,yes,yes,3,Financing clarity was confusing and slowed the whole purchase experience.
+FB-0163,2026-08-19,App,Urban Commuters,Digital,North,4,45,Feature discovery,2,no,no,4,Feature discovery was handled smoothly across the digital journey.
+FB-0315,2026-08-19,Email,Urban Commuters,Digital,Central,3,142,Account access,2,yes,yes,4,Account access took longer than expected but the team communicated.
+FB-0055,2026-08-20,Survey,First-Time Owners,Service,North,3,118,Appointment wait,3,no,no,3,Mixed experience with appointment wait; resolved eventually after follow-up.
+FB-0341,2026-08-20,Social,Touring Owners,Ownership,Central,3,40,Warranty registration,2,no,no,3,Mixed experience with warranty registration; resolved eventually after follow-up.
+FB-0279,2026-08-22,Email,Performance Enthusiasts,Ownership,North,4,113,Insurance documentation,3,no,no,4,Insurance documentation was handled smoothly across the ownership journey.
+FB-0216,2026-08-23,Email,Urban Commuters,Digital,North,5,101,Account access,2,no,no,5,Clear and proactive handling of account access; very satisfied.
+FB-0081,2026-08-24,Dealer,First-Time Owners,Purchase,South,2,99,Financing clarity,5,yes,yes,4,Financing clarity created friction and I expected clearer guidance.
+FB-0257,2026-08-24,Dealer,Touring Owners,Purchase,North,3,105,Order tracking,3,yes,yes,5,Mixed experience with order tracking; resolved eventually after follow-up.
+FB-0092,2026-08-25,Email,Urban Commuters,Digital,Central,4,98,App onboarding,2,yes,no,4,Clear and proactive handling of app onboarding; very satisfied.
+FB-0360,2026-08-25,Email,Performance Enthusiasts,Ownership,North,5,86,Warranty registration,3,no,no,5,Warranty registration matched expectations and the ownership step felt effortless.
+FB-0368,2026-08-25,App,Performance Enthusiasts,Service,North,4,67,Repair turnaround,2,no,no,4,Repair turnaround was handled smoothly across the service journey.
+FB-0102,2026-08-27,Email,Urban Commuters,Service,South,3,108,Repair turnaround,3,yes,no,3,Mixed experience with repair turnaround; resolved eventually after follow-up.
+FB-0113,2026-08-27,Survey,Urban Commuters,Service,South,3,115,Parts availability,3,yes,yes,4,Parts availability took longer than expected but the team communicated.
+FB-0202,2026-08-27,Social,Performance Enthusiasts,Service,North,4,33,Maintenance clarity,2,yes,yes,5,Maintenance clarity was handled smoothly across the service journey.
+FB-0233,2026-08-27,Survey,Performance Enthusiasts,Ownership,North,3,131,Recall communication,3,yes,yes,4,Recall communication took longer than expected but the team communicated.
+FB-0270,2026-08-27,Survey,First-Time Owners,Service,Central,4,127,Parts availability,4,no,no,4,Clear and proactive handling of parts availability; very satisfied.
+FB-0378,2026-08-30,App,Urban Commuters,Service,North,4,59,Repair turnaround,3,yes,yes,5,Clear and proactive handling of repair turnaround; very satisfied.
+FB-0076,2026-08-31,App,Touring Owners,Ownership,South,5,66,Recall communication,2,no,no,5,Recall communication matched expectations and the ownership step felt effortless.
+FB-0122,2026-08-31,Social,Urban Commuters,Purchase,Central,5,89,Trade-in valuation,2,no,no,5,Trade-in valuation matched expectations and the purchase step felt effortless.
+FB-0057,2026-09-02,App,Urban Commuters,Ownership,South,4,50,Insurance documentation,2,no,no,4,Insurance documentation was handled smoothly across the ownership journey.
+FB-0095,2026-09-02,Dealer,Touring Owners,Ownership,North,5,41,Accessories,2,no,no,5,Clear and proactive handling of accessories; very satisfied.
+FB-0161,2026-09-02,Survey,Urban Commuters,Digital,North,4,88,Digital service booking,2,no,no,4,Digital service booking matched expectations and the digital step felt effortless.
+FB-0188,2026-09-02,Survey,Performance Enthusiasts,Ownership,Central,2,140,Recall communication,3,yes,yes,2,Recall communication created friction and I expected clearer guidance.
+FB-0211,2026-09-02,Dealer,Touring Owners,Digital,South,5,68,Connectivity pairing,2,no,no,5,Clear and proactive handling of connectivity pairing; very satisfied.
+FB-0290,2026-09-02,App,Performance Enthusiasts,Digital,North,3,94,Account access,3,yes,yes,4,Account access was acceptable but digital could be smoother.
+FB-0340,2026-09-02,Email,Touring Owners,Ownership,South,4,80,Accessories,3,no,no,4,Accessories matched expectations and the ownership step felt effortless.
+FB-0060,2026-09-03,App,First-Time Owners,Service,South,3,128,Repair turnaround,3,yes,yes,5,Mixed experience with repair turnaround; resolved eventually after follow-up.
+FB-0220,2026-09-04,App,Touring Owners,Digital,North,4,108,Feature discovery,1,yes,no,4,Clear and proactive handling of feature discovery; very satisfied.
+FB-0304,2026-09-04,Dealer,First-Time Owners,Service,Central,3,52,Parts availability,2,yes,yes,5,Parts availability was acceptable but service could be smoother.
+FB-0365,2026-09-06,Survey,Performance Enthusiasts,Purchase,North,5,91,Financing clarity,1,no,no,5,Financing clarity was handled smoothly across the purchase journey.
+FB-0213,2026-09-08,Dealer,Performance Enthusiasts,Service,North,3,91,Repair turnaround,3,no,no,3,Repair turnaround took longer than expected but the team communicated.
+FB-0292,2026-09-08,Survey,Urban Commuters,Ownership,South,5,127,Recall communication,2,no,no,5,Recall communication was handled smoothly across the ownership journey.
+FB-0306,2026-09-11,Social,Urban Commuters,Ownership,Central,4,34,Accessories,2,no,no,4,Accessories was handled smoothly across the ownership journey.
+FB-0318,2026-09-11,Email,First-Time Owners,Purchase,North,2,91,Financing clarity,4,yes,yes,5,Financing clarity was confusing and slowed the whole purchase experience.
+FB-0324,2026-09-11,App,Urban Commuters,Digital,Central,3,106,Feature discovery,3,yes,yes,4,Feature discovery was acceptable but digital could be smoother.
+FB-0333,2026-09-11,Dealer,Touring Owners,Purchase,North,5,95,Delivery handover,2,yes,yes,5,Delivery handover matched expectations and the purchase step felt effortless.
+FB-0107,2026-09-12,Email,Urban Commuters,Purchase,North,4,80,Order tracking,3,no,no,4,Order tracking matched expectations and the purchase step felt effortless.
+FB-0443,2026-09-12,App,First-Time Owners,Ownership,North,3,115,Insurance documentation,4,yes,yes,4,Insurance documentation was acceptable but ownership could be smoother.
+FB-0022,2026-09-14,Email,First-Time Owners,Service,South,4,153,Service cost transparency,2,no,no,4,Service cost transparency matched expectations and the service step felt effortless.
+FB-0261,2026-09-14,Dealer,Touring Owners,Ownership,South,3,89,Recall communication,2,yes,no,4,Recall communication took longer than expected but the team communicated.
+FB-0295,2026-09-15,Email,Urban Commuters,Purchase,Central,4,69,Test ride,3,yes,no,4,Test ride was handled smoothly across the purchase journey.
+FB-0309,2026-09-15,Dealer,Performance Enthusiasts,Digital,Central,3,84,Account access,2,no,no,3,Account access was acceptable but digital could be smoother.
+FB-0302,2026-09-17,Email,Performance Enthusiasts,Service,North,3,74,Service cost transparency,2,yes,yes,4,Mixed experience with service cost transparency; resolved eventually after follow-up.
+FB-0376,2026-09-17,App,Touring Owners,Digital,Central,4,105,Account access,2,yes,yes,5,Account access matched expectations and the digital step felt effortless.
+FB-0072,2026-09-18,Survey,First-Time Owners,Purchase,North,3,138,Trade-in valuation,3,yes,yes,4,Trade-in valuation took longer than expected but the team communicated.
+FB-0342,2026-09-21,Dealer,Performance Enthusiasts,Digital,North,5,88,Digital service booking,2,no,no,5,Clear and proactive handling of digital service booking; very satisfied.
+FB-0085,2026-09-23,Email,First-Time Owners,Ownership,Central,2,132,Warranty registration,3,yes,yes,4,Frustrated with warranty registration during ownership; needed several contacts to resolve.
+FB-0155,2026-09-23,App,Performance Enthusiasts,Purchase,North,3,62,Financing clarity,4,yes,yes,5,Financing clarity was acceptable but purchase could be smoother.
+FB-0212,2026-09-24,Survey,First-Time Owners,Digital,North,3,73,Feature discovery,3,yes,no,3,Mixed experience with feature discovery; resolved eventually after follow-up.
+FB-0319,2026-09-24,Social,Touring Owners,Purchase,South,4,81,Delivery handover,3,yes,yes,5,Clear and proactive handling of delivery handover; very satisfied.
+FB-0162,2026-09-26,Dealer,First-Time Owners,Purchase,North,2,78,Financing clarity,4,yes,no,2,Frustrated with financing clarity during purchase; needed several contacts to resolve.
+FB-0186,2026-09-26,Email,Urban Commuters,Service,North,5,69,Repair turnaround,2,no,no,5,Repair turnaround matched expectations and the service step felt effortless.
+FB-0013,2026-09-27,Survey,First-Time Owners,Purchase,Central,3,126,Financing clarity,5,yes,yes,5,Mixed experience with financing clarity; resolved eventually after follow-up.
+FB-0026,2026-09-27,Social,Urban Commuters,Ownership,Central,3,72,Insurance documentation,2,yes,yes,4,Insurance documentation was acceptable but ownership could be smoother.
+FB-0247,2026-09-27,Social,First-Time Owners,Purchase,Central,3,45,Financing clarity,3,no,no,3,Mixed experience with financing clarity; resolved eventually after follow-up.
+FB-0250,2026-09-27,Dealer,Performance Enthusiasts,Ownership,North,3,41,Warranty registration,3,no,no,3,Warranty registration was acceptable but ownership could be smoother.
