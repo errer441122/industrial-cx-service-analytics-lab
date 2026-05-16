@@ -27,8 +27,7 @@ Experience / Customer Insights / CX Analyst** internships.
   freight, late delivery).
 - **Comment themes** from a disclosed Portuguese keyword lexicon over the
   real review text.
-- SQL reporting views, a Power BI star schema + DAX measure catalogue, and
-  a stakeholder satisfaction brief.
+- A stakeholder satisfaction brief (`reports/customer_satisfaction_brief.md`).
 
 ## Recruiter 5-minute route
 
@@ -37,8 +36,6 @@ Experience / Customer Insights / CX Analyst** internships.
 2. `reports/customer_satisfaction_brief.md` — the stakeholder summary.
 3. `data/REAL_DATA_PROVENANCE.md` — source, license (CC BY-NC-SA 4.0),
    cleaning rules and checksums.
-4. `sql/cx_reporting_views.sql` and `powerbi/` — BI-side evidence.
-5. `dashboard-workbook/customer_experience_dashboard.xlsx` — the workbook.
 
 ## Run
 
@@ -67,7 +64,6 @@ CSVs are committed, so the analysis and tests run without the source.
 | `src/build_cx_summary.py` | Stakeholder KPI brief and monthly trend. |
 | `data/` | Real prepared reviews + comments + `REAL_DATA_PROVENANCE.md`. |
 | `reports/` | Driver analysis, metrics JSON and the satisfaction brief. |
-| `sql/`, `powerbi/`, `dashboard-workbook/` | SQL views, star schema/DAX, Excel workbook. |
 | `tests/` | Behavioral tests: methodological correctness on the real data. |
 
 ## Boundary
